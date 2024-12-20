@@ -29,9 +29,9 @@ export default function AuthLayout({
 
   return (
     <>
-      <Header />
+     
       <main>{children}</main>
-      <Footer />
+   
     </>
   );
 }

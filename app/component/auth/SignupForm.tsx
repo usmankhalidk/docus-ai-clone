@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/app/context/AuthContext';
@@ -16,6 +16,20 @@ export default function SignupForm() {
   const [showEmailForm, setShowEmailForm] = useState(false);
   const router = useRouter();
   const { signup } = useAuth();
+
+  useEffect(() => {
+    // Disable scrolling when showEmailForm is true
+    if (showEmailForm) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup on component unmount or when the state changes
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showEmailForm]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,7 +59,7 @@ export default function SignupForm() {
 
   if (showEmailForm) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
+      <div className="flex flex-col items-center justify-center bg-white p-10">
         <div className="w-full max-w-md space-y-8">
           {/* Logo */}
           <div className="flex justify-center">
@@ -146,7 +160,7 @@ export default function SignupForm() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white p-4">
+    <div className="flex flex-col items-center justify-center  bg-white p-10">
       <div className="w-full max-w-md space-y-8">
         {/* Logo */}
         <div className="flex justify-center">
