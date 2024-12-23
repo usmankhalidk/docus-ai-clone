@@ -1,3 +1,6 @@
+import { Footer } from './component/layout/Footer';
+import Header from './component/layout/Header';
+import { UpperFooter } from './component/layout/UpperFooter';
 import { AuthProvider } from './context/AuthContext';
 import './globals.css';
 import { Inter } from 'next/font/google';
@@ -49,7 +52,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>{children}</AuthProvider>
+
+        <AuthProvider>
+          <Header />
+          {children}
+          <UpperFooter />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

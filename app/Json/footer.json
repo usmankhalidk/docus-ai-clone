@@ -1,0 +1,125 @@
+{
+    "component": {
+        "type": "HeroSection",
+        "content": {
+            "title": "You're only one click away from a life-changing journey",
+            "button": {
+                "text": "Try Docus for Free",
+                "action": "redirect",
+                "url": "/try-docus"
+            },
+            "features": [
+                "Virtual health assistant powered by AI",
+                "350+ world-renowned Doctors"
+            ]
+        },
+        "styles": {
+            "backgroundColor": "#2E2E3A",
+            "textColor": "#FFFFFF",
+            "buttonColor": "#E95D53",
+            "buttonTextColor": "#FFFFFF"
+        }
+    },
+    "sections": [
+        {
+            "title": "Company",
+            "links": [
+                {
+                    "name": "About us",
+                    "url": "#"
+                },
+                {
+                    "name": "Pricing",
+                    "url": "#"
+                },
+                {
+                    "name": "Join as a Doctor",
+                    "url": "#"
+                },
+                {
+                    "name": "Contact",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Product",
+            "links": [
+                {
+                    "name": "AI Health Assistant",
+                    "url": "#"
+                },
+                {
+                    "name": "AI Doctor",
+                    "url": "#"
+                },
+                {
+                    "name": "Lab Test Interpretation",
+                    "url": "#"
+                },
+                {
+                    "name": "Symptom Checker",
+                    "url": "#"
+                },
+                {
+                    "name": "Second Opinion",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Resources",
+            "links": [
+                {
+                    "name": "Blog",
+                    "url": "#"
+                },
+                {
+                    "name": "Knowledge Base",
+                    "url": "#"
+                },
+                {
+                    "name": "Symptoms Guide",
+                    "url": "#"
+                },
+                {
+                    "name": "Glossary",
+                    "url": "#"
+                },
+                {
+                    "name": "All Articles",
+                    "url": "#"
+                },
+                {
+                    "name": "All Doctors",
+                    "url": "#"
+                },
+                {
+                    "name": "Use Cases",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "title": "Trust",
+            "links": [
+                {
+                    "name": "Terms of use",
+                    "url": "#"
+                },
+                {
+                    "name": "Privacy policy",
+                    "url": "#"
+                },
+                {
+                    "name": "Cookie policy",
+                    "url": "#"
+                }
+            ]
+        }
+    ],
+    "legal": {
+        "copyright": "© 2024 Docus, Inc.",
+        "address": "2810 N Church Street, Wilmington, DE 19802 United States"
+    }
+}
