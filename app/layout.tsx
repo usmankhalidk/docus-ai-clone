@@ -1,11 +1,15 @@
-import { Footer } from './component/layout/Footer';
-import Header from './component/layout/Header';
-import { UpperFooter } from './component/layout/UpperFooter';
 import { AuthProvider } from './context/AuthContext';
+import LayoutWrapper from './context/LayoutWrapper';
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+// Initialize Noto Sans font
+const notoSans = Noto_Sans({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-noto-sans',  // This creates a CSS variable for the font
+});
 
 export const metadata = {
   title: {
@@ -44,20 +48,20 @@ export const metadata = {
   },
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-
+    <html lang="en" className={`light ${notoSans.variable}`}>
+      <body className={`${notoSans.className} bg-white`}>
         <AuthProvider>
-          <Header />
-          {children}
-          <UpperFooter />
-          <Footer />
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
         </AuthProvider>
       </body>
     </html>
