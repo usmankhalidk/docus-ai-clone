@@ -37,7 +37,7 @@ export default function DashboardPage() {
         {/* Cards */}
         <div className="grid grid-cols-2 gap-4">
           {/* Chat with AI Doctor */}
-          <Link href="/ai-doctor" passHref>
+          <Link href="/dashboard/chat" passHref>
             <div className="bg-teal-500/10 p-4 rounded-lg shadow border-teal-600/10 border flex flex-wrap justify-between cursor-pointer">
               <h2 className="text-lg md:text-xl font-semibold w-full sm:w-48 break-words mb-2 sm:mb-0">Chat with AI Doctor</h2>
               <div className="mt-2 flex justify-end w-full sm:w-auto sm:mt-0">
