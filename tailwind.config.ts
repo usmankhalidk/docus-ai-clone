@@ -9,8 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        button_color: "rgb(233, 93, 83)",
+        button_color_onHover: "rgb(233, 93, 83,0.9)",
+        theme_color: "rgb(26, 132, 124)",
+        theme_color_onHover: "rgb(26, 132, 124,0.9)",
       },
     },
   },

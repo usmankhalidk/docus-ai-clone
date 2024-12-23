@@ -1,0 +1,519 @@
+{
+    "blogHeroSection": {
+        "title": "Docus Blog - Insights Into AI-Powered Healthcare",
+        "subtitle": "Welcome to Docus Blog, your one-stop source for the latest news, insights, and advancements in AI-powered healthcare.",
+        "featuredArticle": {
+            "title": "The Future of AI in Healthcare: Exploring What's Next",
+            "author": "Dr George Laliotis",
+            "date": "Jul 03, 2023",
+            "readTime": "6 min read",
+            "description": "The future of artificial intelligence in healthcare is here. Learn about what advancements are taking place and what they can mean for you.",
+            "image": "./images/BlogHeroSection.webp"
+        }
+    },
+    "GlossaryHeroSection": {
+        "title": "Docus Glossary",
+        "subtitle": "Get comprehensive explanations of essential medical and healthcare terms to empower your health decisions and understanding."
+    },
+    "KnowledgeHeroSection": {
+        "title": "Medical Knowledge Base",
+        "subtitle": "Explore a wide range of health topics, ask your questions, and receive instant answers from Docus AI Doctor."
+    },
+    "SymptomsHeroSection": {
+        "title": "Symptoms Guide",
+        "subtitle": "Gain insights into a variety of medical symptoms and health conditions. Understand your health better and make informed decisions."
+    },
+    "BlogCards": [
+        {
+            "category": "AI in Healthcare",
+            "title": "AI Medical Scribe: Benefits, Challenges, and Impact",
+            "date": "Oct 08, 2024",
+            "readTime": "5 min read",
+            "image": "./images/AICards-1.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "AI in Clinical Decision Support: Importance and Benefits",
+            "date": "Aug 23, 2024",
+            "readTime": "5 min read",
+            "image": "./images/AICards-2.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "AI in Patient Engagement: Benefits and Examples",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-3.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "Revolutionizing Healthcare with AI-Assisted Decision-Making",
+            "date": "Jul 31, 2024",
+            "readTime": "6 min read",
+            "image": "./images/AICards-4.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "AI in Medical Diagnosis: How AI is Transforming Healthcare",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-5.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "8 Best Medical Symptom Checkers of 2024",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-6.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "The Role of AI in Public Health for Better Communities",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-7.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "AI in Disease Management: Transforming Modern Healthcare",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-8.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "AI in Personalized Medicine: Precision Healthcare Today",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-9.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "Find Out How to Find and Choose a Good Endocrinologist",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-10.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "Big Data and Artificial Intelligence in Healthcare",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-11.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "The New Role of AI in Preventive Healthcare Strategies",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-12.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "What to Consider When Choosing a Right Oncologist?",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-13.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "The Future of AI in Surgery: Surgical Revolution Explained",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-14.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "The Role of AI in Early Cancer Diagnosis And Treatment",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-15.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "13 Fastest Growing Digital Health Companies in 2023",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-16.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "Essential Steps on How to Find a Good Cardiologist",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-17.webp"
+        },
+        {
+            "category": "AI in Healthcare",
+            "title": "AI Powered Chatbots In Healthcare: Use Cases, Pros And Cons",
+            "date": "Aug 13, 2024",
+            "readTime": "7 min read",
+            "image": "./images/AICards-18.webp"
+        }
+    ],
+    "GlossaryCards": [
+        {
+            "GlossaryCardstitle": "Biomarkers",
+            "GlossaryCardsDescription": "Dive into lab test types to understand their purposes and how they are used in diagnosing and monitoring health conditions.",
+            "GlossaryCardsImage": "./images/GlossaryCards-1.webp"
+        },
+        {
+            "GlossaryCardstitle": "Lab Test Types",
+            "GlossaryCardsDescription": "Explore our detailed guide on biomarkers to learn what these crucial health indicators mean and how they can influence diagnosis, treatment, and monitoring.",
+            "GlossaryCardsImage": "./images/GlossaryCards-2.webp"
+        }
+    ],
+    "BlogPoster": {
+        "title": "Make Informed Health Decisions",
+        "description": "Talk to Docus AI Doctor, generate health reports, get them validated by Top Doctors from the US and Europe.",
+        "button": {
+            "text": "Try Docus for Free",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "./images/BlogPosterSection.webp"
+    },
+    "SymptomsPoster": {
+        "title": "AI-Powered Health Platform",
+        "description": "Talk to AI Health Assistant, generate your health report, validate it with a Top Doctor from the US & Europe.",
+        "button": {
+            "text": "Start Journey",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "./images/BlogPosterSection.webp"
+    },
+    "KnowledgePoster": {
+        "title": "AI-Powered Health Platform",
+        "description": "Talk to AI Health Assistant, generate your health report, validate it with a Top Doctor from the US & Europe.",
+        "button": {
+            "text": "Start Journey",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "./images/BlogPosterSection.webp"
+    },
+    "GlossaryPoster": {
+        "title": "Make Informed Health Decisions",
+        "description": "Talk to Docus AI Doctor, generate health reports, get them validated by Top Doctors from the US and Europe.",
+        "button": {
+            "text": "Try Docus for Free",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "./images/BlogPosterSection.webp"
+    },
+    "symptoms": [
+        {
+            "title": "What Causes Fibromyalgia Rash and What Can You Do?",
+            "description": "Struggling with fibromyalgia rash? Discover its causes, symptoms, and simple ways to soothe itching, redness, and skin discomfort.",
+            "tags": [
+                "Dermatology",
+                "Skin Rash"
+            ],
+            "date": "Dec 21, 2024"
+        },
+        {
+            "title": "Why Do You Crave Chocolate on Your Period? Main Reasons",
+            "description": "Why do you crave chocolate on your period? Hormones, serotonin drops, and nutrient needs trigger cravings—here's what causes it and how to handle it.",
+            "tags": [
+                "Menstruation",
+                "Gynecology"
+            ],
+            "date": "Dec 18, 2024"
+        },
+        {
+            "title": "Is It Appendicitis or Gas Pain? How to Tell the Difference",
+            "description": "Learn how to differentiate between appendicitis and gas pain. Explore key symptoms, causes, diagnosis methods, and effective treatments for both conditions.",
+            "tags": [
+                "Appendicitis"
+            ],
+            "date": "Dec 14, 2024"
+        },
+        {
+            "title": "Hyperspermia: Causes, Treatments, and Impact on Fertility",
+            "description": "Learn about hyperspermia, a rare condition with high semen volume. Discover its causes, symptoms, diagnosis, and treatments to improve fertility.",
+            "tags": [
+                "Urology"
+            ],
+            "date": "Dec 13, 2024"
+        },
+        {
+            "title": "What a Negative Ovulation Test Means and What to Do Next",
+            "description": "A negative ovulation test may occur if ovulation hasn't started yet, or due to irregular cycles or hormonal issues. Learn the reasons and how to track better.",
+            "tags": [
+                "Ovulation",
+                "Gynecology"
+            ],
+            "date": "Dec 12, 2024"
+        },
+        {
+            "title": "What Causes Grass Rash and How Can You Treat It?",
+            "description": "Learn what triggers grass rash, its symptoms, and the best ways to treat and prevent it for healthy, irritation-free skin.",
+            "tags": [
+                "Dermatology",
+                "Skin Rash"
+            ],
+            "date": "Dec 10, 2024"
+        },
+        {
+            "title": "What Causes Constipation During Periods?",
+            "description": "Constipation during the period is linked to hormones, stress, and diet. Learn its causes, practical tips for relief, and ways to improve comfort.",
+            "tags": [
+                "Menstruation",
+                "Constipation",
+                "Gynecology"
+            ],
+            "date": "Dec 09, 2024"
+        },
+        {
+            "title": "What Is Permissive Hypertension and When Is It Used",
+            "description": "Discover how permissive hypertension helps stroke recovery, its applications, risks, and why it's a vital tool for improving brain blood flow.",
+            "tags": [
+                "Blood Pressure",
+                "Neurology"
+            ],
+            "date": "Dec 08, 2024"
+        },
+        {
+            "title": "Watery Sperm Concerns: Causes and Treatment Options",
+            "description": "Address watery sperm with insights on causes, health impacts, and treatments. Learn how to improve semen quality for better reproductive health.",
+            "tags": [
+                "Urology",
+                "Sexual Health"
+            ],
+            "date": "Dec 04, 2024"
+        },
+        {
+            "title": "What Happens If Men Ejaculate Daily? A Scientific Approach",
+            "description": "Explore the scientific perspective on daily ejaculation, its benefits for stress relief and sperm quality, and potential impacts on health.",
+            "tags": [
+                "Urology",
+                "Sexual Health"
+            ],
+            "date": "Dec 04, 2024"
+        },
+        {
+            "title": "Can High Blood Pressure Cause Flashing Lights in Eyes?",
+            "description": "Discover how high blood pressure can cause flashing lights in eyes, what it means for vision, and how to prevent and treat this serious health issue.",
+            "tags": [
+                "Ophthalmology",
+                "Blood Pressure",
+                "Vision Problems"
+            ],
+            "date": "Dec 01, 2024"
+        },
+        {
+            "title": "Chlamydia Rash on the Inner Thigh: Diagnostics and Treatment",
+            "description": "Chlamydia rash on the inner thigh may cause red bumps or boils. Learn the causes, symptoms, and treatment options for this skin condition.",
+            "tags": [
+                "Skin Rash",
+                "Dermatology",
+                "STI"
+            ],
+            "date": "Dec 01, 2024"
+        },
+        {
+            "title": "Is It Discharge Before Period or Early Pregnancy?",
+            "description": "Find out the differences between discharge before a period and early pregnancy, from texture to color, to better understand your body's signals.",
+            "tags": [
+                "Menstruation",
+                "Pregnancy",
+                "Gynecology"
+            ],
+            "date": "Nov 28, 2024"
+        },
+        {
+            "title": "Papular Eczema: Symptoms, Causes, Diagnosis and Treatment",
+            "description": "Discover key strategies for diagnosing papular eczema, effective treatments, and vital tips, especially for parents, on managing this condition.",
+            "tags": [
+                "Dermatology",
+                "Skin Rash",
+                "Eczema"
+            ],
+            "date": "Oct 15, 2024"
+        },
+        {
+            "title": "Itchy Acne: Causes, Treatments, and Prevention Strategies",
+            "description": "Learn why acne becomes itchy and discover easy tips for relief, from gentle skincare to treatments that soothe irritated skin.",
+            "tags": [
+                "Acne",
+                "Dermatology"
+            ],
+            "date": "Oct 14, 2024"
+        },
+        {
+            "title": "Can Constipation Cause Fever? Answers and Insights",
+            "description": "Explore if constipation can cause fever, when these symptoms can appear together, and discover treatment options for managing both effectively.",
+            "tags": [
+                "Fever",
+                "Constipation"
+            ],
+            "date": "Oct 11, 2024"
+        },
+        {
+            "title": "Nightshade Allergy: Causes, Symptoms, Diagnosis, Treatments",
+            "description": "Learn about nightshade allergy symptoms, causes, risks, diagnosis, and treatments. Discover how to manage your diet and avoid allergic reactions.",
+            "tags": [
+                "Allergy",
+                "Nutrition"
+            ],
+            "date": "Sep 23, 2024"
+        },
+        {
+            "title": "Can Stress Cause Nosebleeds? Find Out The Connection",
+            "description": "Find out how stress might trigger nosebleeds and explore simple, practical tips to prevent and manage them effectively.",
+            "tags": [
+                "Stress",
+                "Otorhinolaryngology"
+            ],
+            "date": "Sep 20, 2024"
+        },
+        {
+            "title": "Why Do You Get a Headache When Bending Over?",
+            "description": "Learn the reasons behind headaches when bending over, including sinus, dehydration, and blood pressure, and find treatments that work.",
+            "tags": [
+                "Headache"
+            ],
+            "date": "Sep 19, 2024"
+        },
+        {
+            "title": "Bump on the Roof of Your Mouth: 13 Common Causes",
+            "description": "A bump on the roof of your mouth can stem from infections, cysts, or injuries. Learn common causes and when to seek medical attention.",
+            "tags": [
+                "Oral Health",
+                "Otorhinolaryngology"
+            ],
+            "date": "Sep 18, 2024"
+        },
+        {
+            "title": "Bleeding Tonsils: Causes, Treatments, and Complications",
+            "description": "Bleeding tonsils can result from infections, stones, trauma, bleeding disorders, or cancer. Discover the causes, treatments, and when to seek medical attention.",
+            "tags": [
+                "Tonsils",
+                "Otorhinolaryngology",
+                "Lymphatic System"
+            ],
+            "date": "Sep 16, 2024"
+        },
+        {
+            "title": "Bleeding Tonsils: Causes, Treatments, and Complications",
+            "description": "Bleeding tonsils can result from infections, stones, trauma, bleeding disorders, or cancer. Discover the causes, treatments, and when to seek medical attention.",
+            "tags": [
+                "Tonsils",
+                "Otorhinolaryngology",
+                "Lymphatic System"
+            ],
+            "date": "Sep 16, 2024"
+        },
+        {
+            "title": "Bleeding Tonsils: Causes, Treatments, and Complications",
+            "description": "Bleeding tonsils can result from infections, stones, trauma, bleeding disorders, or cancer. Discover the causes, treatments, and when to seek medical attention.",
+            "tags": [
+                "Tonsils",
+                "Otorhinolaryngology",
+                "Lymphatic System"
+            ],
+            "date": "Sep 16, 2024"
+        }
+    ],
+    "knowledge": [
+        {
+            "title": "Can High Blood Pressure Cause Ringing in the Ears?",
+            "description": "Find out how high blood pressure can cause ringing in the ears (tinnitus), its symptoms, and how to manage it effectively.",
+            "tags": [
+                "Blood Pressure",
+                "Otorhinolaryngology",
+                "Cardiology"
+            ],
+            "date": "Dec 20, 2024"
+        },
+        {
+            "title": "Sperm vs Semen: What Is the Difference?",
+            "description": "Read about the difference between sperm and semen, their roles in reproduction, and how they work together to support fertility.",
+            "tags": [
+                "Urology"
+            ],
+            "date": "Dec 16, 2024"
+        },
+        {
+            "title": "Is Appendicitis Genetic? What You Should Know",
+            "description": "Explore whether appendicitis is genetic, how family history plays a role, and other factors that increase your risk.",
+            "tags": [
+                "Appendicitis"
+            ],
+            "date": "Dec 04, 2024"
+        },
+        {
+            "title": "Can You Get Pregnant 2 Days After Positive Ovulation Test?",
+            "description": "Find out if you can get pregnant 2 days after a positive ovulation test. Learn about your fertile window, ovulation timing, and tips for conception success.",
+            "tags": [
+                "Ovulation",
+                "Gynecology"
+            ],
+            "date": "Dec 03, 2024"
+        },
+        {
+            "title": "What Foods Cause Tonsil Stones? Prevention Tips",
+            "description": "Learn what foods cause tonsil stones, from dairy to sugary snacks, and find out how to prevent them with proper diet and oral hygiene tips.",
+            "tags": [
+                "Tonsils",
+                "Lymphatic System",
+                "Otorhinolaryngology"
+            ],
+            "date": "Sep 16, 2024"
+        },
+        {
+            "title": "Hyperpigmentation: Causes, Types, and Best Treatments",
+            "description": "Explore causes, types, and treatments for hyperpigmentation, with tips to reduce and prevent dark spots on your skin.",
+            "tags": [
+                "Vascular Diseases"
+            ],
+            "date": "Sep 04, 2024"
+        },
+        {
+            "title": "What You Need to Know About a Reptured Varicose Vein",
+            "description": "A reptured varicose vein can cause sudden bleeding and swelling. Learn abour its symptoms, causes and treatment to avoid serious complications",
+            "tags": [
+                "Dermatology"
+            ],
+            "date": "Sep 04, 2024"
+        },
+        {
+            "title": "Common Botox Side Effects and Their Duration",
+            "description": "Common Botox side effects include mild bruising and headaches. Read about their causes, duration, and how to minimize risks.",
+            "tags": [
+                "Dermatology"
+            ],
+            "date": "Sep 03, 2024"
+        },
+        {
+            "title": "Why Is One Tonsil Bigger Than the Other?",
+            "description": "Is it normal for one tonsil to be bigger than the other? Learn about potential causes and when to seek medical advice.",
+            "tags": [
+                "Lymphatic System",
+                "Otorhinolaryngology",
+                "Tonsils"
+            ],
+            "date": "Sep 02, 2024"
+        },
+        {
+            "title": "Tips on How to Prevent Fainting When Getting Blood Drawn",
+            "description": "Learn about how to not pass out when getting blood drawn. Discover practical tips on staying calm and steady during your next blood draw.",
+            "tags": [
+                "Blood Work"
+            ],
+            "date": "Sep 01, 2024"
+        },
+        {
+            "title": "Tonsillitis on One Side: Causes and Duration",
+            "description": "Learn about tonsillitis on one side, including its causes, duration, and why only one tonsil might get infected.",
+            "tags": [
+                "Lymphatic System",
+                "Otorhinolaryngology",
+                "Tonsils"
+            ],
+            "date": "Aug 30, 2024"
+        }
+    ]
+}
