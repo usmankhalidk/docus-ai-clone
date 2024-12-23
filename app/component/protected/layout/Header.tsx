@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useAuth } from '@/app/context/AuthContext';
 import { IoHomeSharp } from 'react-icons/io5';
 import { BiBell } from 'react-icons/bi';
@@ -13,7 +13,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logout } = useAuth();
   const pathname = usePathname();
-
+  const router = useRouter();
   const isActive = (path: string) => pathname === path;
 
   return (
@@ -21,15 +21,20 @@ export default function Header() {
       <div className="w-full">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <div className="flex-shrink-0 flex items-center ml-4">
-              <div className='p-2 h-10 w-10 rounded-full bg-teal-100 flex justify-center items-center'>
-                <IoHomeSharp className='h-5 w-5 text-teal-600'/>
-              </div>
-              <div className='ml-2'>
-                <p className='text-black'>My Dashboard</p>
-              </div>
-            </div>
-           
+          <div 
+    onClick={()=>router.push('/dashboard')}
+      className="flex-shrink-0 flex items-center ml-4 group cursor-pointer"
+    >
+      {/* Circle and Logo */}
+      <div className="p-2 h-10 w-10 rounded-full bg-teal-100 flex justify-center items-center group-hover:bg-teal-600 transition-all">
+        <IoHomeSharp className="h-5 w-5 text-teal-600 group-hover:text-white transition-all" />
+      </div>
+
+      {/* Text */}
+      <div className="ml-2">
+        <p className="text-black group-hover:text-teal-600 transition-all">My Dashboard</p>
+      </div>
+    </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             {user ? (
