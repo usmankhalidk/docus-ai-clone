@@ -1,7 +1,7 @@
 import React from 'react'
-import Forbes from './Home/Forbes'
 import json from "../Json/Accordion.json"
 import AccordionItem from './Home/Accordion'
+import { Forbes } from './Home/Forbes'
 const Pricing = () => {
     return (
         <>

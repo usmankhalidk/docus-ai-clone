@@ -5,13 +5,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  font-family: var(--font-noto-sans);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
@@ -25,7 +24,7 @@ body {
 .switch {
   --_switch-bg-clr: #70a9c5;
   --_switch-padding: 4px; /* padding around button*/
-  --_slider-bg-clr: rgba(12, 74, 110, 0.65); /* slider color unchecked */
+  --_slider-bg-clr: rgba(26, 132, 124, 0.65); /* slider color unchecked */
   --_slider-bg-clr-on: rgba(12, 74, 110, 1); /* slider color checked */
   --_slider-txt-clr: #ffffff;
   --_label-padding: 1rem 2rem; /* padding around the labels -  this gives the switch it's global width and height */
