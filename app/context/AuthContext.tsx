@@ -33,7 +33,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const dummyUser = { id: '1', email, name: 'Test User' };
     localStorage.setItem('user', JSON.stringify(dummyUser));
     setUser(dummyUser);
-    router.replace('/dashboard');
+    router.replace('/welcome');
   };
 
   const signup = async (email: string, password: string) => {
@@ -41,7 +41,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const dummyUser = { id: Date.now().toString(), email, name: 'New User' };
     localStorage.setItem('user', JSON.stringify(dummyUser));
     setUser(dummyUser);
-    router.replace('/dashboard');
+    router.replace('/welcome');
   };
 
   const logout = () => {

@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <section>
-      <HIPA />
+        <HIPA />
       </section>
       <HealthInformed />
       <section className="my-14 sm:my-20 flex items-center justify-center gap-8 md:gap-12 lg:gap-28 sm:flex-row flex-col">
