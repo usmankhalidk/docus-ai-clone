@@ -3,9 +3,10 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import Header from '../component/layout/Header';
-import Footer from '../component/layout/Footer';
+
+
 import { useAuth } from '../context/AuthContext';
+import Header from '../component/protected/layout/Header';
 
 
 export default function ProtectedLayout({
@@ -28,10 +29,9 @@ export default function ProtectedLayout({
   }
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
+      <main className="flex-1 overflow-auto">{children}</main>
+    </div>
   );
 }
