@@ -23,7 +23,7 @@ export default function Home() {
       <OptionCard
         title="Personal AI Doctor"
         description="Has memory. Uses your health data for tailored insights."
-        href="/personal-ai-doctor"
+        href="/chat/personal  "
         imageSrc="/assets/personal-ai-doctor.svg" // Replace with your image path or URL
       />
       <OptionCard

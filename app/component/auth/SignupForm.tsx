@@ -42,7 +42,7 @@ export default function SignupForm() {
 
     try {
       await signup(email, password);
-      router.push('/dashboard');
+      router.push('/welcome');
     } catch (error) {
       setError('Failed to create account');
     }
@@ -51,7 +51,7 @@ export default function SignupForm() {
   const handleGoogleSignup = async () => {
     try {
       // Implement Google signup logic here
-      router.push('/dashboard');
+      router.push('/welcome');
     } catch (error) {
       setError('Failed to sign up with Google');
     }
