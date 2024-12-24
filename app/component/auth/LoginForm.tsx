@@ -21,7 +21,7 @@ export default function LoginForm() {
     setError('');
     try {
       await login(email, password);
-      router.push('/dashboard');
+      router.push('/welcome');
     } catch (error) {
       setError('Invalid email or password');
     }

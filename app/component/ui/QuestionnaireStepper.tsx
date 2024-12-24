@@ -275,11 +275,11 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                     className="flex items-center space-x-2 p-2 border rounded-md hover:bg-gray-50 cursor-pointer"
                   >
                     <input
-                      type="checkbox"
-                      checked={answers[currentStep!]?.selectedOptions?.includes(option) || false}
-                      onChange={() => handleOptionToggle(option)}
-                      className="h-4 w-4 text-teal-600"
-                    />
+  type="checkbox"
+  checked={answers[currentStep!]?.selectedOptions?.includes(option) || false}
+  onChange={() => handleOptionToggle(option)}
+  className="h-4 w-4 text-teal-600 accent-teal-600 focus:ring-teal-600 focus:ring-offset-0"
+/>
                     <span>{option}</span>
                   </label>
                 ))}

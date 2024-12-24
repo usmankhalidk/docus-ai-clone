@@ -9,6 +9,7 @@ const noHeaderFooterRoutes = [
     '/signup',
     '/forget-password',
     '/dashboard',
+    '/welcome',
   ];
   
   // Component to handle layout logic
