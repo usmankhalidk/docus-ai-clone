@@ -67,7 +67,7 @@ export const Blog = () => {
 
             {/* Poster Section */}
             <section className="max-w-6xl mx-auto lg:px-16 py-0 sm:py-8 lg:py-16 px-5">
-                <Poster PosterData={BlogPoster} />
+                <Poster PosterData={BlogPoster} buttonColor="Green"/>
             </section>
 
             {/* AI Cards Section */}
