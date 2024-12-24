@@ -2,7 +2,7 @@ import React from "react";
 import data from "../Json/blog.json";
 import { Poster } from "./ui/Poster";
 import { Cards } from "./ui/Cards";
-import { BlogCards, Card } from "../types/blogInterface";
+import { Card } from "../types/blogInterface";
 export const Glossary = () => {
     const { GlossaryHeroSection, GlossaryPoster } = data;
     const { GlossaryCards }: { GlossaryCards: Card[] } = data;
@@ -28,7 +28,7 @@ export const Glossary = () => {
 
             {/* Poster Section */}
             <section className="max-w-6xl mx-auto lg:px-16 py-0 sm:py-8 lg:py-16 px-5 mb-12 sm:mb-16">
-                <Poster PosterData={GlossaryPoster} />
+                <Poster PosterData={GlossaryPoster} buttonColor="Green" />
             </section>
 
         </div>

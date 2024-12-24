@@ -1,8 +1,9 @@
 import QuestionnaireStepper from '@/app/component/ui/QuestionnaireStepper';
+import { Question } from '@/app/types/medical';
 export default function MedicalHistoryPage() {
   const basePath = '/dashboard/account/profile/update/medical-history';
 
-    const medicalQuestions = [
+    const medicalQuestions:Question[] = [
         {
           title: "Surgical History",
           description: "Have you had any major surgeries?",

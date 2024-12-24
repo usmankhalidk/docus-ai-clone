@@ -1,0 +1,92 @@
+{
+    "SafeDataLab": {
+        "title": "Your health data",
+        "subtitle": "Is safe",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "We don't need any personally identifiable information to analyze your lab tests. Feel free to crop or black out any personal details."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
+    "SafeDataHome": {
+        "title": "Your data",
+        "subtitle": "Is secure",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "No personally identifiable information is required to utilize the Docus AI Health Assistant and its associated features."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
+    "SafeDataDoctor": {
+        "title": "Your health data",
+        "subtitle": "Is safe",
+        "content": [
+            {
+                "icon": "Warning",
+                "text": "No online tool can replace professional medical advice. Always consult a professional before taking any action."
+            },
+            {
+                "icon": "Key",
+                "text": "Docus AI Doctor doesn’t need any personally identifiable information to provide you with relevant insights and recommendations."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
+    "HomeBenefitCards": {
+        "title": "Benefits of Personal AI Health Assistant",
+        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "firstIcon",
+                "cardtitle": "Proactive Preventive Care",
+                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+            },
+            {
+                "icon": "secondIcon",
+                "cardtitle": "Tailored Health Solutions",
+                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+            },
+            {
+                "icon": "thirdIcon",
+                "cardtitle": "In-Depth Health Insights",
+                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+            }
+        ]
+    },
+    "LabBenefitCards": {
+        "title": "Benefits of Personal AI Health Assistant",
+        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "firstIcon",
+                "cardtitle": "Proactive Preventive Care",
+                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+            },
+            {
+                "icon": "secondIcon",
+                "cardtitle": "Tailored Health Solutions",
+                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+            },
+            {
+                "icon": "thirdIcon",
+                "cardtitle": "In-Depth Health Insights",
+                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+            }
+        ]
+    }
+}

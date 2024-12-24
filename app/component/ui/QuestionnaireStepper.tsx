@@ -29,11 +29,13 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
   const [answers, setAnswers] = useState<AnswerType>({});
   const [currentStep, setCurrentStep] = useState<number | null>(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
   const [showCongratulations, setShowCongratulations] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -46,6 +48,37 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
       }
     }
   }, [pathname, basePath, questions, router]);
+
+  const calculateProgress = () => {
+    if (currentStep === null) return 0;
+    // Now dividing by total steps (questions.length) instead of (questions.length - 1)
+    return ((currentStep) / (questions.length)) * 100;
+  };
+
+  const isCurrentAnswerValid = () => {
+    if (currentStep === null) return false;
+    const currentAnswer = answers[currentStep];
+    
+    if (!currentAnswer) return false;
+
+    const question = questions[currentStep];
+    switch (question.type) {
+      case "yes-no":
+      case "multiple-choice":
+        return currentAnswer.answer !== undefined;
+      case "yes-no-with-text":
+        return currentAnswer.answer !== undefined && 
+          (!currentAnswer.answer || (currentAnswer.answer && currentAnswer.text?.trim()));
+      case "yes-no-with-options":
+        return currentAnswer.answer !== undefined &&
+          (!currentAnswer.answer || 
+           (currentAnswer.answer && 
+            currentAnswer.selectedOptions && 
+            currentAnswer.selectedOptions.length > 0));
+      default:
+        return false;
+    }
+  };
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -79,24 +112,35 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
     setIsSaving(true);
   };
 
-  const nextStep = (): void => {
+  const nextStep = async () => {
     if (currentStep !== null && currentStep < questions.length - 1) {
+      setIsLoading(true);
       const nextQuestion = questions[currentStep + 1];
-      router.push(`${basePath}/${nextQuestion.slug}`);
+      await router.push(`${basePath}/${nextQuestion.slug}`);
+      setIsLoading(false);
+    }
+    if(currentStep !== null && currentStep === questions.length - 1){
+        setCurrentStep(currentStep + 1);
     }
   };
 
-  const prevStep = (): void => {
+  const prevStep = async () => {
     if (currentStep !== null && currentStep > 0) {
+      setIsLoading(true);
       const prevQuestion = questions[currentStep - 1];
-      router.push(`${basePath}/${prevQuestion.slug}`);
+      await router.push(`${basePath}/${prevQuestion.slug}`);
+      setIsLoading(false);
     }
   };
 
   const handleYesNoAnswer = (value: boolean) => {
     setAnswers((prev) => ({
       ...prev,
-      [currentStep!]: { answer: value },
+      [currentStep!]: { 
+        answer: value,
+        selectedOptions: value ? [] : undefined,
+        text: value ? "" : undefined
+      },
     }));
   };
 
@@ -272,8 +316,14 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
 
   if (!mounted || currentStep === null) return null;
 
-  const progressPercentage = ((currentStep + 1) / questions.length) * 100;
-  
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white p-4 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-10 w-10 border-4 border-teal-600 border-t-transparent"></div>
+      </div>
+    );
+  }
+
   if (showCongratulations) {
     return (
       <div className="min-h-screen bg-white p-4 flex items-center justify-center">
@@ -305,26 +355,29 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
     );
   }
 
+  const progressPercentage = calculateProgress();
+
   return (
-    <div className=" bg-white p-4">
+    <div className="bg-white p-4">
       <div className="max-w-xl mx-auto">
         <div className="mb-6">
-        <div className="flex items-center gap-3 w-full justify-center">
-  {currentStep > 0 && (
-    <button
-      onClick={prevStep}
-      type="button"
-      aria-label="Previous question"
-      className="p-2 hover:bg-gray-100 rounded-full"
-    >
-      <FaArrowLeft className="w-4 h-4" />
-    </button>
-  )}
-  <h1 className="text-lg font-semibold text-teal-700 text-center flex-grow">MEDICAL HISTORY</h1>
-</div>
+          <div className="flex items-center gap-3 w-full justify-center">
+            {currentStep > 0 && (
+              <button
+                onClick={prevStep}
+                type="button"
+                aria-label="Previous question"
+                className="p-2 hover:bg-gray-100 rounded-full"
+              >
+                <FaArrowLeft className="w-4 h-4" />
+              </button>
+            )}
+            <h1 className="text-lg font-semibold text-teal-700 text-center flex-grow">
+              MEDICAL HISTORY
+            </h1>
+          </div>
 
           <div className="mt-4 relative">
-            {/* Shortened progress bar */}
             <div className="h-2 bg-gray-200 rounded-full relative">
               <div
                 className="h-2 bg-teal-600 rounded-full transition-all duration-300"
@@ -334,7 +387,6 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 aria-valuemin={0}
                 aria-valuemax={100}
               />
-              {/* Adjusted Middle Diamond */}
               <div
                 className="absolute top-0 transition-all duration-300"
                 style={{
@@ -346,11 +398,12 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 }}
               >
                 <FaDiamond
-                  className={`w-2 h-2 ${progressPercentage >= 50 ? "text-white" : "text-teal-600"}`}
+                  className={`w-2 h-2 ${
+                    progressPercentage >= 50 ? "text-white" : "text-teal-600"
+                  }`}
                   aria-hidden="true"
                 />
               </div>
-              {/* Adjusted End Diamond */}
               <div
                 className="absolute top-0 right-0"
                 style={{
@@ -360,57 +413,76 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 }}
               >
                 <FaDiamond
-                  className={`w-2 h-2 ${progressPercentage === 100 ? "text-white" : "text-teal-600"}`}
+                  className={`w-2 h-2 ${
+                    progressPercentage === 100 ? "text-white" : "text-teal-600"
+                  }`}
                   aria-hidden="true"
                 />
               </div>
             </div>
             <div className="absolute right-0 top-5 text-xs text-gray-600">
-              {currentStep + 1}/{questions.length}
+              {/* Modified to show steps out of total + 1 for save step */}
+              Step {currentStep + 1} of {questions.length }
             </div>
           </div>
         </div>
-        {currentStep !== null && questions[currentStep] && (
+
+        {/* Question Section - Show questions or final save step */}
+        {currentStep !== null && (
           <div className="mb-8">
-            <h2 className="text-lg font-medium mb-3">{questions[currentStep].title}</h2>
-            <p className="text-gray-600 mb-6">{questions[currentStep].description}</p>
-            {renderQuestion()}
+            {currentStep < questions.length ? (
+              <>
+                <h2 className="text-lg font-medium mb-3">
+                  {questions[currentStep].title}
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  {questions[currentStep].description}
+                </p>
+                {renderQuestion()}
+              </>
+            ) : (
+              <>
+                <h2 className="text-lg font-medium mb-3">
+                  Review and Save
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Please review your answers and save your medical history.
+                </p>
+                <button
+                  type="button"
+                  onClick={handleSaveChanges}
+                  className="w-full px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700"
+                >
+                  Save Changes
+                </button>
+              </>
+            )}
           </div>
         )}
 
-        <div className="flex justify-between">
-          {currentStep === questions.length - 1 ? (
+        {/* Navigation Buttons */}
+        {currentStep < questions.length && (
+          <div className="flex justify-between">
             <button
               type="button"
-              onClick={handleSaveChanges}
-              className="w-full px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={answers[currentStep] === undefined}
+              onClick={() => router.push("/dashboard")}
+              className="text-teal-600 hover:text-teal-700"
             >
-              Save Changes
+              Save and Exit
             </button>
-          ) : (
-            <>
-              <button
-                type="button"
-                onClick={() => router.push("/dashboard")}
-                className="text-teal-600 hover:text-teal-700"
-              >
-                Save and Exit
-              </button>
-              <button
-                type="button"
-                onClick={nextStep}
-                disabled={answers[currentStep] === undefined}
-                className="px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Next
-              </button>
-            </>
-          )}
-        </div>
+            <button
+              type="button"
+              onClick={nextStep}
+              disabled={!isCurrentAnswerValid()}
+              className="px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
     </div>
-  );
-};
+    );
+    };
 
-export default QuestionnaireStepper;
+    export default QuestionnaireStepper;
