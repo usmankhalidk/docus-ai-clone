@@ -90,9 +90,7 @@ export default function Example() {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-lg font-semibold text-gray-900">
-            Pricing
-          </a>
+          <Link href="/pricing"> <a className="text-lg font-semibold text-gray-900"> Pricing </a> </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
               Resources

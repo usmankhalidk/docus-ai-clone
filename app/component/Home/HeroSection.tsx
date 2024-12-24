@@ -11,7 +11,7 @@ const HeroSection = () => {
                     <p>Health Assistant</p>
                     <p className='text-theme_color'>Powered by AI</p>
                 </p>
-                <p className='text-lg'>
+                <p className='text-base md:text-lg'>
                     Prevent potential health issues and effectively manage your health. Gain insights with our AI Doctor and validate them with top US and European doctors.
                 </p>
                 <div className='flex items-center justify-center md:justify-start'>
