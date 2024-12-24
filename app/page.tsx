@@ -8,7 +8,6 @@ import { SafeData } from "./component/Home/SafeData";
 
 import homedata from "./Json/home.json"
 
-
 export default function HomePage() {
 
   const { SafeDataHome, HomeBenefitCards } = homedata

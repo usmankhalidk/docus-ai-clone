@@ -6,14 +6,19 @@ export interface RootObject {
     GlossaryPoster: PosterInterface;
     SymptomsPoster: PosterInterface;
     KnowledgePoster: PosterInterface;
+    OpinionPoster: PosterInterface;
     symptoms: QusetionsBlock[];
     knowledge: QusetionsBlock[];
     LabAnalysis: LabAnalysis[];
     DoctorAnalysis: DoctorAnalysis[];
     MainTitle: MainTitle;
     testTypes: Feature[];
+    Counts: Count[];
+    Doctors: Doctor[];
     SafeData: SafeDataPoster;
     HomeBenefitCards: BenefitCardsData;
+    LabBenefitCards: BenefitCardsData;
+    DoctorBenefitCards: BenefitCardsData;
 }
 export type Card = BlogCards & GlossaryCards;
 export interface BlogCards {
@@ -49,10 +54,21 @@ export interface BenefitCardsData {
     buttonText?: string;
     content: BenefitContent[];
 }
-interface BenefitContent {
+export interface BenefitContent {
     icon: string;
     cardtitle: string;
     text: string;
+}
+export interface Doctor {
+    name: string;
+    country: string;
+    experience: string;
+    specialty: string;
+    image?: string;
+}
+export interface Count {
+    value: string;
+    label: string;
 }
 export interface QusetionsBlock {
     title: string;
@@ -70,7 +86,7 @@ export interface Feature {
     description: string;
 }
 export interface SafeDataPoster {
-    title: string;
+    title?: string;
     subtitle: string;
     content: Content[];
 }
@@ -80,7 +96,7 @@ export interface Content {
 }
 export interface PosterInterface {
     title: string;
-    description: string;
+    description?: string;
     button: Button;
     image: string;
 }

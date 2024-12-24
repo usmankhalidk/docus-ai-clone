@@ -25,7 +25,6 @@ export const Benefits = ({ BenefitCardsData }: { BenefitCardsData: BenefitCardsD
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-6">
                 {content.map((data, index) => {
                     const Icon = iconMapping[data.icon];
-                    console.log(index)
                     return (
                         <div key={index} className='border rounded-md p-[22px] flex flex-col gap-4 shadow-sm' style={{ backgroundColor: "rgb(233, 243, 242)" }}>
                             <Icon className="size-8 text-theme_color mb-1" />
@@ -35,13 +34,13 @@ export const Benefits = ({ BenefitCardsData }: { BenefitCardsData: BenefitCardsD
                     )
                 })}
             </div>
-            <div className='flex items-center justify-center my-5'>
-                {buttonText &&
+            {buttonText &&
+                <div className='flex items-center justify-center my-5'>
                     <button className="mt-6 bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
                         {buttonText}
                     </button>
-                }
-            </div>
+                </div>
+            }
         </>
     )
 }

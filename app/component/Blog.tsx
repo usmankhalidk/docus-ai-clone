@@ -1,14 +1,14 @@
 "use client"
 
 import React, { useState } from "react";
-import data from "../Json/blog.json";
+import blogdata from "../Json/blog.json";
 import { Poster } from "./ui/Poster";
 import { Cards } from "./ui/Cards";
 import { BlogCards } from "../types/blogInterface";
 
 export const Blog = () => {
-    const { blogHeroSection, BlogPoster } = data;
-    const { BlogCards }: { BlogCards: BlogCards[] } = data;
+    const { blogHeroSection, BlogPoster } = blogdata;
+    const { BlogCards }: { BlogCards: BlogCards[] } = blogdata;
     const TotalCards = BlogCards.length
 
     const [loadingCards, setLoadingCards] = useState(6);

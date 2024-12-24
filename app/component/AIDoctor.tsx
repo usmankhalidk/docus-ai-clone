@@ -15,7 +15,7 @@ import HomeAccordion from "./Home/HomeAccordion";
 export const AIDoctor = () => {
 
   const { DoctorAnalysis, MainTitle }: { DoctorAnalysis: LabAnalysis[], MainTitle: MainTitle } = labdata
-  const { SafeDataDoctor } = homedata
+  const { SafeDataDoctor, DoctorBenefitCards } = homedata
 
   return (
     <div>
@@ -37,7 +37,7 @@ export const AIDoctor = () => {
       </section>
 
       <section className="max-w-7xl mx-auto lg:px-16 py-4 px-5">
-        <Benefits />
+        <Benefits BenefitCardsData={DoctorBenefitCards}/>
       </section>
 
       <section className="my-12 sm:my-14 lg:mt-20 lg:mb-4 flex items-center justify-center gap-8 md:gap-12 lg:gap-28 sm:flex-row flex-col">

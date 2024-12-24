@@ -1,4 +1,8 @@
 {
+    "OpinionHeroSection": {
+        "title": "Get an online second opinion from Top Doctors",
+        "subtitle": "Verify your diagnosis and treatment strategy with top doctors from the US and Europe before making crucial health decisions."
+    },
     "SafeDataLab": {
         "title": "Your health data",
         "subtitle": "Is safe",
@@ -45,6 +49,19 @@
             }
         ]
     },
+    "SafeDataOpinion": {
+        "subtitle": "Disclaimer",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "Docus AI Health Assistant is not a real doctor, even though it is trained on a vast amount of medical data. Unless reviewed by your local physician, the provided information is for educational and general purposes only."
+            },
+            {
+                "icon": "Security",
+                "text": "We strongly recommend not to share any personally identifiable information while using Docus AI Health Assistant. Before sharing any information, please ensure all direct identifiers such as your name, address, or social security number are removed."
+            }
+        ]
+    },
     "HomeBenefitCards": {
         "title": "Benefits of Personal AI Health Assistant",
         "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
@@ -88,5 +105,93 @@
                 "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
             }
         ]
-    }
+    },
+    "DoctorBenefitCards": {
+        "title": "Benefits of Docus AI Doctor",
+        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "firstIcon",
+                "cardtitle": "Proactive Preventive Care",
+                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+            },
+            {
+                "icon": "secondIcon",
+                "cardtitle": "Tailored Health Solutions",
+                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+            },
+            {
+                "icon": "thirdIcon",
+                "cardtitle": "In-Depth Health Insights",
+                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+            }
+        ]
+    },
+    "OpinionBenefitCards": {
+        "title": "Benefits for patients & caregivers",
+        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "firstIcon",
+                "cardtitle": "Proactive Preventive Care",
+                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+            },
+            {
+                "icon": "secondIcon",
+                "cardtitle": "Tailored Health Solutions",
+                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+            },
+            {
+                "icon": "thirdIcon",
+                "cardtitle": "In-Depth Health Insights",
+                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+            }
+        ]
+    },
+    "Counts": [
+        {
+            "value": "350+",
+            "label": "Top doctors"
+        },
+        {
+            "value": "100+",
+            "label": "Subspecialties"
+        },
+        {
+            "value": "15+",
+            "label": "Countries"
+        }
+    ],
+    "Doctors": [
+        {
+            "name": "Marco Siano",
+            "country": "Switzerland",
+            "experience": "22 years of experience",
+            "specialty": "Oncology",
+            "image": "./images/doctor-1.webp"
+        },
+        {
+            "name": "Francesco DiMeco",
+            "country": "Italy",
+            "experience": "36 years of experience",
+            "specialty": "Neurosurgery",
+            "image": "./images/doctor-2.webp"
+        },
+        {
+            "name": "Christian Thaler",
+            "country": "Germany",
+            "experience": "40 years of experience",
+            "specialty": "Gynecology, Reproductive Medicine",
+            "image": "./images/doctor-3.webp"
+        },
+        {
+            "name": "Madhusmita Misra",
+            "country": "United States",
+            "experience": "38 years of experience",
+            "specialty": "Pediatric Endocrinology",
+            "image": "./images/doctor-4.webp"
+        }
+    ]
 }

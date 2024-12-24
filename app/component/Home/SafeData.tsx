@@ -27,7 +27,8 @@ export const SafeData: React.FC<LocalInterface> = ({ SafeData }) => {
                 <div className='flex items-center justify-center'>
                     <CiLock className='size-12' />
                 </div>
-                <p className='text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold'>{title}</p>
+                {title &&
+                    <p className='text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold'>{title}</p>}
                 <div className='text-2xl md:text-[46px] leading-[32px] font-bold flex justify-center'>
                     <p className='bg-theme_color rounded-md -rotate-3 py-3 sm:py-4 px-8 sm:px-10 hover:scale-110 transition-all'>{subtitle}</p>
                 </div>

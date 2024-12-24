@@ -40,13 +40,6 @@ export const LAB = () => {
         ))}
       </section>
 
-      <section className="max-w-7xl mx-auto lg:px-16 py-4 px-5">
-        <div className="text-center">
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
-        </div>
-      </section>
-
       <section className='flex items-center justify-center max-w-[1128px] mx-auto lg:px-16 lg:py-[92px] py-6 px-5'>
         <SafeData SafeData={SafeDataLab} />
       </section>
