@@ -4,8 +4,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import Header from '../component/layout/Header';
-import Footer from '../component/layout/Footer';
+
 
 
 export default function AuthLayout({
@@ -29,9 +28,9 @@ export default function AuthLayout({
 
   return (
     <>
-      <Header />
+     
       <main>{children}</main>
-      <Footer />
+   
     </>
   );
 }

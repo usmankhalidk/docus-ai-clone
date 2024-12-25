@@ -32,9 +32,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ index, question, answer }
         <div className="border-b border-slate-200 ">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex justify-between items-center py-5 text-slate-800"
+                className="flex justify-between items-center py-5 text-slate-800 "
             >
-                <span className='text-lg font-bold'>{question}</span>
+                <span className='text-base md:text-lg font-bold text-left'>{question}</span>
                 <span className="text-slate-800 transition-transform duration-300">
                     {isOpen ? upSVG : downSVG}
                 </span>
@@ -44,7 +44,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ index, question, answer }
                 style={{ maxHeight, overflow: 'hidden' }}
                 className="transition-all duration-500 ease-in-out"
             >
-                <div className="pb-5 text-base text-slate-500">{answer}</div>
+                <div className="pb-5 text-base md:text-sm text-slate-500">{answer}</div>
             </div>
         </div>
     );

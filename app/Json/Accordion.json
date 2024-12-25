@@ -1,39 +1,97 @@
-[
-    {
-      "title": "What is Docus?",
-      "description": "Docus is a Personal Health Assistant powered by advanced AI technology. It provides personalized health management, proactive care, and detailed insights, integrating features like AI Doctor consultations, lab test interpretations, and more to support your health decisions."
-    },
-    {
-      "title": "How can I get started with Docus and manage my health?",
-      "description": "Getting started with Docus is straightforward. First, sign up on our platform and complete your health profile. Once set up, you can immediately begin exploring a variety of features. Use the Lab Test Interpretation for detailed biomarker analysis. For interactive support, chat with your personal AI Doctor to ask health questions and get instant answers. Additionally, you can consult with top doctors for expert second opinions, all accessible from your personalized dashboard."
-    },
-    {
-      "title": "What kind of health issues can Docus help with?",
-      "description": "Docus can assist with a range of health issues from routine wellness queries and symptom checks to more complex health conditions. It provides lab test interpretations, and expert consultations for a comprehensive health management experience. Plus, your personal AI Doctor is available 24/7 for any health-related queries."
-    },
-    {
-      "title": "How reliable are the health insights provided by Docus?",
-      "description": "The insights from Docus are based on AI algorithms trained on a wide range of medical data, designed to provide accurate and up-to-date health information. However, while Docus aims for precision, it is best used as a tool alongside professional medical advice."
-    },
-    {
-      "title": "What is Docus AI Doctor?",
-      "description": "The Docus AI Doctor is an advanced medical chatbot that acts as your virtual health assistant. It utilizes sophisticated AI technology to analyze your health information and respond to your queries in real-time. Whether you have questions about symptoms, need help interpreting lab results, or are seeking health advice, the AI Doctor provides accurate, personalized insights based on your health profile, making it an invaluable tool for day-to-day health management."
-    },
-    {
-      "title": "How do I get a second opinion through Docus?",
-      "description": "For a second opinion, navigate to the 'Consult Top Doctors' feature where you can choose from over 350 top doctors. Alternatively, when interacting with the AI Doctor, select the 'Suggest Top Doctor' action, and it will recommend the most relevant doctors for your health condition. Simply select a doctor, submit a request for a consultation through our platform, and we will arrange for an expert to review your case and provide their opinion."
-    },
-    {
-      "title": "Can Docus replace my doctor?",
-      "description": "No, Docus is designed to supplement your healthcare experience by providing AI-driven insights and access to expert medical opinions. It offers preliminary guidance and can help prepare you for more informed discussions with healthcare professionals, but it is not a substitute for direct medical advice from a doctor."
-    },
-    {
-      "title": "How do I ensure my health data is safe with Docus?",
-      "description": "We prioritize your privacy and data security. Our platform is compliant with HIPAA and GDPR standards. All personal health information provided to Docus is encrypted and stored securely."
-    },
-    {
-      "title": "Why should I choose Docus as my Personal Health Assistant?",
-      "description": "Choose Docus for 24/7 health support and personalized health management plans tailored to your unique needs. Docus stands out from other health apps by combining AI-driven insights with access to over 350 top doctors, providing a perfect blend of technology and expert human advice. This unique approach ensures comprehensive, proactive care and easy-to-understand insights for all your health concerns."
-    }
-  ]
+{
+  "HomeAccrodion": {
+    "MainHeading":"Have questions? Let’s find answers",
+    "data":
+    [
+      {
+        "title": "What is Docus?",
+        "description": "Docus is a Personal Health Assistant powered by advanced AI technology. It provides personalized health management, proactive care, and detailed insights, integrating features like AI Doctor consultations, lab test interpretations, and more to support your health decisions."
+      },
+      {
+        "title": "How can I get started with Docus and manage my health?",
+        "description": "Getting started with Docus is straightforward. First, sign up on our platform and complete your health profile. Once set up, you can immediately begin exploring a variety of features. Use the Lab Test Interpretation for detailed biomarker analysis. For interactive support, chat with your personal AI Doctor to ask health questions and get instant answers. Additionally, you can consult with top doctors for expert second opinions, all accessible from your personalized dashboard."
+      },
+      {
+        "title": "What kind of health issues can Docus help with?",
+        "description": "Docus can assist with a range of health issues from routine wellness queries and symptom checks to more complex health conditions. It provides lab test interpretations, and expert consultations for a comprehensive health management experience. Plus, your personal AI Doctor is available 24/7 for any health-related queries."
+      },
+      {
+        "title": "How reliable are the health insights provided by Docus?",
+        "description": "The insights from Docus are based on AI algorithms trained on a wide range of medical data, designed to provide accurate and up-to-date health information. However, while Docus aims for precision, it is best used as a tool alongside professional medical advice."
+      },
+      {
+        "title": "What is Docus AI Doctor?",
+        "description": "The Docus AI Doctor is an advanced medical chatbot that acts as your virtual health assistant. It utilizes sophisticated AI technology to analyze your health information and respond to your queries in real-time. Whether you have questions about symptoms, need help interpreting lab results, or are seeking health advice, the AI Doctor provides accurate, personalized insights based on your health profile, making it an invaluable tool for day-to-day health management."
+      },
+      {
+        "title": "How do I get a second opinion through Docus?",
+        "description": "For a second opinion, navigate to the 'Consult Top Doctors' feature where you can choose from over 350 top doctors. Alternatively, when interacting with the AI Doctor, select the 'Suggest Top Doctor' action, and it will recommend the most relevant doctors for your health condition. Simply select a doctor, submit a request for a consultation through our platform, and we will arrange for an expert to review your case and provide their opinion."
+      },
+      {
+        "title": "Can Docus replace my doctor?",
+        "description": "No, Docus is designed to supplement your healthcare experience by providing AI-driven insights and access to expert medical opinions. It offers preliminary guidance and can help prepare you for more informed discussions with healthcare professionals, but it is not a substitute for direct medical advice from a doctor."
+      },
+      {
+        "title": "How do I ensure my health data is safe with Docus?",
+        "description": "We prioritize your privacy and data security. Our platform is compliant with HIPAA and GDPR standards. All personal health information provided to Docus is encrypted and stored securely."
+      },
+      {
+        "title": "Why should I choose Docus as my Personal Health Assistant?",
+        "description": "Choose Docus for 24/7 health support and personalized health management plans tailored to your unique needs. Docus stands out from other health apps by combining AI-driven insights with access to over 350 top doctors, providing a perfect blend of technology and expert human advice. This unique approach ensures comprehensive, proactive care and easy-to-understand insights for all your health concerns."
+      }
+    ]
+  },
+ "Pricing": {
+    "MainHeading":"Have questions? Let’s find answers",
+    "data":
+    [ { "question": "Is the AI Health Assistant really free?", "answer": "Absolutely! Docus AI Health Assistant is a complimentary service designed to help you with general health-related questions. However, certain plan limitations may apply, so be sure to check the details of your specific plan." }, { "question": "How much does a second opinion from a top doctor cost?", "answer": "The cost of a medical second opinion varies depending on the doctor's expertise. Medical second opinions start at $99, while more specialized cases may be priced higher. Each doctor sets their own fee schedule, which can be viewed on their profile. Written opinions and video calls may have different pricing structures." }, { "question": "Can I use the AI Health Assistant before getting a second opinion from a top doctor?", "answer": "Yes, you can use the Docus AI Health Assistant to gather preliminary information on your health concerns. If you need further guidance or a more in-depth analysis, you can then request a medical second opinion from one of our top doctors." }, { "question": "How do I request a second opinion from a top doctor?", "answer": "To request a medical second opinion, simply navigate the Doctors listing page, choose a doctor based on your specific needs, complete the form, and our specialists will be in touch with you shortly." }, { "question": "What if I'm not satisfied with the second opinion I receive from a top doctor?", "answer": "Your health is our priority. If you're not satisfied with the second opinion, please contact our customer support team. We'll review your case and determine if a refund or another second opinion at no extra cost is appropriate." }, { "question": "How can I pay for the services?", "answer": "We accept various payment methods, including major credit cards, debit cards, and selected digital cards such as Apple Pay and Google Pay. All transactions are processed securely through Stripe, ensuring your information remains protected." }, { "question": "Can I get a second opinion for multiple medical conditions?", "answer": "Yes, you can get medical second opinions for multiple medical conditions. However, please note that each condition may require a separate second opinion from a different doctor, which will be billed accordingly." }, { "question": "Can I change the professional providing my second opinion after making a payment?", "answer": "If you would like to change the professional providing your second opinion, please contact our customer support team as soon as possible. We'll do our best to accommodate your request, though it may result in additional fees or a delay in receiving your second opinion." } ]
+  },
+ "AiDoctor": {
+    "MainHeading":"Have questions? Let’s find answers",
+    "data":
+    [
+      {
+        "question": "What is the AI Doctor?",
+        "answer": "AI Doctor is the chatbot feature of Docus AI Health Assistant, designed to provide health-related information, recommendations, and support. It analyzes your medical history, symptoms, and other relevant factors to assist you with preliminary guidance through interactive communication."
+      },
+      {
+        "question": "How do I interact with the AI Doctor?",
+        "answer": "To interact with the AI Doctor, first sign up on the Docus Platform and complete your health profile. Then navigate to your personal AI Doctor section. Simply enter your health-related questions or concerns in the chat area, and the AI Doctor will analyze your inputs and provide responses tailored to your needs."
+      },
+      {
+        "question": "Is the AI Doctor a replacement for a doctor?",
+        "answer": "While the AI Doctor provides valuable health insights, it is not intended to replace the expertise of a real doctor. It offers preliminary guidance and general information, and we recommend consulting with a healthcare professional for specific health concerns or medical advice."
+      },
+      {
+        "question": "How accurate is the information provided by the AI Doctor?",
+        "answer": "The AI Doctor strives to provide accurate and relevant information based on advanced AI modeling and training. However, for definitive diagnoses and treatment plans, consulting with a healthcare professional is essential."
+      },
+      {
+        "question": "Is my personal information secure when using the AI Doctor?",
+        "answer": "Your privacy is a top priority for us. The Docus Health Assistant ensures that all data, including interactions with the AI Doctor, are protected with advanced encryption and security protocols, fully compliant with HIPAA and GDPR standards."
+      },
+      {
+        "question": "Can the AI Doctor diagnose medical conditions?",
+        "answer": "The AI Doctor can suggest potential medical conditions based on the differential diagnosis process from the information you provide, but it cannot make definitive medical diagnoses. Always seek a professional evaluation for an accurate diagnosis."
+      },
+      {
+        "question": "Can the AI Doctor prescribe medications?",
+        "answer": "The AI Doctor does not have the capability to prescribe medications. Medication prescriptions require a licensed healthcare professional who can evaluate your specific medical needs."
+      },
+      {
+        "question": "Is the AI Doctor available 24/7?",
+        "answer": "Yes, the AI Doctor is available 24/7, allowing you to access health assistance anytime and anywhere, regardless of your subscription plan."
+      },
+      {
+        "question": "Can I use the AI Doctor for emergency situations?",
+        "answer": "The AI Doctor is not equipped to handle emergency situations. In case of an emergency, contact your local emergency services or visit the nearest emergency room immediately."
+      }
+    ]
+  }
+}
+
+
+
+
+
   

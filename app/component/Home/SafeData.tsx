@@ -1,37 +1,49 @@
-import React from 'react'
-import { IoIosLock } from "react-icons/io";
-import { GrShieldSecurity } from "react-icons/gr";
-import { IoKeyOutline } from "react-icons/io5";
-const SafeData = () => {
-    return (
-        <>
-            <div className='flex items-center justify-center mx-auto max-w-5xl my-10 md:my-16'>
-                <div className='border rounded-2xl flex  p-4 md:p-16 gap-6 md:gap-12 flex-col md:flex-row mx-5' style={{ backgroundColor: "rgb(39, 42, 61)" }}>
-                    <div className='flex flex-col justify-center text-center text-white gap-7 w-full md:w-1/2'>
-                        <div className='flex items-center justify-center'>
-                            <IoIosLock className='size-12' />
-                        </div>
-                        <p className='text-3xl md:text-5xl font-bold'>Your Health Data</p>
-                        <div className='text-3xl md:text-5xl font-bold flex justify-center'>
-                            <p className='bg-theme_color py-3 px-9 rounded-lg -rotate-6'>Is safe</p>
-                        </div>
-                    </div>
-                    <div className='w-full md:w-1/2'>
-                        <div className='flex p-5 text-white gap-3 font-semibold'>
-                            <div>
-                                <IoKeyOutline className='size-6 mt-1' /></div>
-                            <p className='text-base md:text-lg'>No personally identifiable information is required to utilize the Docus AI Health Assistant and its associated features.</p>
-                        </div>
-                        <div className='flex p-5 text-white gap-3 font-semibold'>
-                            <div>
-                                <GrShieldSecurity className='size-6 mt-1' /></div>
-                            <p className='text-base md:text-lg'>No personally identifiable information is required to utilize the Docus AI Health Assistant and its associated features.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+import React, { FC } from 'react'
+import { PiKey } from "react-icons/pi";
+import { CiLock } from "react-icons/ci";
+import { IoWarningOutline } from "react-icons/io5";
+import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import { SafeDataPoster } from "../../types/blogInterface";
+
+type LocalInterface = {
+    SafeData: SafeDataPoster
 }
 
-export default SafeData
+export const SafeData: React.FC<LocalInterface> = ({ SafeData }) => {
+
+    const { title, subtitle, content } = SafeData
+
+    const iconMapping: Record<string, React.ElementType> = {
+        Warning: IoWarningOutline,
+        Key: PiKey,
+        Security: IoShieldCheckmarkOutline,
+    }
+
+    return (
+        <div className='rounded-3xl flex p-5 md:p-16 gap-6 lg:gap-12 flex-col lg:flex-row' style={{ backgroundColor: "rgb(39, 42, 61)" }}>
+            <div className='flex flex-col justify-center text-center text-white gap-5 sm:gap-7 w-full lg:w-1/2'>
+                <div className='flex items-center justify-center'>
+                    <CiLock className='size-12' />
+                </div>
+                {title &&
+                    <p className='text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold'>{title}</p>}
+                <div className='text-2xl md:text-[46px] leading-[32px] font-bold flex justify-center'>
+                    <p className='bg-theme_color rounded-md -rotate-3 py-3 sm:py-4 px-8 sm:px-10 hover:scale-110 transition-all'>{subtitle}</p>
+                </div>
+            </div>
+            <div className='w-full lg:w-1/2'>
+                {content.map((item, index) => {
+                    const Icon = iconMapping[item.icon];
+                    return (
+                        <div key={index} className="flex lg:px-5 mt-6 text-white gap-4 font-semibold">
+                            <div><Icon className="size-6 mt-2" /></div>
+                            <p className="text-sm sm:text-lg">
+                                {item.text}
+                            </p>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    )
+}

@@ -203,6 +203,16 @@
         },
         "image": "./images/BlogPosterSection.webp"
     },
+    "OpinionPoster": {
+        "title": "How it works",
+        "description": "3 Accodians",
+        "button": {
+            "text": "Find Doctor",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "./images/Opinion-poster.webp"
+    },
     "symptoms": [
         {
             "title": "What Causes Fibromyalgia Rash and What Can You Do?",

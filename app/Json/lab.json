@@ -1,0 +1,190 @@
+{
+    "MainTitle": {
+        "LabAnalysisTitle": "Unlock the Power of Docus AI Lab Analysis",
+        "DoctorAnalysisTitle": "Transforming Healthcare with AI Doctor"
+    },
+    "LabAnalysis": [
+        {
+            "title": "In-depth Biomarker Analysis",
+            "description": "Our AI system simplifies complex lab data into clear, easy-to-understand visual interpretations.",
+            "features": [
+                {
+                    "icon": "🟢",
+                    "title": "Detailed Biomarker Information",
+                    "description": "See each biomarker's measured value, normal range, and status (normal, high, or low)."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "In-depth Explanations",
+                    "description": "Receive explanations for out-of-range values, including potential health risks and related conditions."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Trend Tracking",
+                    "description": "Monitor biomarker changes over time with dynamic graphs that highlight trends from various tests."
+                }
+            ],
+            "buttonText": "Explore Your Biomarkers",
+            "image": "./images/lab-analysis.webp"
+        },
+        {
+            "title": "Detailed Lab Test Reports",
+            "description": "Receive detailed lab test reports for better understanding and proactive health management. Each report includes:",
+            "features": [
+                {
+                    "icon": "🟢",
+                    "title": "Test Interpretation",
+                    "description": "Understand the meanings behind your test results with clear explanations."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Clinical Significance",
+                    "description": "Learn about the implications of your results and their potential impact on your health."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Recommendations",
+                    "description": "Receive actionable advice based on your lab results to help manage and improve your health."
+                }
+            ],
+            "buttonText": "Get Your Report",
+            "image": "./images/lab-analysis.webp"
+        },
+        {
+            "title": "Interaction with AI Doctor",
+            "description": "Consult our AI Doctor to clarify any questions about your lab results. It provides:",
+            "features": [
+                {
+                    "icon": "🟢",
+                    "title": "Detailed Explanations",
+                    "description": "Get clear answers to any additional questions about your lab tests, biomarker analysis, or lab test report."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Tailored Advice",
+                    "description": "Get practical steps and strategies tailored to improve your health."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Specialist Referrals",
+                    "description": "Access our network of 350+ top doctors for further expert consultation if needed."
+                }
+            ],
+            "buttonText": "Talk to AI Doctor",
+            "image": "./images/lab-analysis.webp"
+        }
+    ],
+    "DoctorAnalysis": [
+        {
+            "title": "Personalize Your Health Journey",
+            "description": "Complete your health profile to unlock a customized AI Doctor experience, tailored to your health needs.",
+            "features": [
+                {
+                    "icon": "🟢",
+                    "title": "Chat with Your Personal AI Doctor",
+                    "description": "Chat with an AI that knows your health history and provides responses and recommendations based on your personal health data."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Discover Your Health Risks",
+                    "description": "Identify potential health risks through an analysis of your health profile. Gain valuable insights with detailed explanations and recommendations."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Receive a Personal Checkup Plan",
+                    "description": "Based on your health data and identified risks, receive a customized checkup plan recommending key tests and screenings for proactive health management."
+                }
+            ],
+            "buttonText": "Start Journey",
+            "image": "./images/Doctor-analysis.webp"
+        },
+        {
+            "title": "Consult Your AI Doctor",
+            "description": "Share your symptoms, health condition, and any health-related questions while chatting with your AI Doctor.",
+            "features": [
+                {
+                    "icon": "🟢",
+                    "title": "Find Probability of Diseases (DDx)",
+                    "description": "Receive estimated probabilities of conditions that guide you toward understanding potential diagnoses."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Explore Treatment Options",
+                    "description": "Receive information on potential treatment options and other health recommendations to discuss with your doctor."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Generate Health Reports",
+                    "description": "Generate detailed reports from AI interactions to enhance discussions with your doctor."
+                }
+            ],
+            "buttonText": "Start Chat",
+            "image": "./images/ai-doctor-analysis.webp"
+        },
+        {
+            "title": "Validate Your Recommendationsr",
+            "description": "Continue your health journey. Validate your potential diagnosis and treatment strategy with top doctors from the US and Europe.",
+            "features": [
+                {
+                    "icon": "🟢",
+                    "title": "Identify the Right Specialty",
+                    "description": "Based on your health profile and conversations, your AI Doctor identifies the most relevant medical specialties for your condition."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Get Doctor Recommendations",
+                    "description": "Dr. AI recommends the most appropriate doctors from our extensive network of over 350 professionals for consultation."
+                },
+                {
+                    "icon": "🟢",
+                    "title": "Request a Consultation",
+                    "description": "Select an expert for a second opinion on your health condition and request a consultation through written feedback or a video call."
+                }
+            ],
+            "buttonText": "View Doctors",
+            "image": "./images/doctor-analysis (2).webp"
+        }
+    ],
+    "testTypes": [
+        {
+            "icon": "./images/Blood.webp",
+            "title": "Blood Test",
+            "description": "Overall health, immune system, organ function, etc."
+        },
+        {
+            "icon": "./images/Urin.webp",
+            "title": "Urine Test",
+            "description": "Kidney function, urinary tract infections, etc."
+        },
+        {
+            "icon": "./images/Swab.webp",
+            "title": "Swab Test",
+            "description": "Bacterial infections, viruses, fungal infections, etc."
+        },
+        {
+            "icon": "./images/Stool.webp",
+            "title": "Stool Test",
+            "description": "Digestive conditions, infections, parasites, etc."
+        },
+        {
+            "icon": "./images/PapSmear.webp",
+            "title": "Pap Smear",
+            "description": "Precancerous conditions, cervical cancer, HPV, etc."
+        },
+        {
+            "icon": "./images/Semen.webp",
+            "title": "Semen Analysis",
+            "description": "Sperm count, motility, morphology, fertility issues."
+        }
+    ],
+    "LabPoster": {
+        "title": "Uncover Key Insights of Your Lab Results",
+        "description": "Start managing your health smarter! Upload your lab tests, receive detailed interpretations and personalized recommendations from our AI Doctor, and take action based on informed insights.",
+        "button": {
+            "text": "Talk to AI Doctor",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "./images/lab-test-poster.webp"
+    }
+}
