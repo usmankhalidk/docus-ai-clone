@@ -7,11 +7,12 @@ import HomeAccordion from "./component/Home/HomeAccordion";
 import { SafeData } from "./component/Home/SafeData";
 
 import homedata from "./Json/home.json"
-
+import json from "./Json/Carousal.json"
+import Carousel from "./component/Home/Carousal";
 export default function HomePage() {
 
   const { SafeDataHome, HomeBenefitCards } = homedata
-
+  console.log("121221212", json)
   return (
     <>
       <HeroSection />
@@ -28,6 +29,7 @@ export default function HomePage() {
       <section className='flex items-center justify-center max-w-[1128px] mx-auto lg:px-16 lg:py-16 py-6 px-5'>
         <SafeData SafeData={SafeDataHome} />
       </section>
+      <Carousel description={json.Home.description} cards={json.Home.data} title={json.Home.title} />
       <HomeAccordion />
     </>
   );

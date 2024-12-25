@@ -1,39 +1,87 @@
-[
-    {
-      "text": "As an athlete, maintaining optimal health is crucial. Docus has been a game-changer for me. Its AI Doctor is amazing, providing insights that help me fine-tune my training regimen and nutrition. I'm so thrilled to have found Docus.",
-      "name": "Eric S.",
-      "imgSrc": "/images/Carousal/quotation.png",
-      "imageUrl": "/images/Carousal/testimonial_1.jpeg"
-    },
-    {
-      "text": "Dealing with health anxiety, every new symptom used to send me down a rabbit hole of worry and speculation. Discovering Docus has been transformative for my mental and physical well-being. Docus AI Doctor provides clear, concise insights, guiding me on when to seek professional help. It's been an essential tool in managing my health anxiety, helping me approach my concerns with calm and confidence.",
-      "name": "Alex T.",
-      "imgSrc": "/images/Carousal/quotation.png",
-      "imageUrl": "/images/Carousal/testimonial_2.jpeg"
-    },
-    {
-      "text": "Docus enabled me to conveniently secure a second opinion from a top US doctor, saving both time and travel expenses. I appreciate the seamless and hassle-free experience they provided, ensuring access to expert medical advice.",
-      "name": "Casey R.",
-      "imgSrc": "/images/Carousal/quotation.png",
-      "imageUrl": "/images/Carousal/testimonial_3.jpeg"
-    },
-    {
-      "text": "The speed and accuracy of the Docus AI Health Assistant were truly impressive. It provided me with the confidence I needed to proceed with my treatment, knowing that I had reliable guidance and support along the way.",
-      "name": "Peter S.",
-      "imgSrc": "/images/Carousal/quotation.png",
-      "imageUrl": "/images/Carousal/testimonial_4.jpeg"
-    },
-    {
-      "text": "Entering menopause was a bit daunting with all the changes my body started to go through. The Docus AI Doctor helped me identify my symptoms like hot flashes and mood swings as menopausal. Knowing what was happening gave me peace of mind and the confidence to seek the right treatment. I'm grateful for such a supportive tool.",
-      "name": "Aisha H.",
-      "imgSrc": "/images/Carousal/quotation.png",
-      "imageUrl": "/images/Carousal/testimonial_5.jpeg"
-    },
-    {
-      "text": "My son had recurring stomach aches, and I wasn't sure if it was his diet or something more serious. Docus AI Doctor suggested possible food intolerance and recommended seeing a specialist. It turned out to be lactose intolerance, and we've since adjusted his diet. I'm so grateful for the guidance that led us to find a solution.",
-      "name": "Sofia R.",
-      "imgSrc": "/images/Carousal/quotation.png",
-      "imageUrl": "/images/Carousal/testimonial_6.jpeg"
-    }
-  ]
-  
+{
+  "Home": {
+    "title": "Our Users Love Us",
+    "description":"Discover how Docus has transformed the way people understand and manage their health.",
+    "data": [
+      {
+        "text": "As an athlete, maintaining optimal health is crucial. Docus has been a game-changer for me. Its AI Doctor is amazing, providing insights that help me fine-tune my training regimen and nutrition. I'm so thrilled to have found Docus.",
+        "name": "Eric S.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_1.jpeg"
+      },
+      {
+        "text": "Dealing with health anxiety, every new symptom used to send me down a rabbit hole of worry and speculation. Discovering Docus has been transformative for my mental and physical well-being. Docus AI Doctor provides clear, concise insights, guiding me on when to seek professional help. It's been an essential tool in managing my health anxiety, helping me approach my concerns with calm and confidence.",
+        "name": "Alex T.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_2.jpeg"
+      },
+      {
+        "text": "Docus enabled me to conveniently secure a second opinion from a top US doctor, saving both time and travel expenses. I appreciate the seamless and hassle-free experience they provided, ensuring access to expert medical advice.",
+        "name": "Casey R.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_3.jpeg"
+      },
+      {
+        "text": "The speed and accuracy of the Docus AI Health Assistant were truly impressive. It provided me with the confidence I needed to proceed with my treatment, knowing that I had reliable guidance and support along the way.",
+        "name": "Peter S.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_4.jpeg"
+      },
+      {
+        "text": "Entering menopause was a bit daunting with all the changes my body started to go through. The Docus AI Doctor helped me identify my symptoms like hot flashes and mood swings as menopausal. Knowing what was happening gave me peace of mind and the confidence to seek the right treatment. I'm grateful for such a supportive tool.",
+        "name": "Aisha H.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_5.jpeg"
+      },
+      {
+        "text": "My son had recurring stomach aches, and I wasn't sure if it was his diet or something more serious. Docus AI Doctor suggested possible food intolerance and recommended seeing a specialist. It turned out to be lactose intolerance, and we've since adjusted his diet. I'm so grateful for the guidance that led us to find a solution.",
+        "name": "Sofia R.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_6.jpeg"
+      }
+    ]
+  },
+  "Other": {
+    "title": "Our Users Love Us",
+    "description":"Discover how Docus has transformed the way people understand and manage their health.",
+    "data": [
+      {
+        "text": "As an athlete, maintaining optimal health is crucial. Docus has been a game-changer for me. Its AI Doctor is amazing, providing insights that help me fine-tune my training regimen and nutrition. I'm so thrilled to have found Docus.",
+        "name": "Eric S.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_1.jpeg"
+      },
+      {
+        "text": "Dealing with health anxiety, every new symptom used to send me down a rabbit hole of worry and speculation. Discovering Docus has been transformative for my mental and physical well-being. Docus AI Doctor provides clear, concise insights, guiding me on when to seek professional help. It's been an essential tool in managing my health anxiety, helping me approach my concerns with calm and confidence.",
+        "name": "Alex T.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_2.jpeg"
+      },
+      {
+        "text": "Docus enabled me to conveniently secure a second opinion from a top US doctor, saving both time and travel expenses. I appreciate the seamless and hassle-free experience they provided, ensuring access to expert medical advice.",
+        "name": "Casey R.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_3.jpeg"
+      },
+      {
+        "text": "The speed and accuracy of the Docus AI Health Assistant were truly impressive. It provided me with the confidence I needed to proceed with my treatment, knowing that I had reliable guidance and support along the way.",
+        "name": "Peter S.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_4.jpeg"
+      },
+      {
+        "text": "Entering menopause was a bit daunting with all the changes my body started to go through. The Docus AI Doctor helped me identify my symptoms like hot flashes and mood swings as menopausal. Knowing what was happening gave me peace of mind and the confidence to seek the right treatment. I'm grateful for such a supportive tool.",
+        "name": "Aisha H.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_5.jpeg"
+      },
+      {
+        "text": "My son had recurring stomach aches, and I wasn't sure if it was his diet or something more serious. Docus AI Doctor suggested possible food intolerance and recommended seeing a specialist. It turned out to be lactose intolerance, and we've since adjusted his diet. I'm so grateful for the guidance that led us to find a solution.",
+        "name": "Sofia R.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_6.jpeg"
+      }
+    ]
+  }
+ 
+  }

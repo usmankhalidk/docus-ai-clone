@@ -15,13 +15,13 @@ interface CarouselProps {
     cards: Card[];
     title?: string;
     description?: string;
-    customSettings?: object; // Allows for additional `react-slick` settings.
+    customSettings?: object;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
     cards,
-    title = "Carousel Title",
-    description = "Carousel Description",
+    title,
+    description,
     customSettings = {}
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

@@ -22,9 +22,9 @@ import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import { MdGroups2 } from "react-icons/md";
 import Link from 'next/link'
 const products = [
-  { name: 'AI Doctor', href: '#', icon: HiChatBubbleLeftRight },
-  { name: 'Lab Test Interpretation', href: '#', icon: FaFlaskVial },
-  { name: 'Second Opinion', href: '#', icon: MdGroups2 },
+  { name: 'AI Doctor', href: 'ai-doctor', icon: HiChatBubbleLeftRight },
+  { name: 'Lab Test Interpretation', href: 'lab-test-interpretation', icon: FaFlaskVial },
+  { name: 'Second Opinion', href: 'second-opinion', icon: MdGroups2 },
 ]
 const Resources = [
   { name: 'Blog', href: 'blog' },
@@ -39,14 +39,14 @@ export default function Example() {
     <header className="bg-white fixed top-0 left-0 right-0 z-10 hidden lg:block">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-16">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               alt="Your Company Logo"
-              src="https://docus.ai/docus-dark-logo.svg"
+              src="/images/docus-logo.svg"
               className="h-9 w-auto"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -78,10 +78,10 @@ export default function Example() {
                       <item.icon aria-hidden="true" className="size-6 text-gray-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <Link href={item.href} className="block font-semibold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -108,10 +108,10 @@ export default function Example() {
                     className="group relative flex items-center rounded-lg  text-sm/6 hover:bg-gray-50"
                   >
                     <div className="flex-auto">
-                      <a href={item.href} className="block text-base text-gray-900 p-3 text-md">
+                      <Link href={item.href} className="block text-base text-gray-900 p-3 text-md">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -121,18 +121,25 @@ export default function Example() {
           </Popover>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5">
-          <a href="#" className="text-lg font-semibold text-gray-900 hover:text-button_color">
+          {/* Sign In link */}
+          <Link href="/login" className="text-lg font-semibold text-gray-900 hover:text-button_color">
             Sign in
-          </a>
-          <button
-            type="submit"
-            className="rounded-sm bg-button_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-button_color_onHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Get Started For Free
-          </button>
+          </Link>
+
+          {/* Get Started button */}
+          <Link href="/signup">
+            <button
+              type="submit"
+              className="rounded-sm bg-button_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-button_color_onHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Get Started For Free
+            </button>
+          </Link>
         </div>
       </nav>
     </header>
+
+
     <div className='flex items-center justify-between p-5'>
       <a href="#" className=" block lg:hidden ">
         <span className="sr-only">Your Company</span>

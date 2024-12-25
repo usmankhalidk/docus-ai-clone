@@ -23,7 +23,7 @@ export const Blog = () => {
 
     return (
         <div className="flex flex-col gap-8">
-            <section className="flex flex-col md:flex-row items-center py-8 mx-auto max-w-7xl lg:px-16 px-5">
+            <section className="flex flex-col md:flex-row items-center py-8 mx-auto max-w-7xl  lg:px-16 px-5">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold text-gray-800 mb-4">
                         {blogHeroSection.title}
@@ -67,7 +67,7 @@ export const Blog = () => {
 
             {/* Poster Section */}
             <section className="max-w-6xl mx-auto lg:px-16 py-0 sm:py-8 lg:py-16 px-5">
-                <Poster PosterData={BlogPoster} buttonColor="Green"/>
+                <Poster PosterData={BlogPoster} buttonColor="Green" />
             </section>
 
             {/* AI Cards Section */}

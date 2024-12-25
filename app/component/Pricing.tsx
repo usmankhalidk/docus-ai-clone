@@ -24,7 +24,9 @@ const Pricing = () => {
                     <span>Latest</span>
                 </label>
             </div>
-            <Forbes />
+            <section className="my-14 sm:my-20 flex items-center justify-center gap-8 md:gap-12 lg:gap-28 sm:flex-row flex-col">
+                <Forbes />
+            </section>
             <div className='mx-auto max-w-3xl px-5'>
                 <p className='text-4xl font-bold text-center mb-7'>
                     {json.HomeAccrodion.MainHeading}

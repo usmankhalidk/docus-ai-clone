@@ -4,9 +4,9 @@ import { IoIosStar } from "react-icons/io";
 const HeroSection = () => {
 
     return (
-        <div className='flex flex-row items-center mx-auto max-w-6xl mt-16 md:mt-28 px-5 md:px-0'>
+        <div className='flex flex-row items-center mx-auto max-w-6xl mt-10 sm:mt-16 md:mt-28 px-5  lg:px-0'>
             <div className='flex flex-col gap-8 w-full md:w-1/2 pr-5 '>
-                <p className='text-5xl font-bold line leading-snug'>
+                <p className='text-4xl sm:text-5xl md:text-5xl font-bold line leading-tight md:leading-snug'>
                     <p>Your Personal</p>
                     <p>Health Assistant</p>
                     <p className='text-theme_color'>Powered by AI</p>
