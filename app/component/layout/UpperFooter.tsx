@@ -1,7 +1,7 @@
 import React from "react";
 import footerData from '../../Json/footer.json';
 
-export const UpperFooter = () => {
+const UpperFooter = () => {
     // Destructure JSON data
     const {
         component: {
@@ -50,3 +50,4 @@ export const UpperFooter = () => {
 }
 
 
+export default UpperFooter;
