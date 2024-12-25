@@ -5,11 +5,10 @@ import labdata from "../Json/lab.json"
 import homedata from "../Json/home.json"
 import blogdata from "../Json/blog.json"
 import { SafeData } from "./Home/SafeData";
-import { HIPA } from "./Home/HIPA";
 import HomeAccordion from "./Home/HomeAccordion";
 import { Poster } from "./ui/Poster";
-import { AI } from "./ui/AI"
-import { LabAnalysis, MainTitle, Feature } from "../types/blogInterface";
+import { Counts } from "./ui/Counts";
+import { MainTitle } from "../types/blogInterface";
 import { Benefits } from "./Home/Benefits";
 import { Forbes } from "./Home/Forbes";
 
@@ -19,7 +18,7 @@ export const Opinion = () => {
     const { LabPoster } = labdata
     const { OpinionPoster } = blogdata
     const { MainTitle }: { MainTitle: MainTitle } = labdata
-    const { OpinionHeroSection, SafeDataOpinion, OpinionBenefitCards, Doctors, Counts } = homedata
+    const { OpinionHeroSection, SafeDataOpinion, OpinionBenefitCards, Doctors, OpinionCounts } = homedata
 
     return (
         <div>
@@ -33,15 +32,8 @@ export const Opinion = () => {
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto lg:px-16 py-2 px-5">
-                <div className="flex flex-col md:flex-row text-center justify-center gap-8 mb-14">
-                    {Counts.map((count, index) => (
-                        <div key={index}>
-                            <h2 className="text-4xl font-bold text-[#1A847C] mb-2">{count.value}</h2>
-                            <p className="text-gray-500 text-base font-semibold">{count.label}</p>
-                        </div>
-                    ))}
-                </div>
+            <section className="max-w-7xl mx-auto lg:px-16 py-2 px-5 mb-12 mt-2">
+                <Counts CountsData={OpinionCounts} />
             </section>
 
             <section className="max-w-7xl mx-auto lg:px-16 py-4 px-5">

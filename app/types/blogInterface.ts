@@ -13,7 +13,8 @@ export interface RootObject {
     DoctorAnalysis: DoctorAnalysis[];
     MainTitle: MainTitle;
     testTypes: Feature[];
-    Counts: Count[];
+    OpinionCounts: Count[];
+    LabCounts: Count[];
     Doctors: Doctor[];
     SafeData: SafeDataPoster;
     HomeBenefitCards: BenefitCardsData;

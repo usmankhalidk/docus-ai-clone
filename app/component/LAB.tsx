@@ -10,13 +10,14 @@ import { Poster } from "./ui/Poster";
 import { AI } from "./ui/AI"
 import { LabAnalysis, MainTitle, Feature } from "../types/blogInterface";
 import { Benefits } from "./Home/Benefits";
+import { Counts } from "./ui/Counts";
 
 // Main Section
 export const LAB = () => {
   const { LabAnalysis, MainTitle }: { LabAnalysis: LabAnalysis[], MainTitle: MainTitle } = labdata
   const { testTypes }: { testTypes: Feature[] } = labdata
   const { LabPoster } = labdata
-  const { SafeDataLab, LabBenefitCards } = homedata
+  const { SafeDataLab, LabBenefitCards, LabCounts } = homedata
   return (
     <div>
 
@@ -28,8 +29,12 @@ export const LAB = () => {
         <Benefits BenefitCardsData={LabBenefitCards} />
       </section>
 
+      <section className="max-w-7xl mx-auto lg:px-16 py-2 px-5 mb-12 mt-8">
+        <Counts CountsData={LabCounts} />
+      </section>
+
       <section className="max-w-7xl mx-auto lg:px-[108px] py-4 px-5">
-        <h1 className="text-3xl sm:text-[34px] lg:text-[38px] font-bold text-gray-800 md:text-center my-4 sm:my-8 lg:mt-16 lg:mb-12">{MainTitle.LabAnalysisTitle}</h1>
+        <h1 className="text-3xl sm:text-[34px] lg:text-[38px] font-bold text-gray-800 md:text-center my-4 sm:my-8 lg:mb-12">{MainTitle.LabAnalysisTitle}</h1>
         {LabAnalysis.map((data, index) => (
           <React.Fragment key={index}>
             <AI AnalysisData={data} isImageLeft={index === 1} />

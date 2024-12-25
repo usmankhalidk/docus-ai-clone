@@ -4,7 +4,7 @@
         "subtitle": "Verify your diagnosis and treatment strategy with top doctors from the US and Europe before making crucial health decisions."
     },
     "SafeDataLab": {
-        "title": "Your health data",
+        "title": "Your data",
         "subtitle": "Is safe",
         "content": [
             {
@@ -87,7 +87,6 @@
     "LabBenefitCards": {
         "title": "Simple Steps to Better Health",
         "subtitle": "Experience a streamlined process that turns your lab results into actionable health insights with just a few clicks.",
-        "buttonText": "Try Docus For Free",
         "content": [
             {
                 "icon": "ONE",
@@ -148,7 +147,7 @@
             }
         ]
     },
-    "Counts": [
+    "OpinionCounts": [
         {
             "value": "350+",
             "label": "Top doctors"
@@ -160,6 +159,20 @@
         {
             "value": "15+",
             "label": "Countries"
+        }
+    ],
+    "LabCounts": [
+        {
+            "value": "100+",
+            "label": "Blood Tests"
+        },
+        {
+            "value": "30+",
+            "label": "Urine Tests"
+        },
+        {
+            "value": "50+",
+            "label": "Other Tests"
         }
     ],
     "Doctors": [
