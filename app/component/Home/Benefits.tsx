@@ -2,6 +2,14 @@ import React from 'react'
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { FaPerson } from "react-icons/fa6";
 import { CgNotes } from "react-icons/cg";
+import { TbWorld } from "react-icons/tb";
+import { PiFlowerLotus } from "react-icons/pi";
+import { GoClockFill } from "react-icons/go";
+import { HiMiniCpuChip } from "react-icons/hi2";
+import { IoMan } from "react-icons/io5";
+import { RiNumber1 } from "react-icons/ri";
+import { RiNumber2 } from "react-icons/ri";
+import { RiNumber3 } from "react-icons/ri";
 import { BenefitCardsData } from "../../types/blogInterface"
 
 export const Benefits = ({ BenefitCardsData }: { BenefitCardsData: BenefitCardsData }) => {
@@ -9,9 +17,17 @@ export const Benefits = ({ BenefitCardsData }: { BenefitCardsData: BenefitCardsD
     const { title, subtitle, content, buttonText } = BenefitCardsData
 
     const iconMapping: Record<string, React.ElementType> = {
-        firstIcon: FaHandHoldingMedical,
-        secondIcon: FaPerson,
-        thirdIcon: CgNotes
+        Medical: FaHandHoldingMedical,
+        HealthSolutions: FaPerson,
+        Notes: CgNotes,
+        World: TbWorld,
+        Man: IoMan,
+        ONE: RiNumber1,
+        TWO: RiNumber2,
+        THREE: RiNumber3,
+        Clock: GoClockFill,
+        AIChip: HiMiniCpuChip,
+        Flower: PiFlowerLotus,
     }
 
     return (

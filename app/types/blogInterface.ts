@@ -50,7 +50,7 @@ export interface DoctorAnalysis {
 }
 export interface BenefitCardsData {
     title: string;
-    subtitle: string;
+    subtitle?: string;
     buttonText?: string;
     content: BenefitContent[];
 }

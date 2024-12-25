@@ -11,8 +11,6 @@ type LocalInterface = {
 
 export const SafeData: React.FC<LocalInterface> = ({ SafeData }) => {
 
-    // const { SafeData }: { SafeData: SafeDataPoster } = data
-
     const { title, subtitle, content } = SafeData
 
     const iconMapping: Record<string, React.ElementType> = {

@@ -68,83 +68,81 @@
         "buttonText": "Try Docus For Free",
         "content": [
             {
-                "icon": "firstIcon",
+                "icon": "Medical",
                 "cardtitle": "Proactive Preventive Care",
                 "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
             },
             {
-                "icon": "secondIcon",
+                "icon": "HealthSolutions",
                 "cardtitle": "Tailored Health Solutions",
                 "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
             },
             {
-                "icon": "thirdIcon",
+                "icon": "Notes",
                 "cardtitle": "In-Depth Health Insights",
                 "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
             }
         ]
     },
     "LabBenefitCards": {
-        "title": "Benefits of Personal AI Health Assistant",
-        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
+        "title": "Simple Steps to Better Health",
+        "subtitle": "Experience a streamlined process that turns your lab results into actionable health insights with just a few clicks.",
         "buttonText": "Try Docus For Free",
         "content": [
             {
-                "icon": "firstIcon",
-                "cardtitle": "Proactive Preventive Care",
-                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+                "icon": "ONE",
+                "cardtitle": "Upload Your Testse",
+                "text": "Upload your lab test results as PDFs, images, screenshots, or simply snap a picture. Our system supports various methods to ensure a smooth and easy process."
             },
             {
-                "icon": "secondIcon",
-                "cardtitle": "Tailored Health Solutions",
-                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+                "icon": "TWO",
+                "cardtitle": "Get AI-Powered Analysis",
+                "text": "Our AI Doctor analyzes your results using the latest medical guidelines. It evaluates biomarkers, identifies patterns, and assesses risk factors, ensuring that nothing is overlooked."
             },
             {
-                "icon": "thirdIcon",
-                "cardtitle": "In-Depth Health Insights",
-                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+                "icon": "THREE",
+                "cardtitle": "Receive Detailed Report",
+                "text": "Get a comprehensive lab test report that identifies abnormalities and their health implications, along with clear insights and practical suggestions."
             }
         ]
     },
     "DoctorBenefitCards": {
         "title": "Benefits of Docus AI Doctor",
-        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
         "buttonText": "Try Docus For Free",
         "content": [
             {
-                "icon": "firstIcon",
-                "cardtitle": "Proactive Preventive Care",
-                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+                "icon": "Clock",
+                "cardtitle": "24/7 Availability",
+                "text": "Dr. AI has no working hours and never gets tired. Use our chatbot anytime, anywhere, and ask as many questions as you want."
             },
             {
-                "icon": "secondIcon",
-                "cardtitle": "Tailored Health Solutions",
-                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+                "icon": "Medical",
+                "cardtitle": "Personalization",
+                "text": "AI Doctor screenings are tailored to your specific needs, health history, and even lifestyle habits, helping to closely align AI with medical diagnoses."
             },
             {
-                "icon": "thirdIcon",
-                "cardtitle": "In-Depth Health Insights",
-                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+                "icon": "AIChip",
+                "cardtitle": "Powered by NLP Models",
+                "text": "Our AI Doctor is driven by a natural language model, which enables it to approach your health inquiries with advanced intelligence and understanding."
             }
         ]
     },
     "OpinionBenefitCards": {
         "title": "Benefits for patients & caregivers",
-        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
         "buttonText": "Try Docus For Free",
         "content": [
             {
-                "icon": "firstIcon",
+                "icon": "World",
                 "cardtitle": "Proactive Preventive Care",
                 "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
             },
             {
-                "icon": "secondIcon",
+                "icon": "Man",
                 "cardtitle": "Tailored Health Solutions",
                 "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
             },
             {
-                "icon": "thirdIcon",
+                "icon": "Flower",
                 "cardtitle": "In-Depth Health Insights",
                 "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
             }
