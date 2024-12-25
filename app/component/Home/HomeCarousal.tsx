@@ -5,9 +5,9 @@ const HomeCarousal = () => {
     return (
         <>
             <Carousel
-                cards={cardData}
-                title="Make Informed Health Decisions"
-                description="We have all you need to better understand your health and make informed and accurate decisions about your well-being."
+                cards={cardData?.Home?.data}
+                title={cardData?.Home?.title}
+                description={cardData?.Home?.description}
             />
 
         </>
