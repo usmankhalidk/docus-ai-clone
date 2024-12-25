@@ -43,8 +43,7 @@
   },
   "aidoctor": {
     "title": "Hear From Our Users",
-    "description":"Discover how our AI Doctor has positively impacted lives.",
-    "data": [
+    "description":"Discover how our AI Doctor has positively impacted lives.","data": [
       {
         "text": "I've never felt more empowered in my health journey than I do with Docus AI Doctor. It provides instant, reliable health insights that are easy to understand. It's not intended to replace my doctor, but it complements my healthcare routine perfectly by offering a readily available second opinion. Everyone should use this!",
         "name": "Monica A.",
