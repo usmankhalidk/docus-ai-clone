@@ -6,7 +6,7 @@ const HealthInformed = () => {
         <>
             <div className='mx-auto max-w-6xl '>
                 <div className='px-5 md:px-0'>
-                    <p className='text-4xl font-bold text-center mb-6'>
+                    <p className='text-3xl sm:text-[34px] lg:text-[38px] font-bold text-center mb-6'>
                         Make Informed Health Decisions
                     </p>
                     <p className='text-lg text-center mb-6'>
@@ -15,7 +15,7 @@ const HealthInformed = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                         <div className='flex flex-col gap-3 p-6 hover:shadow-lg rounded-md border' style={{ backgroundColor: "rgb(245, 245, 245)" }}>
                             <img src="https://docus.ai/_next/image?url=%2Fhome%2Fservices%2Fhome_ai_doctor.png&w=1920&q=100" alt="" className='size-24' />
-                            <p className='text-3xl font-bold'>Personal AI Doctor</p>
+                            <p className='text-2xl md:text-3xl font-bold'>Personal AI Doctor</p>
                             <p className='text-lg'>Customize your personal AI Doctor. Simply complete your health profile, ask your health questions, and receive personalized, data-driven advice.</p>
                             <p className='text-base'><span className='text-theme_color'>✓ </span>Get tailored insights</p>
                             <p className='text-base'><span className='text-theme_color'>✓ </span> Discover your health risks</p>

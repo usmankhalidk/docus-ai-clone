@@ -1,17 +1,23 @@
 import React from "react";
 import { PosterInterface } from "../../types/blogInterface";
 
-export const Poster: React.FC<{ PosterData: PosterInterface }> = ({ PosterData }) => {
+type LocalInterface = {
+    PosterData: PosterInterface
+    buttonColor: string
+    posterClasses?: string
+}
+
+export const Poster: React.FC<LocalInterface> = ({ PosterData, buttonColor, posterClasses }) => {
 
     const { title, button, description, image } = PosterData;
     return (
-        <div className="flex flex-col md:flex-row items-center rounded-lg gap-x-8 lg:gap-x-24 bg-neutral-100 md:p-10 lg:p-20 p-5 border border-solid">
+        <div className={`flex flex-col md:flex-row items-center rounded-lg gap-x-8 lg:gap-x-24 bg-neutral-100 border border-solid p-5 md:p-10 lg:p-20 ${posterClasses}`}>
             <div className="md:w-1/2">
-                <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gray-800 lg:leading-[56px] mb-5">
+                <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-gray-800 lg:leading-[56px] mb-6">
                     {title}
                 </h2>
-                <p className="text-gray-600 text-base sm:text-lg mb-8">{description}</p>
-                <button className="bg-[#1A847C] text-white font-semibold py-3 px-6 rounded-[4px] hover:bg-[#12635C] transition-colors w-full md:w-fit text-center">
+                <p className="text-gray-600 text-base sm:text-lg mb-7">{description}</p>
+                <button className={`${buttonColor === "Green" ? "bg-theme_color" : "bg-button_color"} ${buttonColor === "Green" ? "hover:bg-theme_color_onHover" : "hover:bg-button_color_onHover"} text-white font-semibold py-3 px-6 rounded-[4px] transition-colors w-full md:w-fit text-center`}>
                     {button.text}
                 </button>
             </div>

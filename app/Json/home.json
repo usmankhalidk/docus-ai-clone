@@ -1,0 +1,208 @@
+{
+    "OpinionHeroSection": {
+        "title": "Get an online second opinion from Top Doctors",
+        "subtitle": "Verify your diagnosis and treatment strategy with top doctors from the US and Europe before making crucial health decisions."
+    },
+    "SafeDataLab": {
+        "title": "Your data",
+        "subtitle": "Is safe",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "We don't need any personally identifiable information to analyze your lab tests. Feel free to crop or black out any personal details."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
+    "SafeDataHome": {
+        "title": "Your data",
+        "subtitle": "Is secure",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "No personally identifiable information is required to utilize the Docus AI Health Assistant and its associated features."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
+    "SafeDataDoctor": {
+        "title": "Your health data",
+        "subtitle": "Is safe",
+        "content": [
+            {
+                "icon": "Warning",
+                "text": "No online tool can replace professional medical advice. Always consult a professional before taking any action."
+            },
+            {
+                "icon": "Key",
+                "text": "Docus AI Doctor doesn’t need any personally identifiable information to provide you with relevant insights and recommendations."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
+    "SafeDataOpinion": {
+        "subtitle": "Disclaimer",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "Docus AI Health Assistant is not a real doctor, even though it is trained on a vast amount of medical data. Unless reviewed by your local physician, the provided information is for educational and general purposes only."
+            },
+            {
+                "icon": "Security",
+                "text": "We strongly recommend not to share any personally identifiable information while using Docus AI Health Assistant. Before sharing any information, please ensure all direct identifiers such as your name, address, or social security number are removed."
+            }
+        ]
+    },
+    "HomeBenefitCards": {
+        "title": "Benefits of Personal AI Health Assistant",
+        "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "Medical",
+                "cardtitle": "Proactive Preventive Care",
+                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+            },
+            {
+                "icon": "HealthSolutions",
+                "cardtitle": "Tailored Health Solutions",
+                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+            },
+            {
+                "icon": "Notes",
+                "cardtitle": "In-Depth Health Insights",
+                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+            }
+        ]
+    },
+    "LabBenefitCards": {
+        "title": "Simple Steps to Better Health",
+        "subtitle": "Experience a streamlined process that turns your lab results into actionable health insights with just a few clicks.",
+        "content": [
+            {
+                "icon": "ONE",
+                "cardtitle": "Upload Your Testse",
+                "text": "Upload your lab test results as PDFs, images, screenshots, or simply snap a picture. Our system supports various methods to ensure a smooth and easy process."
+            },
+            {
+                "icon": "TWO",
+                "cardtitle": "Get AI-Powered Analysis",
+                "text": "Our AI Doctor analyzes your results using the latest medical guidelines. It evaluates biomarkers, identifies patterns, and assesses risk factors, ensuring that nothing is overlooked."
+            },
+            {
+                "icon": "THREE",
+                "cardtitle": "Receive Detailed Report",
+                "text": "Get a comprehensive lab test report that identifies abnormalities and their health implications, along with clear insights and practical suggestions."
+            }
+        ]
+    },
+    "DoctorBenefitCards": {
+        "title": "Benefits of Docus AI Doctor",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "Clock",
+                "cardtitle": "24/7 Availability",
+                "text": "Dr. AI has no working hours and never gets tired. Use our chatbot anytime, anywhere, and ask as many questions as you want."
+            },
+            {
+                "icon": "Medical",
+                "cardtitle": "Personalization",
+                "text": "AI Doctor screenings are tailored to your specific needs, health history, and even lifestyle habits, helping to closely align AI with medical diagnoses."
+            },
+            {
+                "icon": "AIChip",
+                "cardtitle": "Powered by NLP Models",
+                "text": "Our AI Doctor is driven by a natural language model, which enables it to approach your health inquiries with advanced intelligence and understanding."
+            }
+        ]
+    },
+    "OpinionBenefitCards": {
+        "title": "Benefits for patients & caregivers",
+        "buttonText": "Try Docus For Free",
+        "content": [
+            {
+                "icon": "World",
+                "cardtitle": "Proactive Preventive Care",
+                "text": "Utilize predictive analytics and expert advice to identify and manage health risks early, ensuring your long-term wellness."
+            },
+            {
+                "icon": "Man",
+                "cardtitle": "Tailored Health Solutions",
+                "text": "Get health support tailored to your needs with personalized plans and strategies, available 24/7 to seamlessly fit your lifestyle."
+            },
+            {
+                "icon": "Flower",
+                "cardtitle": "In-Depth Health Insights",
+                "text": "Gain a deeper understanding of your health with clear, actionable insights, helping you make informed decisions effortlessly."
+            }
+        ]
+    },
+    "OpinionCounts": [
+        {
+            "value": "350+",
+            "label": "Top doctors"
+        },
+        {
+            "value": "100+",
+            "label": "Subspecialties"
+        },
+        {
+            "value": "15+",
+            "label": "Countries"
+        }
+    ],
+    "LabCounts": [
+        {
+            "value": "100+",
+            "label": "Blood Tests"
+        },
+        {
+            "value": "30+",
+            "label": "Urine Tests"
+        },
+        {
+            "value": "50+",
+            "label": "Other Tests"
+        }
+    ],
+    "Doctors": [
+        {
+            "name": "Marco Siano",
+            "country": "Switzerland",
+            "experience": "22 years of experience",
+            "specialty": "Oncology",
+            "image": "./images/doctor-1.webp"
+        },
+        {
+            "name": "Francesco DiMeco",
+            "country": "Italy",
+            "experience": "36 years of experience",
+            "specialty": "Neurosurgery",
+            "image": "./images/doctor-2.webp"
+        },
+        {
+            "name": "Christian Thaler",
+            "country": "Germany",
+            "experience": "40 years of experience",
+            "specialty": "Gynecology, Reproductive Medicine",
+            "image": "./images/doctor-3.webp"
+        },
+        {
+            "name": "Madhusmita Misra",
+            "country": "United States",
+            "experience": "38 years of experience",
+            "specialty": "Pediatric Endocrinology",
+            "image": "./images/doctor-4.webp"
+        }
+    ]
+}

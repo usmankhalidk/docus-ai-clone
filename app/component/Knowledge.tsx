@@ -52,7 +52,7 @@ export const Knowledge = () => {
 
             {/* Poster Section */}
             <section className="max-w-6xl mx-auto lg:px-16 py-0 sm:py-8 lg:py-16 px-5 mb-12 sm:mb-14">
-                <Poster PosterData={KnowledgePoster} />
+                <Poster PosterData={KnowledgePoster} buttonColor="Green" />
             </section>
 
         </div>
