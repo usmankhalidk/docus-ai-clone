@@ -27,7 +27,7 @@ const UpperFooter = () => {
                 {/* Button */}
                 <div className="px-5 lg:w-1/2 mx-auto">
                     <button
-                        className="rounded-[4px] bg-button_color px-6 py-3 text-lg font-semibold text-white shadow-sm mt-6 w-full lg:w-fit bg-[#E95D53] hover:bg-[#D2544B]"
+                        className="rounded-[4px] bg-button_color px-6 py-3 text-lg font-semibold text-white shadow-sm mt-6 w-full lg:w-fit  hover:bg-[#D2544B]"
                         style={{
                             color: buttonTextColor
                         }}
