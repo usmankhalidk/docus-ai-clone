@@ -185,6 +185,80 @@
             "action": "redirect",
             "url": "/try-docus"
         },
-        "image": "./images/lab-test-poster.webp"
-    }
+        "image": "../images/lab-test-poster.webp"
+    },
+    "BloodTestPoster": {
+        "title": "Blood Tests Matter",
+        "description": "Blood tests are a fundamental tool in modern healthcare to diagnose diseases, monitor organ function, check for infections, and evaluate overall health. Understanding these results helps in proactive health management and early detection of potential issues.",
+        "button": {
+            "text": "Start Your Free Analysis",
+            "action": "redirect",
+            "url": "/try-docus"
+        },
+        "image": "../images/lab-analysis.webp"
+    },
+    "SpecialistDoctors": [
+        {
+            "title": "Best Neurologists and Brain Doctors at Docus",
+            "description": "Consult the best neurologists and brain doctors from the US and Europe. Obtain reliable second opinions and navigate your neurological concerns with confidence."
+        },
+        {
+            "title": "Best Urologists and Kidney Doctors at Docus",
+            "description": "Consult top urologists and kidney doctors for trusted second opinions at Docus. Navigate your urological health journey with leading professionals."
+        },
+        {
+            "title": "Best Cardiologists and Heart Doctors at Docus",
+            "description": "Connect with top cardiologists and heart doctors from the US and Europe for a trusted second opinion. Ensure informed decisions for your heart's well-being."
+        },
+        {
+            "title": "Best Oncologists and Cancer Doctors at Docus",
+            "description": "Consult top oncologists and cancer doctors at Docus. Gain deeper insights into your health with a professional second opinion."
+        },
+        {
+            "title": "Best Endocrinologists and Thyroid Doctors at Docus",
+            "description": "Consult top endocrinologists and thyroid doctors from the US and EU for a second opinion. Make informed decisions for your endocrine and thyroid health."
+        },
+        {
+            "title": "Best Reproductive Endocrinologists and Fertility Doctors",
+            "description": "Consult leading fertility doctors and reproductive experts from the US and Europe for a reliable second opinion. Make smart choices for your fertility."
+        }
+    ],
+    "TestTypes": [
+        {
+            "title": "Complete Blood Count (CBC)",
+            "description": "Assesses overall health and detects disorders like anemia and infection."
+        },
+        {
+            "title": "Metabolic Panel",
+            "description": "Measures glucose, electrolytes, and liver and kidney function."
+        },
+        {
+            "title": "Lipid Panel",
+            "description": "Evaluates cardiovascular disease risk by analyzing cholesterol levels."
+        },
+        {
+            "title": "Thyroid Function Tests",
+            "description": "Checks thyroid performance to help diagnose its disorders."
+        },
+        {
+            "title": "Hormone Tests",
+            "description": "Monitors hormones related to fertility, menstruation, and more."
+        },
+        {
+            "title": "Inflammation Tests",
+            "description": "Identifies inflammation and infections in the body."
+        },
+        {
+            "title": "Nutritional Tests",
+            "description": "Determines levels of essential nutrients like iron or vitamin D."
+        },
+        {
+            "title": "Coagulation Panel",
+            "description": "Assesses blood clotting function and monitors anticoagulant therapy."
+        },
+        {
+            "title": "Viral Marker Tests",
+            "description": "Detects common viral infections like HIV and hepatitis."
+        }
+    ]
 }

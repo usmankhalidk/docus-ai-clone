@@ -20,6 +20,7 @@ export interface RootObject {
     HomeBenefitCards: BenefitCardsData;
     LabBenefitCards: BenefitCardsData;
     DoctorBenefitCards: BenefitCardsData;
+    SpecialistDoctors: SpecialistDoctor[];
 }
 export type Card = BlogCards & GlossaryCards;
 export interface BlogCards {
@@ -70,6 +71,10 @@ export interface Doctor {
 export interface Count {
     value: string;
     label: string;
+}
+export interface SpecialistDoctor {
+    title: string;
+    description: string;
 }
 export interface QusetionsBlock {
     title: string;

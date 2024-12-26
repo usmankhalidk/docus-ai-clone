@@ -62,6 +62,20 @@
             }
         ]
     },
+    "SafeDataBloodTest": {
+        "title": "Your data",
+        "subtitle": "Is secure",
+        "content": [
+            {
+                "icon": "Key",
+                "text": "We don't need any personally identifiable information to analyze your lab tests. Feel free to crop or black out any personal details."
+            },
+            {
+                "icon": "Security",
+                "text": "Any data shared while using our services is safeguarded by advanced security protocols, ensuring compliance with HIPAA and GDPR."
+            }
+        ]
+    },
     "HomeBenefitCards": {
         "title": "Benefits of Personal AI Health Assistant",
         "subtitle": "We have all you need to better understand your health and make informed and accurate decisions about your well-being.",
@@ -147,6 +161,28 @@
             }
         ]
     },
+    "BloodTestBenefitCards": {
+        "title": "How It Works",
+        "subtitle": "Unlock insights from your blood tests in three easy steps: upload, analyze, and understand.",
+        "buttonText": "Get Started Now",
+        "content": [
+            {
+                "icon": "ONE",
+                "cardtitle": "Upload Your Tests",
+                "text": "Securely upload your blood results to our platform. It's quick and easy, with support for multiple file formats."
+            },
+            {
+                "icon": "TWO",
+                "cardtitle": "Analysis by Docus AI Doctor",
+                "text": "Our advanced AI immediately analyzes your results, focusing on critical health indicators and biomarkers."
+            },
+            {
+                "icon": "THREE",
+                "cardtitle": "Receive Your Report",
+                "text": "Receive a comprehensive blood test report with clear interpretations, actionable insights, and tailored health recommendations."
+            }
+        ]
+    },
     "OpinionCounts": [
         {
             "value": "350+",
@@ -163,16 +199,26 @@
     ],
     "LabCounts": [
         {
-            "value": "100+",
+            "value": "100k+",
             "label": "Blood Tests"
         },
         {
-            "value": "30+",
+            "value": "30k+",
             "label": "Urine Tests"
         },
         {
-            "value": "50+",
+            "value": "50k+",
             "label": "Other Tests"
+        }
+    ],
+    "BloodTestCounts": [
+        {
+            "value": "100k+",
+            "label": "Blood Tests Interpreted"
+        },
+        {
+            "value": "500k+",
+            "label": "Blood Biomarkers Analyzed"
         }
     ],
     "Doctors": [
