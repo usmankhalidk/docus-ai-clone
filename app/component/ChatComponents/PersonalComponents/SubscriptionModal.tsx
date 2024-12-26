@@ -64,7 +64,7 @@ const Feature: React.FC<{ feature: Feature }> = ({ feature }) => (
 const PricingCard: React.FC<{ option: PricingOption }> = ({ option }) => (
   <button className={`p-4 border rounded-lg ${option.savings ? 'bg-blue-50 hover:bg-blue-100' : 'hover:bg-gray-50'} transition-colors`}>
     <div className="flex items-center justify-between mb-2">
-      <span className="text-lg font-semibold">${option.price}/{option.interval}</span>
+      <span className="text-lg font-semibold text-teal-600">${option.price}/{option.interval}</span>
       {option.savings && (
         <span className="bg-teal-500 text-white text-xs px-2 py-1 rounded">
           Save {option.savings.percentage}%
@@ -106,9 +106,9 @@ const SubscriptionModal: React.FC<SubscriptionModalProps> = ({ isOpen, onClose }
         {/* Content */}
         <div className="text-center mb-6">
           <div className="text-red-500 text-sm mb-2">Message limit reached.</div>
-          <h3 className="text-xl font-semibold mb-4">🚀 Unlock full experience!</h3>
+          <h3 className="text-xl font-semibold mb-4 text-black">🚀 Unlock full experience!</h3>
           
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-600">
             {FEATURES.map((feature, index) => (
               <Feature key={index} feature={feature} />
             ))}

@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --background: #FFFFFF;
+  --background: #ffffff;
   --foreground: #171717 !important;
 }
+
+
+
 body {
   color: #171717 !important;
   background: var(--background);
@@ -19,22 +22,25 @@ body {
   :root {
     --color-text-base: #171717;
     --color-text-muted: #595959;
-    --color-text-inverted: #FFFFFF;
-    --color-fill: #FFFFFF;
+    --color-text-inverted: #ffffff;
+    --color-fill: #ffffff;
     --color-button-accent: rgb(26, 132, 124);
     --color-button-accent-hover: rgba(26, 132, 124, 0.9);
     --color-button-muted: rgb(233, 93, 83);
   }
+
   .dark {
     --color-text-base: #171717;
     --color-text-muted: #595959;
-    --color-text-inverted: #FFFFFF;
-    --color-fill: #FFFFFF;
+    --color-text-inverted: #ffffff;
+    --color-fill: #ffffff;
     --color-button-accent: rgb(26, 132, 124);
     --color-button-accent-hover: rgba(26, 132, 124, 0.9);
     --color-button-muted: rgb(233, 93, 83);
   }
 }
+
+
 .switch {
   --_switch-bg-clr: #70A9C5;
   --_switch-padding: 2px;

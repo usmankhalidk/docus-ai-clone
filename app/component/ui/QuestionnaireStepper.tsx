@@ -22,7 +22,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
   questions,
   basePath,
 }) => {
-  const router = useRouter();
+    const router = useRouter();
   const pathname = usePathname();
 
   const [mounted, setMounted] = useState(false);
@@ -51,7 +51,6 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
 
   const calculateProgress = () => {
     if (currentStep === null) return 0;
-    // Now dividing by total steps (questions.length) instead of (questions.length - 1)
     return ((currentStep) / (questions.length)) * 100;
   };
 
@@ -74,7 +73,8 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
           (!currentAnswer.answer || 
            (currentAnswer.answer && 
             currentAnswer.selectedOptions && 
-            currentAnswer.selectedOptions.length > 0));
+            currentAnswer.selectedOptions.length > 0 &&
+            currentAnswer.text?.trim()));
       default:
         return false;
     }
@@ -93,7 +93,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
         setIsSaving(false);
         setShowCongratulations(true);
         setTimeout(() => {
-          router.push("/dashboard");
+          router.push("/dashboard/chat");
         }, 3000);
       }, loadingMessages.length * 2000);
     }
@@ -182,7 +182,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
               className={`w-full px-5 py-2 rounded-md border ${
                 answers[currentStep!]?.answer === false
                   ? "bg-teal-50 border-teal-200 text-teal-700"
-                  : "border-gray-200 hover:bg-gray-50"
+                  : "bg-teal-50  hover:border-teal-200 text-black"
               }`}
             >
               No
@@ -210,7 +210,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 className={`w-full px-5 py-2 rounded-md border ${
                   answers[currentStep!]?.answer === false
                     ? "bg-teal-50 border-teal-200 text-teal-700"
-                    : "border-gray-200 hover:bg-gray-50"
+                    : "bg-teal-50  hover:border-teal-200 text-black"
                 }`}
               >
                 No
@@ -221,7 +221,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 className={`w-full px-5 py-2 rounded-md border ${
                   answers[currentStep!]?.answer === true
                     ? "bg-teal-50 border-teal-200 text-teal-700"
-                    : "border-gray-200 hover:bg-gray-50"
+                    : "bg-teal-50  hover:border-teal-200 text-black"
                 }`}
               >
                 Yes
@@ -250,7 +250,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 className={`w-full px-5 py-2 rounded-md border ${
                   answers[currentStep!]?.answer === false
                     ? "bg-teal-50 border-teal-200 text-teal-700"
-                    : "border-gray-200 hover:bg-gray-50"
+                    : "bg-teal-50  hover:border-teal-200 text-black"
                 }`}
               >
                 No
@@ -261,29 +261,40 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 className={`w-full px-5 py-2 rounded-md border ${
                   answers[currentStep!]?.answer === true
                     ? "bg-teal-50 border-teal-200 text-teal-700"
-                    : "border-gray-200 hover:bg-gray-50"
+                    : "bg-teal-50  hover:border-teal-200 text-black"
                 }`}
               >
                 Yes
               </button>
             </div>
             {answers[currentStep!]?.answer === true && (
-              <div className="mt-4 space-y-2">
-                {question.options?.map((option) => (
-                  <label
-                    key={option}
-                    className="flex items-center space-x-2 p-2 border rounded-md hover:bg-gray-50 cursor-pointer"
-                  >
-                    <input
-  type="checkbox"
-  checked={answers[currentStep!]?.selectedOptions?.includes(option) || false}
-  onChange={() => handleOptionToggle(option)}
-  className="h-4 w-4 text-teal-600 accent-teal-600 focus:ring-teal-600 focus:ring-offset-0"
-/>
-                    <span>{option}</span>
-                  </label>
-                ))}
-              </div>
+              <>
+                <div className="mt-4 space-y-2">
+                  {question.options?.map((option) => (
+                    <label
+                      key={option}
+                      className="text-black flex items-center space-x-2 p-2 border rounded-md hover:bg-gray-50 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={answers[currentStep!]?.selectedOptions?.includes(option) || false}
+                        onChange={() => handleOptionToggle(option)}
+                        className=" h-4 w-4 text-teal-600 accent-teal-600 focus:ring-teal-600 focus:ring-offset-0"
+                      />
+                      <span>{option}</span>
+                    </label>
+                  ))}
+                </div>
+                <div className="mt-4">
+                  <textarea
+                    className="w-full p-2 border rounded-md text-black"
+                    rows={4}
+                    value={answers[currentStep!]?.text || ""}
+                    onChange={(e) => handleTextInput(e.target.value)}
+                    placeholder="Please provide additional details..."
+                  />
+                </div>
+              </>
             )}
           </div>
         );
@@ -335,7 +346,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
             Your medical history has been successfully updated.
           </p>
           <p className="text-gray-600 mt-2">
-            Redirecting to dashboard...
+            Redirecting to ai doctor...
           </p>
         </div>
       </div>
@@ -413,7 +424,7 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
                 }}
               >
                 <FaDiamond
-                  className={`w-2 h-2 ${
+                  className={`w-2 h-2 translate-x-1 ${
                     progressPercentage === 100 ? "text-white" : "text-teal-600"
                   }`}
                   aria-hidden="true"
@@ -432,10 +443,10 @@ const QuestionnaireStepper: React.FC<QuestionnaireStepperProps> = ({
           <div className="mb-8">
             {currentStep < questions.length ? (
               <>
-                <h2 className="text-lg font-medium mb-3">
+                <h2 className="text-lg font-medium mb-3 text-black text-[14px]">
                   {questions[currentStep].title}
                 </h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 text-[12px]">
                   {questions[currentStep].description}
                 </p>
                 {renderQuestion()}

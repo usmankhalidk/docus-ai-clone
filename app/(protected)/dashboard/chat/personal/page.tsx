@@ -20,14 +20,7 @@ const suggestedQuestions: SuggestedQuestion[] = [
 ];
 
 export default function Chat() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      content: "Hello! I'm here to help with any health concerns you may have, whether they're new or ongoing. How can I assist you today?",
-      sender: 'ai',
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 

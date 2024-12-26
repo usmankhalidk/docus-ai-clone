@@ -47,7 +47,7 @@ export default function DashboardPage() {
           </Link>
 
           {/* Lab Tests & Screenings */}
-          <Link href="/lab-tests" passHref>
+          <Link href="/dashboard/test-results/incomplete" passHref>
             <div className="bg-violet-500/10 p-4 rounded-lg shadow border-violet-600/10 border flex flex-wrap justify-between cursor-pointer">
               <h2 className="text-base md:text-lg font-semibold w-full sm:w-48 break-words mb-2 sm:mb-0">Lab Tests & Screenings</h2>
               <div className="mt-2 flex justify-end w-full sm:w-auto sm:mt-0">
@@ -57,7 +57,7 @@ export default function DashboardPage() {
           </Link>
 
           {/* Checkup Plan */}
-          <Link href="/checkup-plan" passHref>
+          <Link href="#" passHref aria-disabled>
             <div className="bg-white p-4 rounded-lg shadow flex flex-wrap justify-between cursor-pointer">
               <div>
                 <h2 className="text-base md:text-lg font-semibold w-full sm:w-48 break-words mb-2 sm:mb-0">Checkup Plan</h2>
@@ -70,7 +70,7 @@ export default function DashboardPage() {
           </Link>
 
           {/* Health Reports */}
-          <Link href="/health-reports" passHref>
+          <Link href="#" passHref>
             <div className="bg-white p-4 rounded-lg shadow flex flex-wrap justify-between cursor-pointer">
               <div>
                 <h2 className="text-base md:text-lg font-semibold w-full sm:w-48 break-words mb-2 sm:mb-0">Health Reports</h2>
@@ -84,7 +84,7 @@ export default function DashboardPage() {
 
           {/* Consult Top Doctors */}
           <div className="col-span-2 ">
-          <Link href="/top-doctors" passHref> 
+          <Link href="/dashboard/experts" passHref> 
           <div className='bg-white p-4 rounded-lg shadow flex items-center justify-between'>
             <div>
               <h2 className="text-base md:text-lg font-semibold">Consult Top Doctors</h2>
