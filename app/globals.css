@@ -4,7 +4,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #171717 !important;
 }
 
 
@@ -13,6 +13,11 @@ body {
   color: #171717 !important;
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: black !important;  /* Black in dark mode as well */
+  }
 }
 @layer base {
   :root {
