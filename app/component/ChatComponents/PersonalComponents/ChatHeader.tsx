@@ -1,61 +1,61 @@
-import React from 'react';
+'use client';
 
-import { Dropdown, Menu, Button } from 'antd';
+import { Dropdown, Button } from 'antd';
+import type { MenuProps } from 'antd';
 import { FaChevronDown, FaPlus } from 'react-icons/fa';
-import { BiMicrochip } from 'react-icons/bi';
+import Image from 'next/image';
+import AIMemoryModal from '../../ui/AIMemoryModal';
+import ChatModeSelector from '../../ui/ChatModeSelector';
+import { useRouter } from 'next/navigation';
 
-const ChatHeader = () => {
-  const menu = (
-    <Menu>
-      <Menu.Item key="1" className="flex items-center space-x-2">
-        <img
-          src="/api/placeholder/24/24"
+
+const items: MenuProps['items'] = [
+  {
+    key: '1',
+    label: (
+      <div className="flex items-center space-x-2">
+        <Image
+          src="/placeholder.svg"
           alt="General Chat"
-          className="w-6 h-6 rounded-full"
+          width={24}
+          height={24}
+          className="rounded-full"
         />
         <span>General Chat</span>
-      </Menu.Item>
-      <Menu.Item key="2" className="flex items-center space-x-2">
-        <img
-          src="/api/placeholder/24/24"
+      </div>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <div className="flex items-center space-x-2">
+        <Image
+          src="/placeholder.svg"
           alt="Health Chat"
-          className="w-6 h-6 rounded-full"
+          width={24}
+          height={24}
+          className="rounded-full"
         />
         <span>Health Chat</span>
-      </Menu.Item>
-    </Menu>
-  );
+      </div>
+    ),
+  },
+];
 
+export default function ChatHeader() {
+  const router = useRouter();
   return (
-    <div className="border-b border-gray-200">
+    <div className=" bg-white">
       <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Left side - Dropdown */}
-        <Dropdown overlay={menu} trigger={['click']}>
-          <Button className="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-md">
-            <div className="flex items-center">
-              <img
-                src="/api/placeholder/32/32"
-                alt="AI Doctor"
-                className="w-8 h-8 rounded-full"
-              />
-              <span className="ml-2 font-medium">usman's AI Doctor</span>
-              <FaChevronDown className="ml-2 h-4 w-4 text-gray-500" />
-            </div>
-          </Button>
-        </Dropdown>
+       <ChatModeSelector/>
 
-        {/* Right side - Buttons */}
         <div className="flex items-center space-x-2">
-          <Button className="p-2 hover:bg-gray-100 rounded-full">
-            <BiMicrochip className="h-5 w-5 text-gray-600" />
-          </Button>
-          <Button className="p-2 hover:bg-gray-100 rounded-full">
-            <FaPlus className="h-5 w-5 text-gray-600" />
+          <AIMemoryModal />
+          <Button type="text" className="flex items-center justify-center w-12 h-12" onClick={()=>router.push('/dashboard/chat')}>
+            <FaPlus className="w-12 h-12 text-gray-600" />
           </Button>
         </div>
       </div>
     </div>
   );
-};
-
-export default ChatHeader;
+}
