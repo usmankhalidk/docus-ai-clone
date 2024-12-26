@@ -21,6 +21,9 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
     pathname?.startsWith(route)
   );
 
+  // Check if the current path is "/contact"
+  const isContactPage = pathname === '/contact';
+
   if (shouldHideHeaderFooter) {
     return <>{children}</>;
   }
@@ -29,7 +32,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
     <>
       <Header />
       {children}
-      <UpperFooter />
+      {!isContactPage && <UpperFooter />}
       <Footer />
     </>
   );

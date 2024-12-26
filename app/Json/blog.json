@@ -211,7 +211,7 @@
             "action": "redirect",
             "url": "/try-docus"
         },
-        "image": "./images/Opinion-poster.webp"
+        "image": "../images/Opinion-poster.webp"
     },
     "symptoms": [
         {

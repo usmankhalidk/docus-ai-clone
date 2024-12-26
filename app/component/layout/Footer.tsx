@@ -17,16 +17,16 @@ const Footer = () => {
                         <p className="mt-8 text-gray-600">Improving human health through the combination of cutting-edge technologies and top medical expertise.</p>
                         <div className="flex space-x-4 mt-6">
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="./images/twitter.png" alt="Twitter" className="w-6 h-6" />
+                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
                             </a>
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="./images/twitter.png" alt="Twitter" className="w-6 h-6" />
+                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
                             </a>
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="./images/twitter.png" alt="Twitter" className="w-6 h-6" />
+                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
                             </a>
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="./images/twitter.png" alt="Twitter" className="w-6 h-6" />
+                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
                             </a>
                         </div>
                     </div>
