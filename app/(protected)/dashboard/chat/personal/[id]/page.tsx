@@ -57,7 +57,7 @@ export default function ChatPage() {
       sender: 'user',
       timestamp: new Date()
     };
-    
+
     setMessages(prev => [...prev, userMessage]);
 
     // Add loading message
@@ -68,13 +68,13 @@ export default function ChatPage() {
       timestamp: new Date(),
       loading: true
     };
-    
+
     setMessages(prev => [...prev, loadingMessage]);
 
     // Simulate AI response
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       // Remove loading message and add AI response
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -98,7 +98,7 @@ export default function ChatPage() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-50">
-      
+
       <div className="flex-1 overflow-y-auto p-4">
         {isLoading ? (
           <>
@@ -107,9 +107,9 @@ export default function ChatPage() {
           </>
         ) : (
           <>
-            {messages.map((message) => (
-              <ChatMessage key={message.id} message={message} />
-            ))}
+            
+              <ChatMessage messages={messages} />
+           
             {messages.length === 0 && (
               <div className="text-center text-gray-500 mt-8">
                 No messages yet. Start a conversation!
@@ -122,10 +122,10 @@ export default function ChatPage() {
           onQuestionSelect={handleQuestionSelect}
         />
       </div>
-      <ChatInput 
-        onSendMessage={handleSendMessage} 
+      <ChatInput
+        onSendMessage={handleSendMessage}
         messagesLeft={messagesLeft}
-        disabled={isLoading} 
+        disabled={isLoading}
       />
     </div>
   );

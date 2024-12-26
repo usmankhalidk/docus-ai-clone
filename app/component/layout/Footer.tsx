@@ -1,7 +1,7 @@
 import React from 'react';
 import footerData from '../../Json/footer.json'
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer className="bg-[#F5F8F8] p-5 py-12">
             <div className="mx-auto max-w-7xl lg:px-16">
@@ -62,3 +62,5 @@ export const Footer = () => {
         </footer>
     )
 }
+
+export default Footer

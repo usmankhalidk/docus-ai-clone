@@ -140,7 +140,7 @@ const Stepper: React.FC<QuestionnaireStepperProps> = ({
         setIsSaving(false);
         setShowCongratulations(true);
         setTimeout(() => {
-          router.push("/dashboard");
+          router.push("/welcome/start");
         }, 3000);
       }, loadingMessages.length * 2000);
     }

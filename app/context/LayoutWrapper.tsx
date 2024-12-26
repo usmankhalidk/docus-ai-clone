@@ -1,8 +1,8 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import { Footer } from '../component/layout/Footer';
 import Header from '../component/layout/Header';
-import { UpperFooter } from '../component/layout/UpperFooter';
+import Footer from '../component/layout/Footer';
+import UpperFooter from '../component/layout/UpperFooter';
 
 const noHeaderFooterRoutes = [
   '/login',

@@ -12,6 +12,8 @@ import { HIPA } from "./Home/HIPA";
 import json from "../Json/Accordion.json";
 import AccordionItem from "./Home/Accordion";
 import { IoIosStar } from "react-icons/io";
+import cardData from "../Json/Carousal.json"
+import Carousel from "./Home/Carousal";
 // Main Section
 export const AIDoctor = () => {
 
@@ -99,6 +101,13 @@ export const AIDoctor = () => {
       <section className='flex items-center justify-center max-w-[1128px] mx-auto lg:px-16 lg:py-[92px] py-6 px-5'>
         <SafeData SafeData={SafeDataDoctor} />
       </section>
+      <Carousel
+        cards={cardData?.aidoctor?.data}
+        title={cardData?.aidoctor?.title}
+        description={cardData?.aidoctor?.description}
+      />
+
+
       <div className='mx-auto max-w-3xl px-5'>
         <p className='text-4xl font-bold text-center mb-7'>
           {json.HomeAccrodion.MainHeading}
