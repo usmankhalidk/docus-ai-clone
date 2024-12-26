@@ -465,7 +465,7 @@ const Stepper: React.FC<QuestionnaireStepperProps> = ({
                 }}
               >
                 <FaDiamond
-                  className={`w-2 h-2 ${
+                  className={`w-2 h-2 translate-x-1 ${
                     progressPercentage === 100 ? "text-white" : "text-teal-600"
                   }`}
                   aria-hidden="true"

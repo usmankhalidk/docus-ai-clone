@@ -39,7 +39,7 @@ export default function Header() {
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             {user ? (
               <div className="flex items-center space-x-4 mr-4">
-                <button className="text-gray-500 hover:text-gray-700">
+                <button className="text-gray-500 hover:text-gray-700" onClick={()=>router.push('/dashboard/notifications')}>
                   <BiBell className="h-6 w-6" />
                 </button>
                 <button
