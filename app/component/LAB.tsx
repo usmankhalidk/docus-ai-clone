@@ -5,13 +5,16 @@ import labdata from "../Json/lab.json"
 import homedata from "../Json/home.json"
 import { SafeData } from "./Home/SafeData";
 import { HIPA } from "./Home/HIPA";
-import HomeAccordion from "./Home/HomeAccordion";
 import { Poster } from "./ui/Poster";
 import { AI } from "./ui/AI"
 import { LabAnalysis, MainTitle, Feature } from "../types/blogInterface";
 import { Benefits } from "./Home/Benefits";
 import { Counts } from "./ui/Counts";
-
+import { IoIosStar } from "react-icons/io";
+import AccordionItem from "./Home/Accordion";
+import json from "../Json/Accordion.json"
+import cardData from "../Json/Carousal.json"
+import Carousel from "./Home/Carousal";
 // Main Section
 export const LAB = () => {
   const { LabAnalysis, MainTitle }: { LabAnalysis: LabAnalysis[], MainTitle: MainTitle } = labdata
@@ -20,6 +23,75 @@ export const LAB = () => {
   const { SafeDataLab, LabBenefitCards, LabCounts } = homedata
   return (
     <div>
+
+      <div className='flex flex-col md:flex-row items-center mx-auto max-w-6xl mt-10 sm:mt-16 md:mt-28 px-5  lg:px-0'>
+        <div className='flex flex-col gap-8 w-full md:w-1/2 pr-5 '>
+          <p className='text-4xl sm:text-5xl md:text-5xl font-bold line leading-tight md:leading-snug'>
+            <p>Get Actionable  </p>
+            <p>Insights from</p>
+            <p >Your <span className='text-theme_color'>  Lab Tests </span></p>
+          </p>
+          <p className='text-base md:text-lg'>
+            Our AI Doctor can easily analyze and interpret your lab tests, providing clear and actionable health information.
+          </p>
+          <div className="flex flex-col gap-3">
+            <p className='text-base'><span className='text-theme_color'>✓ </span>Get tailored insights</p>
+            <p className='text-base'><span className='text-theme_color'>✓ </span> Discover your health risks</p>
+            <p className='text-base'><span className='text-theme_color'>✓ </span> Get personal checkup plans</p></div>
+          <div className='flex items-center justify-center md:justify-start gap-4'>
+            <button
+              type="submit"
+              className="rounded-sm bg-theme_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-theme_color_onHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Try For Free
+            </button>
+            <button
+              type="submit"
+              className="rounded-sm  px-5 py-3 text-lg font-semibold text-theme_color shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 border border-theme_color hover:bg-theme_color hover:text-white "
+            >
+              Join As Partner lab
+            </button>
+          </div>
+          <div className='flex items-center gap-5 justify-center md:justify-start'>
+            <p className='font-semibold'>Excellent</p>
+            <div className='flex items-center gap-1' title="4.9 out of 5 star rating on Trustpilot">
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+            </div>
+            <div className='flex items-center' title="Trustpilot">
+              <IoIosStar style={{ color: "#00b67a" }} />
+              <p>Trustpilot</p>
+            </div>
+          </div>
+
+        </div>
+        <div className='w-full md:w-1/2 '>
+          <img
+            src="/images/lab-test-intro.png"  // Ensure correct path if you use a relative path or provide a full URL
+            width="100%"
+            height="auto"
+            style={{ borderRadius: '8px' }}
+          />
+        </div>
+      </div>
+
+
 
       <section>
         <HIPA />
@@ -80,8 +152,20 @@ export const LAB = () => {
       <section className="py-12 sm:py-16">
         <Poster PosterData={LabPoster} buttonColor="Red" posterClasses="border-0 p-5 md:p-10 rounded-none lg:px-[188px] lg:py-12" />
       </section>
-
-      <HomeAccordion />
+      <Carousel
+        cards={cardData?.aidoctor?.data}
+        title={cardData?.aidoctor?.title}
+        description={cardData?.aidoctor?.description}
+      />
+      <div className='mx-auto max-w-3xl px-5'>
+        <p className='text-4xl font-bold text-center mb-7'>
+          {json.labtest.MainHeading}
+        </p>
+        {json.labtest.data?.map((data, index) => (
+          <AccordionItem answer={data?.answer} question={data?.question} index={index} />
+        ))}
+      </div>
+      <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
 
     </div>
   )

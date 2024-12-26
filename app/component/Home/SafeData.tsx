@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+"use client"
+
+import React, { FC, useState } from 'react'
 import { PiKey } from "react-icons/pi";
 import { CiLock } from "react-icons/ci";
 import { IoWarningOutline } from "react-icons/io5";
@@ -6,10 +8,11 @@ import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { SafeDataPoster } from "../../types/blogInterface";
 
 type LocalInterface = {
-    SafeData: SafeDataPoster
+    SafeData: SafeDataPoster,
+    Warning?: string
 }
 
-export const SafeData: React.FC<LocalInterface> = ({ SafeData }) => {
+export const SafeData: React.FC<LocalInterface> = ({ SafeData, Warning }) => {
 
     const { title, subtitle, content } = SafeData
 
@@ -21,14 +24,15 @@ export const SafeData: React.FC<LocalInterface> = ({ SafeData }) => {
 
     return (
         <div className='rounded-3xl flex p-5 md:p-16 gap-6 lg:gap-12 flex-col lg:flex-row' style={{ backgroundColor: "rgb(39, 42, 61)" }}>
-            <div className='flex flex-col justify-center text-center text-white gap-5 sm:gap-7 w-full lg:w-1/2'>
+            <div className='flex flex-col justify-center text-center text-white gap-3 sm:gap-7 w-full lg:w-1/2'>
                 <div className='flex items-center justify-center'>
-                    <CiLock className='size-12' />
+                    {Warning ? <IoWarningOutline className='size-12' /> : <CiLock className='size-12' />}
+                    
                 </div>
                 {title &&
                     <p className='text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold'>{title}</p>}
                 <div className='text-2xl md:text-[46px] leading-[32px] font-bold flex justify-center'>
-                    <p className='bg-theme_color rounded-md -rotate-3 py-3 sm:py-4 px-8 sm:px-10 hover:scale-110 transition-all'>{subtitle}</p>
+                    <p className={`bg-theme_color rounded-md -rotate-3 py-3 sm:py-4 px-8 sm:px-10 hover:scale-110 transition-all ${Warning ? "cursor-pointer" : "cursor-default"}`}>{subtitle}</p>
                 </div>
             </div>
             <div className='w-full lg:w-1/2'>

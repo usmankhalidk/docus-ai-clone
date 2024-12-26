@@ -1,21 +1,23 @@
 "use client"
 
 import React from "react";
+import { FaArrowRight } from "react-icons/fa6";
 import labdata from "../Json/lab.json"
 import homedata from "../Json/home.json"
 import blogdata from "../Json/blog.json"
 import { SafeData } from "./Home/SafeData";
-import HomeAccordion from "./Home/HomeAccordion";
 import { Poster } from "./ui/Poster";
 import { Counts } from "./ui/Counts";
 import { MainTitle } from "../types/blogInterface";
 import { Benefits } from "./Home/Benefits";
 import { Forbes } from "./Home/Forbes";
-
-// Main Section
+import AccordionItem from "./Home/Accordion";
+import json from "../Json/Accordion.json"
+import cardData from "../Json/Carousal.json"
+import Carousel from "./Home/Carousal";
 export const Opinion = () => {
 
-    const { LabPoster } = labdata
+    const { SpecialistDoctors } = labdata
     const { OpinionPoster } = blogdata
     const { MainTitle }: { MainTitle: MainTitle } = labdata
     const { OpinionHeroSection, SafeDataOpinion, OpinionBenefitCards, Doctors, OpinionCounts } = homedata
@@ -23,7 +25,7 @@ export const Opinion = () => {
     return (
         <div>
 
-            <section className="flex flex-col items-center justify-center py-8 mx-auto max-w-7xl lg:px-16 px-5">
+            <section className="flex flex-col items-center justify-center py-8 mx-auto max-w-7xl lg:px-16 px-5 mt-8 sm:mt-12 md:mt-16 lg:mt-20">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold text-gray-800 mb-4">
                         {OpinionHeroSection.title}
@@ -41,7 +43,7 @@ export const Opinion = () => {
                     {Doctors.map((doctor, index) => (
                         <div
                             key={index}
-                            className="border rounded-lg shadow-sm hover:shadow flex flex-col group cursor-pointer"
+                            className="border rounded-lg shadow-sm hover:shadow flex flex-col group cursor-pointer overflow-hidden"
                         >
                             <div>
                                 <img src={doctor.image} alt={doctor.name} className="mb-4 object-cover" />
@@ -75,26 +77,76 @@ export const Opinion = () => {
             </section>
 
             <section className='flex items-center justify-center max-w-[1128px] mx-auto lg:px-16 lg:py-20 py-6 px-5'>
-                <SafeData SafeData={SafeDataOpinion} />
+                <SafeData SafeData={SafeDataOpinion} Warning={"Warning"} />
             </section>
-
+            <Carousel
+                cards={cardData?.aidoctor?.data}
+                title={cardData?.aidoctor?.title}
+                description={cardData?.aidoctor?.description}
+            />
             <section className="py-12 sm:py-16">
-                <Poster PosterData={LabPoster} buttonColor="Red" posterClasses="border-0 p-5 md:p-10 rounded-none lg:px-[188px] lg:py-12" />
-            </section>
-
-            <section className="py-12 sm:py-16">
-                <div className="text-center">
-                    <img src="" alt="" />
-                    <h3>Docus AI Doctor</h3>
-                    <h4>Our AI-based virtual health assistant has answers to any question related to your health.</h4>
+                <div className="text-center py-12" style={{ backgroundColor: "rgb(39, 42, 61)" }}>
+                    <img src="./images/ai-assistant.webp" alt="" className="mx-auto" />
+                    <h3 className="text-2xl sm:text-3xl font-bold text-center text-white mb-3 lg:mb-6">Docus AI Doctor</h3>
+                    <p className="text-white text-base text-center sm:text-lg mb-6">Our AI-based virtual health assistant has answers to any question related to your health.</p>
                     <button className="bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
                         Chat with AI Doctor
                     </button>
                 </div>
             </section>
 
-            <HomeAccordion />
+            <section className="max-w-7xl mx-auto lg:px-16 py-4 px-5">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl sm:text-[34px] lg:text-[38px] font-bold text-gray-800 md:text-center m-4 sm:mb-8">
+                        Top Specialists for Medical Second Opinions
+                    </h2>
+                    <p className="text-gray-600 text-center text-base md:text-lg mb-12 lg:px-24">
+                        Get a trusted second opinion from top U.S. and European specialists in Cardiology, Neurology, Oncology, Endocrinology, and more. Gain clarity and confidence by seeking an expert second opinion on our secure, user-friendly platform.
+                    </p>
+                </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {SpecialistDoctors.map((specialist, index) => (
+                        <div
+                            key={index}
+                            className={`border rounded-lg px-4 py-5 hover:shadow-sm flex justify-between items-center border-l-[16px] ${index === 0 || index === 3 || index === 4
+                                ? "border-[#A9AAB1] hover:border-[#272A3D] transition duration-300"
+                                : "border-[#EDB4A3] hover:border-[#E95D53] transition duration-300"
+                                }`}
+                        >
+                            <div className="flex flex-row">
+                                <span className="pe-5">
+                                    <h3 className="text-lg sm:text-xl text-left sm:leading-[30px] font-semibold text-gray-800 mb-3">
+                                        {specialist.title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-2">
+                                        {specialist.description}
+                                    </p>
+                                </span>
+                                <span className="text-gray-500 text-xl my-auto">
+                                    <FaArrowRight />
+                                </span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="text-center mt-10 mb-[84px]">
+                    <button className="bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
+                        View All Specialists
+                    </button>
+                </div>
+            </section>
+
+            <div className='mx-auto max-w-3xl px-5'>
+                <p className='text-4xl font-bold text-center mb-7'>
+                    {json.HomeAccrodion.MainHeading}
+                </p>
+                {json.AiDoctor.data?.map((data, index) => (
+                    <AccordionItem answer={data?.answer} question={data?.question} index={index} />
+                ))}
+            </div>
+            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
         </div>
     )
 }

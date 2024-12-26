@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import data from "../Json/blog.json";
 import { Poster } from "./ui/Poster";
 import { QusetionsBlock } from "../types/blogInterface";
+import Search from "antd/es/input/Search";
 export const SymptomsBlocks = () => {
     const { SymptomsHeroSection, SymptomsPoster } = data;
     const { symptoms }: { symptoms: QusetionsBlock[] } = data;
@@ -33,9 +34,13 @@ export const SymptomsBlocks = () => {
                     </h1>
                     <p className="text-gray-600 text-center text-base md:text-lg">{SymptomsHeroSection.subtitle}</p>
                 </div>
+
             </section>
 
             <section className="mx-auto max-w-6xl lg:px-16 px-5 pt-8 ">
+
+                <Search placeholder="input search text" enterButton />
+
                 <div className="flex flex-col gap-7">
                     {symptomsData.map((item, index) => (
                         <div
