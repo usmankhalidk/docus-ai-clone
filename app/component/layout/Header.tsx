@@ -22,9 +22,9 @@ import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import { MdGroups2 } from "react-icons/md";
 import Link from 'next/link'
 const products = [
-  { name: 'AI Doctor', href: 'ai-doctor', icon: HiChatBubbleLeftRight },
-  { name: 'Lab Test Interpretation', href: 'lab-test-interpretation', icon: FaFlaskVial },
-  { name: 'Second Opinion', href: 'second-opinion', icon: MdGroups2 },
+  { name: 'AI Doctor', href: '/ai-doctor', icon: HiChatBubbleLeftRight },
+  { name: 'Lab Test Interpretation', href: '/lab-test-interpretation', icon: FaFlaskVial },
+  { name: 'Second Opinion', href: '/second-opinion', icon: MdGroups2 },
 ]
 const Resources = [
   { name: 'Blog', href: 'blog' },

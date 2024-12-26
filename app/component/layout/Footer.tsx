@@ -1,4 +1,8 @@
 import React from 'react';
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
 import footerData from '../../Json/footer.json'
 
 const Footer = () => {
@@ -17,17 +21,14 @@ const Footer = () => {
                         <p className="mt-8 text-gray-600">Improving human health through the combination of cutting-edge technologies and top medical expertise.</p>
                         <div className="flex space-x-4 mt-6">
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
+                                <FaTwitter className='w-6 h-6 p-1 rounded-[4px] text-white bg-black hover:bg-theme_color transition' />
                             </a>
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
-                            </a>
+                                <FaFacebookF className='w-6 h-6 p-1 rounded-[4px] text-white bg-black hover:bg-theme_color transition' />                            </a>
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
-                            </a>
+                                <FaInstagram className='w-6 h-6 p-1 rounded-[4px] text-white bg-black hover:bg-theme_color transition' />                            </a>
                             <a href="" className="text-gray-500 hover:text-green-50" target="_blank">
-                                <img src="../images/twitter.png" alt="Twitter" className="w-6 h-6" />
-                            </a>
+                                <FaLinkedinIn className='w-6 h-6 p-1 rounded-[4px] text-white bg-black hover:bg-theme_color transition' />                            </a>
                         </div>
                     </div>
 

@@ -11,6 +11,8 @@ import { AI } from "./ui/AI"
 import { LabAnalysis, MainTitle, Feature } from "../types/blogInterface";
 import { Benefits } from "./Home/Benefits";
 import { Counts } from "./ui/Counts";
+import { IoIosStar } from "react-icons/io";
+import Link from "next/link";
 
 // Main Section
 export const LAB = () => {
@@ -20,6 +22,74 @@ export const LAB = () => {
   const { SafeDataLab, LabBenefitCards, LabCounts } = homedata
   return (
     <div>
+
+      <div className='flex flex-col md:flex-row items-center mx-auto max-w-6xl mt-10 sm:mt-16 md:mt-28 px-5 xl:px-0'>
+        <div className='flex flex-col gap-6 w-full md:w-1/2 lg:pr-8 order-2 md:order-1'>
+          <p className='text-4xl sm:text-5xl md:text-5xl font-bold text-center md:text-left leading-tight md:leading-snug'>
+            <p>Get Actionable </p>
+            <p >Insights from </p>
+            <p> Your <span className='text-theme_color'> Lab Tests </span></p>
+          </p>
+          <p className='text-base md:text-lg text-center md:text-left'>
+            Our AI Doctor can easily analyze and interpret your lab tests, providing clear and actionable health information.
+          </p>
+          <div>
+            <p className="text-base md:text-lg mb-2">Upload your lab tests</p>
+            <p className="text-base md:text-lg mb-2">Receive valuable insights and recommendations</p>
+            <p className="text-base md:text-lg mb-2">Make informed health decisions</p>
+          </div>
+          <div className='flex flex-col lg:flex-row items-center justify-center md:justify-start gap-4'>
+            <button
+              type="submit"
+              className="rounded-[4px] bg-theme_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-theme_color_onHover w-full lg:w-fit"
+            >
+              Try for Free
+            </button>
+            <button
+              type="submit"
+              className="rounded-[4px] border border-[#1a847c] px-5 py-3 text-lg text-[#1a847c] hover:text-white font-semibold shadow-sm hover:bg-theme_color w-full lg:w-fit"
+            >
+              Join us as a Partner Lab
+            </button>
+          </div>
+          <div className='flex flex-col sm:flex-row items-center gap-5 justify-center md:justify-start mx-4 mt-2'>
+            <p className='font-medium'>Excellent</p>
+            <div className='flex items-center gap-1' title="4.9 out of 5 star rating on Trustpilot">
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+              <div className='size-5  flex items-center justify-center' style={{ backgroundColor: "#00b67a" }}>
+                <IoIosStar className='text-white' />
+              </div>
+            </div>
+            <div className='flex items-center' title="Trustpilot">
+              <IoIosStar style={{ color: "#00b67a" }} />
+              <p>Trustpilot</p>
+            </div>
+          </div>
+        </div>
+        <div className='w-full md:w-1/2 order-1 md:order-2 mb-12 md:mb-0'>
+          <img
+            src="./images/lab-test-intro.webp"  
+            // Ensure correct path if you use a relative path or provide a full URL
+            width="100%"
+            height="auto"
+            style={{ borderRadius: '8px' }}
+          />
+        </div>
+      </div>
 
       <section>
         <HIPA />
@@ -58,8 +128,9 @@ export const LAB = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
           {testTypes.map((testType, index) => (
-            <div
+            <Link
               key={index}
+              href='/lab-test-interpretation/blood-test'
               className="bg-neutral-100 border border-solid px-3 sm:px-4 py-3 sm:py-5 rounded-lg hover:shadow-sm hover:border-[#91C4C0] group cursor-pointer transition duration-200 flex items-center gap-3 sm:gap-4"
             >
               <img
@@ -72,7 +143,7 @@ export const LAB = () => {
                 <p className="text-sm text-gray-600">{testType.description}</p>
               </div>
               <span className="ml-auto text-[#1A847C] font-bold text-lg">→</span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

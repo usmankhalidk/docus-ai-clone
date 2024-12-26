@@ -205,7 +205,6 @@
     },
     "OpinionPoster": {
         "title": "How it works",
-        "description": "3 Accodians",
         "button": {
             "text": "Find Doctor",
             "action": "redirect",
