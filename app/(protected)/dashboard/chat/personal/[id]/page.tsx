@@ -107,9 +107,9 @@ export default function ChatPage() {
           </>
         ) : (
           <>
-            {messages.map((message) => (
-              <ChatMessage key={message.id} messages={[message]} />
-            ))}
+            
+              <ChatMessage messages={messages} />
+           
             {messages.length === 0 && (
               <div className="text-center text-gray-500 mt-8">
                 No messages yet. Start a conversation!
