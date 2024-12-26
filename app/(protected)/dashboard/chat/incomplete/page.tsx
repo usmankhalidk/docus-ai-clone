@@ -2,10 +2,21 @@
 
 import { Button, Card } from "antd"
 import Image from "next/image"
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa"
 
-
 export default function AiDoctor() {
+  const router = useRouter();
+  const [loading, setLoading] = useState<boolean>(false);
+ const handleClick = async () => {
+    setLoading(true); // Show loading state
+    // Simulate an async operation, like fetching data or processing
+    setTimeout(() => {
+      // After the operation, redirect to the new page
+      router.push('/dashboard/account/profile/update/medical-history/conditions');
+    }, 2000); // Example delay for 2 seconds (replace with real async logic)
+  };
   return (
     <div className="mt-16 flex items-center justify-center p-4">
       <Card className="max-w-md w-full shadow-sm">
@@ -44,13 +55,18 @@ export default function AiDoctor() {
           </div>
 
           {/* Button */}
-          <Button type="primary" className="w-full py-3 rounded-md  transition-colors mb-4">
-            Complete Health Profile
-          </Button>
+          <Button
+      type="primary"
+      className="w-full py-3 rounded-md transition-colors mb-4"
+      loading={loading} // Show the loading state
+      onClick={handleClick} // Trigger the handleClick function on button click
+    >
+      Complete Health Profile
+    </Button>
 
           {/* Skip link */}
           <button className="text-gray-500 hover:text-gray-700 transition-colors underline">
-            Skip for Now
+            Skip to My Dashboard
           </button>
         </div>
       </Card>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useAuth } from '@/app/context/AuthContext';
+import Link from 'next/link';
 import { useState } from 'react';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 
@@ -90,34 +91,31 @@ export default function ProfileDropdown() {
 
           {/* Links */}
           <ul className="py-2">
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-lg"
-              >
-                Help & Support
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >
-                Billing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >
-                Account Settings
-              </a>
-            </li>
+          <li>
+    <Link href="/dashboard/support-tickets" className='block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-lg'>
+     
+        Help & Support
+     
+    </Link>
+  </li>
+  <li>
+    <Link href="/billing" className='block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-lg'>
+      
+        Billing
+      
+    </Link>
+  </li>
+  <li>
+    <Link href="/dashboard/account/settings" className='block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-lg'>
+     
+        Account Settings
+     
+    </Link>
+  </li>
             <li className="border-gray-200">
               <button
                 
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-lg"
+                className="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-b-lg"
                 onClick={()=>logout()}
               >
                 Sign Out
