@@ -21,7 +21,7 @@ const Pricing = () => {
 
                     // onChange={handleChange}
                     />
-                    <span>Yearly <FaPercentage className='flex' /></span>
+                    <span>Yearly ٪</span>
                     <span>Monthly</span>
                 </label>
             </div>

@@ -20,8 +20,6 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const shouldHideHeaderFooter = noHeaderFooterRoutes.some(route =>
     pathname?.startsWith(route)
   );
-
-  // Check if the current path is "/contact"
   const isContactPage = pathname === '/contact';
 
   if (shouldHideHeaderFooter) {
