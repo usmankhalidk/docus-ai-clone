@@ -10,16 +10,15 @@ interface ChatMessageProps {
 const ChatMessage: React.FC<ChatMessageProps> = ({ messages }) => {
   if (!messages || messages.length === 0) {
     return (
-        <div className="h-full flex items-center justify-center">
-       
-          <Image
-            src="/assets/chat-doctor.svg" // Replace with your actual logo path
-            height={90}
-            width={90}
-            alt="Personal AI Doctor"
-            className="object-cover rounded-full"
-          />
-        
+      <div className="h-full flex items-center justify-center">
+
+        <Image
+          src="/assets/chat-doctor.svg" // Replace with your actual logo path
+          height={90}
+          width={90}
+          alt="Personal AI Doctor"
+          className="object-cover rounded-full"
+        />
       </div>
     );
   }
@@ -29,19 +28,16 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ messages }) => {
       {messages.map((message) => (
         <div
           key={message.id}
-          className={`flex p-4 ${
-            message.sender === "user" ? "justify-end" : "justify-start"
-          }`}
+          className={`flex p-4 ${message.sender === "user" ? "justify-end" : "justify-start"
+            }`}
         >
           <div
-            className={`flex max-w-3xl w-full ${
-              message.sender === "user" ? "flex-row-reverse" : "flex-row"
-            }`}
+            className={`flex max-w-3xl w-full ${message.sender === "user" ? "flex-row-reverse" : "flex-row"
+              }`}
           >
             <div
-              className={`flex flex-col ${
-                message.sender === "user" ? "items-end" : "items-start"
-              }`}
+              className={`flex flex-col ${message.sender === "user" ? "items-end" : "items-start"
+                }`}
             >
               <div className="flex items-center space-x-2 mb-2">
                 <div className="font-medium text-sm sm:text-base">

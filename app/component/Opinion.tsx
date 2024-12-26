@@ -5,14 +5,15 @@ import labdata from "../Json/lab.json"
 import homedata from "../Json/home.json"
 import blogdata from "../Json/blog.json"
 import { SafeData } from "./Home/SafeData";
-import HomeAccordion from "./Home/HomeAccordion";
 import { Poster } from "./ui/Poster";
 import { Counts } from "./ui/Counts";
 import { MainTitle } from "../types/blogInterface";
 import { Benefits } from "./Home/Benefits";
 import { Forbes } from "./Home/Forbes";
-
-// Main Section
+import AccordionItem from "./Home/Accordion";
+import json from "../Json/Accordion.json"
+import cardData from "../Json/Carousal.json"
+import Carousel from "./Home/Carousal";
 export const Opinion = () => {
 
     const { LabPoster } = labdata
@@ -77,7 +78,11 @@ export const Opinion = () => {
             <section className='flex items-center justify-center max-w-[1128px] mx-auto lg:px-16 lg:py-20 py-6 px-5'>
                 <SafeData SafeData={SafeDataOpinion} />
             </section>
-
+            <Carousel
+                cards={cardData?.aidoctor?.data}
+                title={cardData?.aidoctor?.title}
+                description={cardData?.aidoctor?.description}
+            />
             <section className="py-12 sm:py-16">
                 <Poster PosterData={LabPoster} buttonColor="Red" posterClasses="border-0 p-5 md:p-10 rounded-none lg:px-[188px] lg:py-12" />
             </section>
@@ -93,8 +98,18 @@ export const Opinion = () => {
                 </div>
             </section>
 
-            <HomeAccordion />
 
+
+
+            <div className='mx-auto max-w-3xl px-5'>
+                <p className='text-4xl font-bold text-center mb-7'>
+                    {json.HomeAccrodion.MainHeading}
+                </p>
+                {json.AiDoctor.data?.map((data, index) => (
+                    <AccordionItem answer={data?.answer} question={data?.question} index={index} />
+                ))}
+            </div>
+            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
         </div>
     )
 }

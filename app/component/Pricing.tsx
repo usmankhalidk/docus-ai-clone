@@ -2,6 +2,7 @@ import React from 'react'
 import json from "../Json/Accordion.json"
 import AccordionItem from './Home/Accordion'
 import { Forbes } from './Home/Forbes'
+import { FaPercentage } from "react-icons/fa";
 const Pricing = () => {
     return (
         <>
@@ -13,16 +14,16 @@ const Pricing = () => {
                 <p className='text-base md:text-lg text-center'>
                     Pay by the month or the year, and cancel at any time.
                 </p>
-                {/* <label htmlFor="filter" className="switch" aria-label="Toggle Filter">
+                <label htmlFor="filter" className="switch" aria-label="Toggle Filter">
                     <input
                         type="checkbox"
                         id="filter"
 
                     // onChange={handleChange}
                     />
-                    <span>Popular</span>
-                    <span>Latest</span>
-                </label> */}
+                    <span>Yearly <FaPercentage className='flex' /></span>
+                    <span>Monthly</span>
+                </label>
             </div>
             <section className="my-14 sm:my-20 flex items-center justify-center gap-8 md:gap-12 lg:gap-28 sm:flex-row flex-col">
                 <Forbes />

@@ -61,6 +61,23 @@
         "name": "Emily G.",
         "imgSrc": "/images/Carousal/quotation.png",
         "imageUrl": "/images/Carousal/AI_Doctor_Testimonial_3.jpeg"
+      },{
+        "text": "The speed and accuracy of the Docus AI Health Assistant were truly impressive. It provided me with the confidence I needed to proceed with my treatment, knowing that I had reliable guidance and support along the way.",
+        "name": "Peter S.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_4.jpeg"
+      },
+      {
+        "text": "Entering menopause was a bit daunting with all the changes my body started to go through. The Docus AI Doctor helped me identify my symptoms like hot flashes and mood swings as menopausal. Knowing what was happening gave me peace of mind and the confidence to seek the right treatment. I'm grateful for such a supportive tool.",
+        "name": "Aisha H.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_5.jpeg"
+      },
+      {
+        "text": "My son had recurring stomach aches, and I wasn't sure if it was his diet or something more serious. Docus AI Doctor suggested possible food intolerance and recommended seeing a specialist. It turned out to be lactose intolerance, and we've since adjusted his diet. I'm so grateful for the guidance that led us to find a solution.",
+        "name": "Sofia R.",
+        "imgSrc": "/images/Carousal/quotation.png",
+        "imageUrl": "/images/Carousal/testimonial_6.jpeg"
       }
     ]
   }
