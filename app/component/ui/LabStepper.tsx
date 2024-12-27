@@ -4,7 +4,8 @@ import { useRouter, usePathname } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaDiamond } from "react-icons/fa6";
 import { Input, Form, Button, Radio, DatePicker } from 'antd';
-
+import type { Dayjs } from 'dayjs';
+import dayjs from "dayjs";
 type QuestionType = 'text' | 'multiple-choice' | 'date' | 'yes-no-field';
 
 interface Question {
@@ -357,8 +358,8 @@ const LabStepper: React.FC<LabStepperProps> = ({ basePath }) => {
       case 'date':
         return (
           <DatePicker
-            value={currentAnswer?.answer ? undefined : undefined}
-            onChange={(date) => saveAnswer(date?.valueOf() || '')}
+          value={currentAnswer?.answer ? dayjs(currentAnswer.answer) : null}
+          onChange={(date: Dayjs | null) => saveAnswer(date ? date.valueOf() : '')}
             className="w-full"
           />
         );
