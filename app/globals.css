@@ -42,12 +42,12 @@ body {
 
 
 .switch {
-  --_switch-bg-clr: #70A9C5;
-  --_switch-padding: 2px;
+  --_switch-bg-clr: rgba(26, 132, 124, 0.3);
+  --_switch-padding: 3px;
   /* padding around button*/
-  --_slider-bg-clr: rgba(26, 132, 124, 0.65);
+  --_slider-bg-clr: white;
   /* slider color unchecked */
-  --_slider-bg-clr-on: rgba(12, 74, 110, 1);
+  --_slider-bg-clr-on: white;
   /* slider color checked */
   --_slider-txt-clr: #FFFFFF;
   --_label-padding: .4rem .8rem;
@@ -57,7 +57,7 @@ body {
       0.41,
       0.8);
   /* easing on toggle switch */
-  color: white;
+  color: black;
   width: fit-content;
   display: flex;
   justify-content: center;
