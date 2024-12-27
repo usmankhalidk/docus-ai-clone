@@ -21,7 +21,7 @@ export default function LabTests() {
     };
   
     const handleManualEntry = () => {
-      router.push('/enter-test-manually');
+      router.push('/dashboard/test-results/new/text/message/screening-type');
       setIsModalOpen(false);
     };
   
@@ -118,6 +118,7 @@ export default function LabTests() {
           <Card 
             className="hover:shadow-md transition-shadow cursor-pointer group"
             bodyStyle={{ padding: '1.25rem' }}
+            onClick={()=>router.push('/dashboard/list')}
           >
             <div className="flex items-center justify-between">
               <h2 className="text-base font-semibold text-gray-900">
@@ -131,6 +132,7 @@ export default function LabTests() {
           <Card 
             className="hover:shadow-md transition-shadow cursor-pointer group"
             bodyStyle={{ padding: '1.25rem' }}
+            onClick={()=>router.push('/dashboard/biomarkers')}
           >
             <div className="flex items-center justify-between">
               <h2 className="text-base font-semibold text-gray-900">

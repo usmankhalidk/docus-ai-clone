@@ -1,10 +1,9 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaDiamond } from "react-icons/fa6";
 import { Input, Form, Button, Radio, DatePicker } from 'antd';
-
 
 type QuestionType = 'text' | 'multiple-choice' | 'date' | 'yes-no-field';
 
@@ -14,10 +13,14 @@ interface Question {
   description: string;
   type: QuestionType;
   options?: { title: string; description: string; }[];
+  showWhen?: {
+    questionSlug: string;
+    answer: string;
+  };
 }
 
 interface AnswerType {
-  [key: number]: {
+  [key: string]: {
     answer: string | number | undefined;
     additionalFields?: {
       [key: string]: string | number;
@@ -57,6 +60,42 @@ const questions: Question[] = [
     ]
   },
   {
+    slug: 'test-type',
+    title: 'Choose the test result type',
+    description: 'Select the specific type of lab test performed.',
+    type: 'multiple-choice',
+    showWhen: {
+      questionSlug: 'screening-type',
+      answer: 'Lab Test'
+    },
+    options: [
+      {
+        title: 'Blood Test',
+        description: 'Overall health, immune system, organ function, etc.'
+      },
+      {
+        title: 'Urine Test',
+        description: 'Kidney function, urinary tract infections, etc.'
+      },
+      {
+        title: 'Pap Smear',
+        description: 'Precancerous conditions, cervical cancer, HPV, etc.'
+      },
+      {
+        title: 'Semen Analysis',
+        description: 'Sperm count, motility, morphology, fertility issues.'
+      },
+      {
+        title: 'Stool Test',
+        description: 'Digestive conditions, infections, parasites, etc.'
+      },
+      {
+        title: 'Swab Test',
+        description: 'Bacterial infections, viruses, fungal infections, etc.'
+      }
+    ]
+  },
+  {
     slug: 'test-date',
     title: 'Select test date',
     description: 'Select your lab test date to enable analysis of biomarker trends and get accurate health insights.',
@@ -70,10 +109,6 @@ const questions: Question[] = [
   }
 ];
 
-interface LabStepperProps {
-  basePath: string;
-}
-
 const loadingMessages = [
   "Saving your lab results...",
   "Processing your information...",
@@ -81,56 +116,116 @@ const loadingMessages = [
   "Almost ready...",
 ];
 
-const LabStepper: React.FC<LabStepperProps> = ({
-  basePath,
-}) => {
+interface LabStepperProps {
+  basePath: string;
+}
+
+const LabStepper: React.FC<LabStepperProps> = ({ basePath }) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [mounted, setMounted] = useState(false);
-  const [answers, setAnswers] = useState<AnswerType>({});
-  const [currentStep, setCurrentStep] = useState<number | null>(null);
+  // Initialize answers from localStorage if available
+  const [answers, setAnswers] = useState<AnswerType>(() => {
+    if (typeof window !== 'undefined') {
+      const savedAnswers = localStorage.getItem('labStepperAnswers');
+      return savedAnswers ? JSON.parse(savedAnswers) : {};
+    }
+    return {};
+  });
+  
+  const [currentSlug, setCurrentSlug] = useState<string>('');
   const [isSaving, setIsSaving] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
   const [showCongratulations, setShowCongratulations] = useState(false);
 
+  // Persist answers to localStorage whenever they change
   useEffect(() => {
-    setMounted(true);
-    setIsLoading(false);
-  }, []);
-
-  useEffect(() => {
-    if (pathname) {
-      const currentStep = getCurrentStepFromPath(pathname);
-      setCurrentStep(currentStep);
-
-      if (currentStep === -1) {
-        router.replace(`${basePath}/${questions[0].slug}`);
-      }
+    if (Object.keys(answers).length > 0) {
+      localStorage.setItem('labStepperAnswers', JSON.stringify(answers));
     }
-  }, [pathname, basePath, router]);
+  }, [answers]);
 
-  const calculateProgress = () => {
-    if (currentStep === null) return 0;
-    return ((currentStep) / (questions.length)) * 100;
+  // Define visible questions based on current answers with improved logging
+  const visibleQuestions = useMemo(() => {
+    console.log('Recalculating visible questions. Current answers:', answers);
+    return questions.filter(question => {
+      if (!question.showWhen) return true;
+      
+      const dependentAnswer = answers[question.showWhen.questionSlug]?.answer;
+      console.log(`Checking visibility for ${question.slug}:`, {
+        dependsOn: question.showWhen.questionSlug,
+        expectedAnswer: question.showWhen.answer,
+        actualAnswer: dependentAnswer,
+        isVisible: dependentAnswer === question.showWhen.answer
+      });
+      
+      return dependentAnswer === question.showWhen.answer;
+    });
+  }, [answers]);
+
+  // Modified save answer function with improved state management
+  const saveAnswer = (value: string | number, field?: string) => {
+    setAnswers(prev => {
+      const newAnswers = {
+        ...prev,
+        [currentSlug]: {
+          answer: field ? prev[currentSlug]?.answer : value,
+          additionalFields: field ? {
+            ...(prev[currentSlug]?.additionalFields || {}),
+            [field]: value
+          } : prev[currentSlug]?.additionalFields
+        }
+      };
+
+      // Special handling for screening-type changes
+      if (currentSlug === 'screening-type') {
+        console.log('Screening type changed to:', value);
+        if (value !== 'Lab Test') {
+          delete newAnswers['test-type'];
+        }
+      }
+
+      console.log('Updating answers to:', newAnswers);
+      return newAnswers;
+    });
   };
 
-  const isCurrentAnswerValid = () => {
-    if (currentStep === null) return false;
-    const currentAnswer = answers[currentStep];
-    if (!currentAnswer) return false;
-
-    if (questions[currentStep].type === 'yes-no-field') {
-      if (currentAnswer.answer === 'yes') {
-        return currentAnswer.additionalFields?.details !== undefined;
+  // Handle routing and current slug updates with improved logic
+  useEffect(() => {
+    const slug = pathname?.split("/").pop() || '';
+    console.log('Current pathname slug:', slug);
+    
+    // Check if the current slug is valid considering the current answers
+    const isValidSlug = visibleQuestions.some(q => q.slug === slug);
+    
+    if (!isValidSlug) {
+      const firstValidSlug = visibleQuestions[0]?.slug;
+      console.log('Invalid slug, redirecting to:', firstValidSlug);
+      if (firstValidSlug && firstValidSlug !== slug) {
+        router.replace(`${basePath}/${firstValidSlug}`);
       }
-      return currentAnswer.answer !== undefined;
+    } else {
+      console.log('Setting current slug to:', slug);
+      setCurrentSlug(slug);
     }
+  }, [pathname, basePath, router, visibleQuestions]);
 
-    return currentAnswer.answer !== undefined && currentAnswer.answer !== '';
+  // Calculate current step index with improved error handling
+  const currentStepIndex = useMemo(() => {
+    const index = visibleQuestions.findIndex(q => q.slug === currentSlug);
+    console.log('Current step index:', index);
+    return index === -1 ? 0 : index;
+  }, [visibleQuestions, currentSlug]);
+
+  const nextStep = async () => {
+    if (currentStepIndex < visibleQuestions.length - 1) {
+      const nextQuestion = visibleQuestions[currentStepIndex + 1];
+      console.log('Moving to next question:', nextQuestion.slug);
+      await router.push(`${basePath}/${nextQuestion.slug}`);
+    } else {
+      handleSaveChanges();
+    }
   };
-
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isSaving) {
@@ -153,74 +248,55 @@ const LabStepper: React.FC<LabStepperProps> = ({
       if (interval) clearInterval(interval);
     };
   }, [isSaving, router]);
-
-  const getCurrentStepFromPath = (currentPath: string): number => {
-    const slug = currentPath.split("/").pop();
-    return questions.findIndex((q) => q.slug === slug);
+  const prevStep = async () => {
+    if (currentStepIndex > 0) {
+      const prevQuestion = visibleQuestions[currentStepIndex - 1];
+      console.log('Moving to previous question:', prevQuestion.slug);
+      await router.push(`${basePath}/${prevQuestion.slug}`);
+    }
   };
-
   const handleSaveChanges = () => {
     setIsSaving(true);
   };
+    const isCurrentAnswerValid = () => {
+    const currentAnswer = answers[currentSlug];
+    if (!currentAnswer) return false;
 
-  const nextStep = async () => {
-    if (currentStep !== null && currentStep < questions.length - 1) {
-      setIsLoading(true);
-      const nextQuestion = questions[currentStep + 1];
-      await router.push(`${basePath}/${nextQuestion.slug}`);
-      setIsLoading(false);
+    if (visibleQuestions[currentStepIndex].type === 'yes-no-field') {
+      if (currentAnswer.answer === 'yes') {
+        return currentAnswer.additionalFields?.details !== undefined;
+      }
+      return currentAnswer.answer !== undefined;
     }
-    if (currentStep !== null && currentStep === questions.length - 1) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
 
-  const prevStep = async () => {
-    if (currentStep !== null && currentStep > 0) {
-      setIsLoading(true);
-      const prevQuestion = questions[currentStep - 1];
-      await router.push(`${basePath}/${prevQuestion.slug}`);
-      setIsLoading(false);
-    }
-    if (currentStep !== null && currentStep > questions.length - 1) {
-      setIsLoading(true);
-      setCurrentStep(currentStep - 1);
-      setIsLoading(false);
-    }
+    return currentAnswer.answer !== undefined && currentAnswer.answer !== '';
   };
-
-  const handleInputChange = (value: string | number, field?: string) => {
-    if (field) {
-      setAnswers((prev) => ({
-        ...prev,
-        [currentStep!]: {
-          ...prev[currentStep!],
-          additionalFields: {
-            ...(prev[currentStep!]?.additionalFields || {}),
-            [field]: value
-          }
-        }
-      }));
-    } else {
-      setAnswers((prev) => ({
-        ...prev,
-        [currentStep!]: {
-          answer: value,
-          additionalFields: {}
-        },
-      }));
-    }
+  const calculateProgress = () => {
+    return ((currentStepIndex) / (visibleQuestions.length - 1)) * 100;
   };
+  // Clear answers when component unmounts or user completes the form
+  useEffect(() => {
+    return () => {
+      if (showCongratulations) {
+        localStorage.removeItem('labStepperAnswers');
+      }
+    };
+  }, [showCongratulations]);
 
   const renderQuestion = () => {
-    const question = questions[currentStep!];
+    const question = visibleQuestions[currentStepIndex];
+    const currentAnswer = answers[currentSlug];
 
+    // Log current question and answer for debugging
+    console.log('Rendering question:', question.slug);
+    console.log('Current answer:', currentAnswer);
+  
     switch (question.type) {
       case 'text':
         return (
           <Input.TextArea
-            value={answers[currentStep!]?.answer || ''}
-            onChange={(e) => handleInputChange(e.target.value)}
+            value={currentAnswer?.answer || ''}
+            onChange={(e) => saveAnswer(e.target.value)}
             placeholder="Enter your screening results"
             className="rounded"
             rows={4}
@@ -229,42 +305,36 @@ const LabStepper: React.FC<LabStepperProps> = ({
       case 'multiple-choice':
         return (
           <div className="grid gap-3">
-            {question.options?.map((option) => (
-              <Button
-                key={option.title}
-                type={answers[currentStep!]?.answer === option.title ? "primary" : "default"}
-                onClick={() => handleInputChange(option.title)}
-                className="w-full text-left rounded-md border transition-all duration-300"
-                style={{
-                  padding: '16px',
-                  height: 'auto',
-                  whiteSpace: 'normal',
-                  borderColor: answers[currentStep!]?.answer === option.title ? '#13c2c2' : '#d9d9d9',
-                }}
-              >
-                <div    >
+          {question.options?.map((option) => (
+            <Button
+              key={option.title}
+              type={currentAnswer?.answer === option.title ? "primary" : "default"}
+              onClick={() => {
+                console.log('Selected option:', option.title);
+                saveAnswer(option.title);
+              }}
+              className="w-full text-left rounded-md border transition-all duration-300"
+              style={{
+                padding: '16px',
+                height: 'auto',
+                whiteSpace: 'normal',
+                borderColor: currentAnswer?.answer === option.title ? '#13c2c2' : '#d9d9d9',
+              }}
+            >
+              <div>
                 <div className="font-medium">{option.title}</div>
-                <div className="text-sm  mt-1">{option.description}</div>
-                </div>
-              </Button>
-            ))}
-          </div>
-        );
-      case 'date':
-        return (
-            <DatePicker
-            className="w-full"
-            // value={answers[currentStep!]?.answer ? new Date(answers[currentStep!].answer as string) : null}
-            onChange={(date) => handleInputChange(date?.toISOString() || '')} // Handle null case
-            size="large"
-          />
+                <div className="text-sm mt-1">{option.description}</div>
+              </div>
+            </Button>
+          ))}
+        </div>
         );
       case 'yes-no-field':
         return (
           <div className="space-y-4">
             <Radio.Group
-              value={answers[currentStep!]?.answer}
-              onChange={(e) => handleInputChange(e.target.value)}
+              value={currentAnswer?.answer}
+              onChange={(e) => saveAnswer(e.target.value)}
               className="w-full"
             >
               <div className="grid gap-3">
@@ -273,10 +343,10 @@ const LabStepper: React.FC<LabStepperProps> = ({
               </div>
             </Radio.Group>
             
-            {answers[currentStep!]?.answer === 'yes' && (
+            {currentAnswer?.answer === 'yes' && (
               <Input.TextArea
-                value={answers[currentStep!]?.additionalFields?.details || ''}
-                onChange={(e) => handleInputChange(e.target.value, 'details')}
+                value={currentAnswer?.additionalFields?.details || ''}
+                onChange={(e) => saveAnswer(e.target.value, 'details')}
                 placeholder="Please provide additional information"
                 className="mt-4"
                 rows={4}
@@ -284,24 +354,22 @@ const LabStepper: React.FC<LabStepperProps> = ({
             )}
           </div>
         );
+      case 'date':
+        return (
+          <DatePicker
+            value={currentAnswer?.answer ? undefined : undefined}
+            onChange={(date) => saveAnswer(date?.valueOf() || '')}
+            className="w-full"
+          />
+        );
       default:
         return null;
     }
   };
 
-  if (!mounted || currentStep === null) return null;
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen  p-4 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-10 w-10 border-4 border-teal-600 border-t-transparent"></div>
-      </div>
-    );
-  }
-
   if (showCongratulations) {
     return (
-      <div className="min-h-screen  p-4 flex items-center justify-center">
+      <div className="min-h-screen p-4 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-teal-700 mb-4">
             Lab Results Saved Successfully! 🎉
@@ -319,7 +387,7 @@ const LabStepper: React.FC<LabStepperProps> = ({
 
   if (isSaving) {
     return (
-      <div className="min-h-screen bg-white p-4 flex items-center justify-center">
+      <div className="min-h-screen p-4 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-10 w-10 border-4 border-teal-600 border-t-transparent mx-auto mb-4"></div>
           <p className="text-gray-600 animate-pulse">
@@ -337,7 +405,7 @@ const LabStepper: React.FC<LabStepperProps> = ({
       <div className="max-w-xl mx-auto">
         <div className="mb-6">
           <div className="flex items-center gap-3 w-full justify-center">
-            {currentStep > 0 && (
+            {currentStepIndex > 0 && (
               <FaArrowLeft className="w-3 h-3 cursor-pointer" onClick={prevStep} />
             )}
             <p className="text-[12px] uppercase text-teal-700 text-center flex-grow">
@@ -372,55 +440,31 @@ const LabStepper: React.FC<LabStepperProps> = ({
               </div>
             </div>
             <div className="absolute right-0 top-5 text-xs text-gray-600">
-              Step {currentStep > questions.length - 1 ? currentStep : currentStep + 1} of {questions.length}
+              Step {currentStepIndex + 1} of {visibleQuestions.length}
             </div>
           </div>
         </div>
 
-        {currentStep !== null && (
-          <div className="mb-8">
-            {currentStep < questions.length ? (
-              <>
-                <h2 className="text-lg font-medium mb-3 text-black">
-                  {questions[currentStep].title}
-                </h2>
-                <p className="text-gray-600 mb-6 text-[12px]">
-                  {questions[currentStep].description}
-                </p>
-                {renderQuestion()}
-              </>
-            ) : (
-              <>
-                <h2 className="text-lg font-medium mb-3">
-                  Review and Save
-                </h2>
-                <p className="text-gray-600 mb-6">
-                  Please review your lab results and save them.
-                </p>
-                <button
-                  type="button"
-                  onClick={handleSaveChanges}
-                  className="w-full px-5 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700"
-                >
-                  Save Lab Results
-                </button>
-              </>
-            )}
-          </div>
-        )}
+        <div className="mb-8">
+          <h2 className="text-lg font-medium mb-3 text-black">
+            {visibleQuestions[currentStepIndex].title}
+          </h2>
+          <p className="text-gray-600 mb-6 text-[12px]">
+            {visibleQuestions[currentStepIndex].description}
+          </p>
+          {renderQuestion()}
+        </div>
 
-        {currentStep < questions.length && (
-          <div className="flex justify-end">
-            <Button
-              type="primary"
-              onClick={nextStep}
-              disabled={!isCurrentAnswerValid()}
-              className="px-5 py-2"
-            >
-              Next
-            </Button>
-          </div>
-        )}
+        <div className="flex justify-end">
+          <Button
+            type="primary"
+            onClick={nextStep}
+            disabled={!isCurrentAnswerValid()}
+            className="px-5 py-2"
+          >
+            {currentStepIndex === visibleQuestions.length - 1 ? 'Save' : 'Next'}
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -158,7 +158,7 @@ export default function AiDoctor() {
                 </p>
               </Dragger>
 
-              <div className="flex gap-4 justify-end">
+              <div className="flex gap-4 justify-end mt-5">
                 <Button onClick={handleManualEntry} className="text-gray-700">
                   Enter Manually
                 </Button>
