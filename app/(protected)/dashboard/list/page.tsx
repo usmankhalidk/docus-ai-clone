@@ -10,6 +10,7 @@ import { Status } from '@/app/types/list'
 import { SCREENINGS } from '@/app/data/ScreeningData'
 import { useState } from 'react'
 import { CgAttachment } from 'react-icons/cg'
+import ModalLabStepper from '@/app/component/ui/ModalLabStepper'
 
 const { RangePicker } = DatePicker
 const { Dragger } = Upload;
@@ -47,7 +48,13 @@ export default function LabTestsScreenings() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [fileList, setFileList] = useState<UploadFile[]>([]);
     const router = useRouter();
-  
+    const [isStepperModalOpen, setIsStepperModalOpen] = useState(false);
+
+  const handleComplete = (answers: any) => {
+    console.log('Completed with answers:', answers);
+    setIsStepperModalOpen(false);
+    // Handle the answers as needed
+  };
     // Open the modal when "Add New Test" is clicked
     const handleAddTest = () => {
       setIsModalOpen(true);
@@ -90,7 +97,8 @@ export default function LabTestsScreenings() {
       onChange: (info) => {
         const { status } = info.file;
         if (status === 'done') {
-          router.push('/dashboard/test-results/new/text/message/screening-type');
+            setIsStepperModalOpen(true);
+        //   router.push('/dashboard/test-results/new/text/message/screening-type');
           message.success(`${info.file.name} uploaded successfully.`);
         } else if (status === 'error') {
           message.error(`${info.file.name} upload failed.`);
@@ -99,6 +107,7 @@ export default function LabTestsScreenings() {
     };
   
     const handleUpload = async () => {
+        
       if (fileList.length === 0) {
         message.warning('Please select a file first');
         return;
@@ -110,7 +119,7 @@ export default function LabTestsScreenings() {
       try {
         // Simulate upload success
         await new Promise(resolve => setTimeout(resolve, 1500));
-  
+        setIsStepperModalOpen(true);
         message.success('Upload completed successfully');
         setIsModalOpen(false);
         setFileList([]);
@@ -244,6 +253,11 @@ export default function LabTestsScreenings() {
               </div>
             </div>
           </Modal>
+          <ModalLabStepper
+        isOpen={isStepperModalOpen}
+        onClose={() => setIsStepperModalOpen(false)}
+        onComplete={handleComplete}
+      />
     </div>
   )
 }

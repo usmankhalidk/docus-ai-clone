@@ -1,5 +1,6 @@
 'use client';
 
+import ModalLabStepper from "@/app/component/ui/ModalLabStepper";
 import { Button, Card, message, Modal, Upload, UploadFile, UploadProps } from "antd";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -12,6 +13,13 @@ const { Dragger } = Upload;
 export default function AiDoctor() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [fileList, setFileList] = useState<UploadFile[]>([]);
+  const [isStepperModalOpen, setIsStepperModalOpen] = useState(false);
+
+  const handleComplete = (answers: any) => {
+    console.log('Completed with answers:', answers);
+    setIsStepperModalOpen(false);
+    // Handle the answers as needed
+  };
   const router = useRouter();
 
   // Open the modal when "Add New Test" is clicked
@@ -56,7 +64,8 @@ export default function AiDoctor() {
     onChange: (info) => {
       const { status } = info.file;
       if (status === 'done') {
-        router.push('/dashboard/test-results/new/text/message/screening-type');
+        // router.push('/dashboard/test-results/new/text/message/screening-type'); 
+        setIsStepperModalOpen(true);
         message.success(`${info.file.name} uploaded successfully.`);
       } else if (status === 'error') {
         message.error(`${info.file.name} upload failed.`);
@@ -76,7 +85,7 @@ export default function AiDoctor() {
     try {
       // Simulate upload success
       await new Promise(resolve => setTimeout(resolve, 1500));
-
+      setIsStepperModalOpen(true);
       message.success('Upload completed successfully');
       setIsModalOpen(false);
       setFileList([]);
@@ -174,7 +183,11 @@ export default function AiDoctor() {
               </div>
             </div>
           </Modal>
-
+          <ModalLabStepper
+        isOpen={isStepperModalOpen}
+        onClose={() => setIsStepperModalOpen(false)}
+        onComplete={handleComplete}
+      />
           {/* Skip link */}
           <button
             className="text-gray-500 hover:text-gray-700 transition-colors underline mt-6"

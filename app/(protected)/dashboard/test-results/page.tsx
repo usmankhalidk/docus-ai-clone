@@ -9,10 +9,18 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Dragger from 'antd/es/upload/Dragger';
 import { CgAttachment } from 'react-icons/cg';
+import ModalLabStepper from '@/app/component/ui/ModalLabStepper';
 
 export default function LabTests() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [fileList, setFileList] = useState<UploadFile[]>([]);
+    const [isStepperModalOpen, setIsStepperModalOpen] = useState(false);
+
+    const handleComplete = (answers: any) => {
+      console.log('Completed with answers:', answers);
+      setIsStepperModalOpen(false);
+      // Handle the answers as needed
+    };
     const router = useRouter();
   
     // Open the modal when "Add New Test" is clicked
@@ -57,6 +65,7 @@ export default function LabTests() {
       onChange: (info) => {
         const { status } = info.file;
         if (status === 'done') {
+          setIsStepperModalOpen(true);
           message.success(`${info.file.name} uploaded successfully.`);
         } else if (status === 'error') {
           message.error(`${info.file.name} upload failed.`);
@@ -76,7 +85,7 @@ export default function LabTests() {
       try {
         // Simulate upload success
         await new Promise(resolve => setTimeout(resolve, 1500));
-  
+        setIsStepperModalOpen(true);
         message.success('Upload completed successfully');
         setIsModalOpen(false);
         setFileList([]);
@@ -184,6 +193,11 @@ export default function LabTests() {
               </div>
             </div>
           </Modal>
+          <ModalLabStepper
+        isOpen={isStepperModalOpen}
+        onClose={() => setIsStepperModalOpen(false)}
+        onComplete={handleComplete}
+      />
         {/* Add New Button */}
         <div className="flex justify-center">
           <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors text-sm" onClick={handleAddTest}>
