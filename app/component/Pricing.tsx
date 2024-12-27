@@ -5,7 +5,7 @@ import AccordionItem from './Home/Accordion'
 import { Forbes } from './Home/Forbes'
 import { FaPercentage } from "react-icons/fa";
 import Cards from '../PricingCard/Cards';
-import plans from "../json/PricingCard.json"
+import plans from "../Json/PricingCard.json"
 const Pricing = () => {
     const [isYearly, setIsYearly] = useState(false);
     const handleToggle = () => {
