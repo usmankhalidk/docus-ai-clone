@@ -37,9 +37,9 @@ export const LAB = () => {
             Our AI Doctor can easily analyze and interpret your lab tests, providing clear and actionable health information.
           </p>
           <div>
-            <p className="text-base md:text-lg mb-2">Upload your lab tests</p>
-            <p className="text-base md:text-lg mb-2">Receive valuable insights and recommendations</p>
-            <p className="text-base md:text-lg mb-2">Make informed health decisions</p>
+            <p className="text-base md:text-lg mb-2"><span className='text-theme_color'>✓ </span> Upload your lab tests</p>
+            <p className="text-base md:text-lg mb-2"> <span className='text-theme_color'>✓ </span>Receive valuable insights and recommendations</p>
+            <p className="text-base md:text-lg mb-2"><span className='text-theme_color'>✓ </span>Make informed health decisions</p>
           </div>
           <div className='flex flex-col lg:flex-row items-center justify-center md:justify-start gap-4'>
             <button
@@ -85,7 +85,7 @@ export const LAB = () => {
         </div>
         <div className='w-full md:w-1/2 order-1 md:order-2 mb-12 md:mb-0'>
           <img
-            src="./images/lab-test-intro.webp"  
+            src="./images/lab-test-intro.webp"
             // Ensure correct path if you use a relative path or provide a full URL
             width="100%"
             height="auto"
