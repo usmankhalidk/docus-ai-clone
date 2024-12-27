@@ -22,9 +22,9 @@ import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import { MdGroups2 } from "react-icons/md";
 import Link from 'next/link'
 const products = [
-  { name: 'AI Doctor', href: 'ai-doctor', icon: HiChatBubbleLeftRight },
-  { name: 'Lab Test Interpretation', href: 'lab-test-interpretation', icon: FaFlaskVial },
-  { name: 'Second Opinion', href: 'second-opinion', icon: MdGroups2 },
+  { name: 'AI Doctor', href: '/ai-doctor', icon: HiChatBubbleLeftRight },
+  { name: 'Lab Test Interpretation', href: '/lab-test-interpretation', icon: FaFlaskVial },
+  { name: 'Second Opinion', href: '/second-opinion', icon: MdGroups2 },
 ]
 const Resources = [
   { name: 'Blog', href: 'blog' },
@@ -141,14 +141,14 @@ export default function Example() {
 
 
     <div className='flex items-center justify-between p-5'>
-      <a href="#" className=" block lg:hidden ">
+      <Link href="/" className=" block lg:hidden ">
         <span className="sr-only">Your Company</span>
         <img
           alt="Your Company Logo"
-          src="https://docus.ai/docus-dark-logo.svg"
+          src="/images/docus-logo.svg"
           className="h-9 w-auto"
         />
-      </a>
+      </Link>
       <div
         className="h-12 w-12 bg-[rgb(245,245,245)] rounded-full flex justify-center items-center cursor-pointer"
         onClick={() => { setOpen(true) }}
@@ -172,12 +172,15 @@ export default function Example() {
               <div className="flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl">
                 <div className="px-4 sm:px-6">
                   <Dialog.Title className="text-base font-semibold text-gray-900 flex justify-between items-center">
+
                     <div>
-                      <img
-                        alt="Your Company Logo"
-                        src="https://docus.ai/docus-dark-logo.svg"
-                        className="h-6 w-auto"
-                      />
+                      <Link href="/" onClick={() => setOpen(false)}>
+                        <img
+                          alt="Your Company Logo"
+                          src="/images/docus-logo.svg"
+                          className="h-6 w-auto"
+
+                        /></Link>
                     </div>
                     <div onClick={() => setOpen(false)} className="cursor-pointer">
                       <XMarkIcon className="size-6" />
@@ -198,22 +201,23 @@ export default function Example() {
                           </Disclosure.Button>
                           <Disclosure.Panel className="space-y-2 pl-4">
                             {products.map((item) => (
-                              <a
+                              <Link
                                 key={item.name}
                                 href={item.href}
                                 className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
+                                onClick={() => setOpen(false)}
                               >
                                 <item.icon aria-hidden="true" className="size-6 text-gray-600" />
                                 <span>{item.name}</span>
-                              </a>
+                              </Link>
                             ))}
                           </Disclosure.Panel>
                         </>
                       )}
                     </Disclosure>
-                    <a href="#" className="block py-2 text-lg font-semibold text-gray-900">
+                    <Link href="/pricing" className="block py-2 text-lg font-semibold text-gray-900" onClick={() => setOpen(false)}>
                       Pricing
-                    </a>
+                    </Link>
                     {/* Resources Accordion */}
                     <Disclosure>
                       {({ open }) => (
@@ -227,13 +231,14 @@ export default function Example() {
                           <Disclosure.Panel className="space-y-2 pl-4">
                             {Resources.map((item) => (
 
-                              <a
+                              <Link
                                 key={item.name}
                                 href={item.href}
                                 className="block text-gray-700 hover:text-gray-900"
+                                onClick={() => setOpen(false)}
                               >
                                 {item.name}
-                              </a>
+                              </Link>
 
                             ))}
                           </Disclosure.Panel>
@@ -249,15 +254,16 @@ export default function Example() {
                 </div>
 
                 <div>
-                  <button
-                    type="submit"
-                    className="w-full rounded-sm bg-button_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-button_color_onHover"
-                  >
-                    Get Started For Free
-                  </button>
-                  <a href="#" className="block py-2 text-lg font-semibold text-gray-900 text-center">
+                  <Link href="/signup">
+                    <button
+                      type="submit"
+                      className="w-full rounded-sm bg-button_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-button_color_onHover"
+                    >
+                      Get Started For Free
+                    </button></Link >
+                  <Link href="/login" className="block py-2 text-lg font-semibold text-gray-900 text-center">
                     Sign In
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Dialog.Panel>

@@ -10,7 +10,7 @@ export const Glossary = () => {
 
     return (
         <div className="flex flex-col gap-8">
-            <section className="flex flex-col md:flex-row items-center pt-8 mx-auto max-w-7xl lg:px-16 px-5">
+            <section className="flex flex-col md:flex-row items-center pt-8 mx-auto max-w-7xl lg:px-16 px-5 mt-8 sm:mt-12 md:mt-16 lg:mt-20">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl md:text-[46px] leading-[32px] md:leading-[56px] text-center font-bold text-gray-800 mb-2">
                         {GlossaryHeroSection.title}

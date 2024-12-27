@@ -1,0 +1,119 @@
+[
+    {
+        "name": "Free",
+        "price": "$0/forever",
+        "yearly": "$0/forever",
+        "ismiddleCard": false,
+        "details": [
+            {
+                "text": "with AI Doctor",
+                "checked": false,
+                "bold": "3 messages/week"
+            },
+            {
+                "text": "interpreted by AI",
+                "checked": false,
+                "bold": "1 test result "
+            },
+            {
+                "text": "AI long-term memory",
+                "checked": false
+            },
+            {
+                "text": "Conversation Summaries",
+                "checked": false
+            },
+            {
+                "text": "Chat attachments",
+                "checked": false
+            },
+            {
+                "text": "Chat history",
+                "checked": false
+            },
+            {
+                "text": "Premium Support (not included)",
+                "checked": true
+            }
+        ],
+        "highlighted": false
+    },
+    {
+        "name": "Lite",
+        "price": "$5.99/mo",
+        "yearly": "3.99/year",
+        "ismiddleCard": true,
+        "details": [
+            {
+                "text": "with AI Doctor",
+                "checked": false,
+                "bold": "50 messages/month "
+            },
+            {
+                "text": "interpreted by AI",
+                "checked": false,
+                "bold": "5 test results/month "
+            },
+            {
+                "text": "AI long-term memory",
+                "checked": false
+            },
+            {
+                "text": "Conversation Summaries",
+                "checked": false
+            },
+            {
+                "text": "Chat attachments",
+                "checked": false
+            },
+            {
+                "text": "Chat history",
+                "checked": false
+            },
+            {
+                "text": "Premium Support",
+                "checked": false
+            }
+        ],
+        "highlighted": true
+    },
+    {
+        "name": "Pro",
+        "price": "$14.99/mo",
+        "yearly": "7.99/year",
+        "ismiddleCard": false,
+        "details": [
+            {
+                "text": "with AI Doctor",
+                "checked": false,
+                "bold": "500 messages/month "
+            },
+            {
+                "text": "interpreted by AI",
+                "checked": false,
+                "bold": "15 test results/month "
+            },
+            {
+                "text": "AI long-term memory",
+                "checked": false
+            },
+            {
+                "text": "Conversation Summaries",
+                "checked": false
+            },
+            {
+                "text": "Chat attachments",
+                "checked": false
+            },
+            {
+                "text": "Chat history",
+                "checked": false
+            },
+            {
+                "text": "Premium Support",
+                "checked": false
+            }
+        ],
+        "highlighted": false
+    }
+]

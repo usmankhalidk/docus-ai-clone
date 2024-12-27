@@ -12,7 +12,6 @@ import Carousel from "./component/Home/Carousal";
 export default function HomePage() {
 
   const { SafeDataHome, HomeBenefitCards } = homedata
-  console.log("121221212", json)
   return (
     <>
       <HeroSection />
