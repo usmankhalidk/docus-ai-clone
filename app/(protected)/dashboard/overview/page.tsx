@@ -135,8 +135,8 @@ const HealthProfile: React.FC = () => {
 
 
 
-      <div className="bg-white rounded-lg p-6 shadow-sm mb-4">
-        <div className="flex items-center justify-between">
+      <div className="bg-white rounded-lg p-6 shadow-sm mb-4 cursor-pointer" onClick={()=>router.push('/dashboard/overview/main-health-information')}>
+        <div className="flex items-center justify-between " >
           <div className="flex items-center space-x-4">
             
               <CircularProgressBar value={30}/>
@@ -147,7 +147,7 @@ const HealthProfile: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+      <div className="bg-white rounded-lg p-6 shadow-sm cursor-pointer" onClick={()=>router.push('/dashboard/overview/lab-test-interpretation')}>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
          <CircularProgressBar value={0}/>
