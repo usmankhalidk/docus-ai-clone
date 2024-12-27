@@ -260,5 +260,109 @@
             "title": "Viral Marker Tests",
             "description": "Detects common viral infections like HIV and hepatitis."
         }
+    ],
+    "Tags": [
+        {
+            "tag": "Hemoglobin"
+        },
+        {
+            "tag": "Glucose"
+        },
+        {
+            "tag": "Cholesterol"
+        },
+        {
+            "tag": "ALT"
+        },
+        {
+            "tag": "AST"
+        },
+        {
+            "tag": "TSH"
+        },
+        {
+            "tag": "Creatinine"
+        },
+        {
+            "tag": "Iron"
+        },
+        {
+            "tag": "Cortisol"
+        },
+        {
+            "tag": "Insulin"
+        },
+        {
+            "tag": "Testosterone"
+        },
+        {
+            "tag": "Follicle-Stimulating Hormone (FSH)"
+        },
+        {
+            "tag": "Luteinizing Hormone (LH)"
+        },
+        {
+            "tag": "Albumin"
+        },
+        {
+            "tag": "Bilirubin"
+        },
+        {
+            "tag": "Amylase"
+        },
+        {
+            "tag": "Lipase"
+        },
+        {
+            "tag": "Calcium"
+        },
+        {
+            "tag": "Magnesium"
+        },
+        {
+            "tag": "C-Reactive Protein (CRP)"
+        },
+        {
+            "tag": "Sodium"
+        },
+        {
+            "tag": "Potassium"
+        },
+        {
+            "tag": "Chloride"
+        },
+        {
+            "tag": "Vitamin D"
+        },
+        {
+            "tag": "Leptin"
+        },
+        {
+            "tag": "Erythropoietin"
+        },
+        {
+            "tag": "Growth Hormone"
+        },
+        {
+            "tag": "Prolactin"
+        },
+        {
+            "tag": "Estrogen"
+        },
+        {
+            "tag": "Progesterone"
+        },
+        {
+            "tag": "Parathyroid Hormone (PTH)"
+        },
+        {
+            "tag": "Vitamin B12"
+        },
+        {
+            "tag": "Folate"
+        },
+        {
+            "tag": "Uric Acid"
+        }
     ]
 }

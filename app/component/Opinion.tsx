@@ -65,7 +65,7 @@ export const Opinion = () => {
             </section>
 
             <section className="max-w-6xl mx-auto lg:px-16 py-0 sm:py-8 lg:py-10 px-5">
-                <Poster PosterData={OpinionPoster} buttonColor="Green" />
+                <Poster PosterData={OpinionPoster} buttonColor="Green" isAccordion={true} />
             </section>
 
             <section className="my-14 sm:my-24 flex items-center justify-center gap-8 md:gap-12 lg:gap-28 sm:flex-row flex-col">
