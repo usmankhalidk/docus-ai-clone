@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 
@@ -21,10 +22,10 @@ const HealthInformed = () => {
                             <p className='text-base'><span className='text-theme_color'>✓ </span> Discover your health risks</p>
                             <p className='text-base'><span className='text-theme_color'>✓ </span> Get personal checkup plans</p>
                             <p className='text-base'><span className='text-theme_color'>✓ </span> Generate health reports</p>
-                            <div className='flex items-center justify-end text-lg text-theme_color font-bold'>
+                            <Link href="ai-doctor" className='flex items-center justify-end text-lg text-theme_color font-bold'>
                                 <p className='pr-1'>Chat with AI Doctor </p>
                                 <FaLongArrowAltRight />
-                            </div>
+                            </Link>
                         </div>
                         <div className='flex flex-col gap-5'>
                             <div className='p-6 hover:shadow-md flex flex-col gap-6 rounded-md border' style={{ backgroundColor: "rgb(245, 245, 245)" }}>
@@ -36,10 +37,10 @@ const HealthInformed = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex items-center justify-end text-lg text-theme_color font-bold'>
+                                <Link href="/lab-test-interpretation" className='flex items-center justify-end text-lg text-theme_color font-bold'>
                                     <p className='pr-1'>Go To Lab Test </p>
                                     <FaLongArrowAltRight />
-                                </div>
+                                </Link>
 
 
                             </div>
@@ -52,10 +53,10 @@ const HealthInformed = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex items-center justify-end text-lg text-theme_color font-bold'>
+                                <Link href="/second-opinion" className='flex items-center justify-end text-lg text-theme_color font-bold'>
                                     <p className='pr-1'>Get Second Opinion </p>
                                     <FaLongArrowAltRight />
-                                </div>
+                                </Link>
 
 
                             </div>

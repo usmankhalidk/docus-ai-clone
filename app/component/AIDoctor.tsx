@@ -14,6 +14,8 @@ import AccordionItem from "./Home/Accordion";
 import { IoIosStar } from "react-icons/io";
 import cardData from "../Json/Carousal.json"
 import Carousel from "./Home/Carousal";
+import AIChat from "./AIChat";
+import Link from "next/link";
 // Main Section
 export const AIDoctor = () => {
 
@@ -32,14 +34,14 @@ export const AIDoctor = () => {
           <p className='text-base md:text-lg'>
             Docus AI Doctor can be your first step toward an accurate diagnosis. Get recommendations, validate with top doctors, and stay healthy.
           </p>
-          <div className='flex items-center justify-center md:justify-start'>
+          <Link href="/signup" className='flex items-center justify-center md:justify-start'>
             <button
               type="submit"
               className="rounded-sm bg-theme_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-theme_color_onHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Try Docus For Free
             </button>
-          </div>
+          </Link>
           <div className='flex items-center gap-5 justify-center md:justify-start'>
             <p className='font-semibold'>Excellent</p>
             <div className='flex items-center gap-1' title="4.9 out of 5 star rating on Trustpilot">
@@ -78,9 +80,11 @@ export const AIDoctor = () => {
           />
         </div>
       </div>
+
       <section>
         <HIPA />
       </section>
+      <AIChat />
       <section className="max-w-7xl mx-auto lg:px-[108px] py-4 px-5">
         <h1 className="text-3xl sm:text-[34px] lg:text-[38px] font-bold text-gray-800 md:text-center my-4 sm:my-8 lg:mt-16 lg:mb-12">{MainTitle.DoctorAnalysisTitle}</h1>
         {DoctorAnalysis.map((data, index) => (
@@ -116,7 +120,7 @@ export const AIDoctor = () => {
           <AccordionItem answer={data?.answer} question={data?.question} index={index} />
         ))}
       </div>
-      <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
+      <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <Link href="/contact" className='text-theme_color ml-2 underline'> Contact us</Link></p></div>
     </div>
   )
 }

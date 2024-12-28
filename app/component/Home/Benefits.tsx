@@ -11,6 +11,7 @@ import { RiNumber1 } from "react-icons/ri";
 import { RiNumber2 } from "react-icons/ri";
 import { RiNumber3 } from "react-icons/ri";
 import { BenefitCardsData } from "../../types/blogInterface"
+import Link from 'next/link';
 
 export const Benefits = ({ BenefitCardsData }: { BenefitCardsData: BenefitCardsData }) => {
 
@@ -51,11 +52,11 @@ export const Benefits = ({ BenefitCardsData }: { BenefitCardsData: BenefitCardsD
                 })}
             </div>
             {buttonText &&
-                <div className='flex items-center justify-center my-5'>
+                <Link href="/signup" className='flex items-center justify-center my-5'>
                     <button className="mt-6 bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
                         {buttonText}
                     </button>
-                </div>
+                </Link>
             }
         </>
     )

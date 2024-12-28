@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Analysis } from "../../types/blogInterface";
 
 type LocalInterface = {
@@ -33,9 +34,10 @@ export const AI: React.FC<LocalInterface> = ({ AnalysisData, isImageLeft }) => {
                         </li>
                     ))}
                 </ul>
-                <button className="mt-6 bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
-                    {buttonText}
-                </button>
+                <Link href="/signup">
+                    <button className="mt-6 bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
+                        {buttonText}
+                    </button></Link>
             </div>
             {!isImageLeft && (
                 <img

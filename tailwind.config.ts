@@ -15,11 +15,12 @@ export default {
         noto: ['var(--font-noto-sans)'], // This creates a specific class for Noto Sans
       },
       colors: {
-       
+
         button_color: "rgb(233, 93, 83)",
         button_color_onHover: "rgb(233, 93, 83,0.9)",
         theme_color: "rgb(26, 132, 124)",
         theme_color_onHover: "rgb(26, 132, 124,0.9)",
+        chathoverbg: "rgb(233, 243, 242)",
       },
     },
   },

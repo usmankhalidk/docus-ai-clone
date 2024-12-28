@@ -26,19 +26,19 @@
             "links": [
                 {
                     "name": "About us",
-                    "url": "#"
+                    "url": "/pricing"
                 },
                 {
                     "name": "Pricing",
-                    "url": "#"
+                    "url": "/pricing"
                 },
                 {
                     "name": "Join as a Doctor",
-                    "url": "#"
+                    "url": "/pricing"
                 },
                 {
                     "name": "Contact",
-                    "url": "#"
+                    "url": "/pricing"
                 }
             ]
         },
@@ -47,23 +47,23 @@
             "links": [
                 {
                     "name": "AI Health Assistant",
-                    "url": "#"
+                    "url": "/ai-doctor"
                 },
                 {
                     "name": "AI Doctor",
-                    "url": "#"
+                    "url": "ai-doctor"
                 },
                 {
                     "name": "Lab Test Interpretation",
-                    "url": "#"
+                    "url": "/lab-test-interpretation"
                 },
                 {
                     "name": "Symptom Checker",
-                    "url": "#"
+                    "url": "/lab-test-interpretation"
                 },
                 {
                     "name": "Second Opinion",
-                    "url": "#"
+                    "url": "/second-opinion"
                 }
             ]
         },
@@ -72,31 +72,31 @@
             "links": [
                 {
                     "name": "Blog",
-                    "url": "#"
+                    "url": "/blog"
                 },
                 {
                     "name": "Knowledge Base",
-                    "url": "#"
+                    "url": "/knowledge-base"
                 },
                 {
                     "name": "Symptoms Guide",
-                    "url": "#"
+                    "url": "/symptoms-guide"
                 },
                 {
                     "name": "Glossary",
-                    "url": "#"
+                    "url": "/glossary"
                 },
                 {
                     "name": "All Articles",
-                    "url": "#"
+                    "url": "/blog"
                 },
                 {
                     "name": "All Doctors",
-                    "url": "#"
+                    "url": "/signup"
                 },
                 {
                     "name": "Use Cases",
-                    "url": "#"
+                    "url": "/knowledge-base"
                 }
             ]
         },
@@ -105,15 +105,15 @@
             "links": [
                 {
                     "name": "Terms of use",
-                    "url": "#"
+                    "url": "/knowledge-base"
                 },
                 {
                     "name": "Privacy policy",
-                    "url": "#"
+                    "url": "/symptoms-guide"
                 },
                 {
                     "name": "Cookie policy",
-                    "url": "#"
+                    "url": "/blog"
                 }
             ]
         }
