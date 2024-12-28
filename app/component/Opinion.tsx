@@ -15,6 +15,7 @@ import AccordionItem from "./Home/Accordion";
 import json from "../Json/Accordion.json"
 import cardData from "../Json/Carousal.json"
 import Carousel from "./Home/Carousal";
+import Link from "next/link";
 export const Opinion = () => {
 
     const { SpecialistDoctors } = labdata
@@ -57,11 +58,11 @@ export const Opinion = () => {
                         </div>
                     ))}
                 </div>
-                <div className="text-center mt-10 mb-12">
+                <Link href="ai-doctor" className="flex justify-center mt-10 mb-12">
                     <button className="bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
                         Choose Top Doctor
                     </button>
-                </div>
+                </Link>
             </section>
 
             <section className="max-w-6xl mx-auto lg:px-16 py-0 sm:py-8 lg:py-10 px-5">
@@ -89,9 +90,10 @@ export const Opinion = () => {
                     <img src="./images/ai-assistant.webp" alt="" className="mx-auto" />
                     <h3 className="text-2xl sm:text-3xl font-bold text-center text-white mb-3 lg:mb-6">Docus AI Doctor</h3>
                     <p className="text-white text-base text-center sm:text-lg mb-6">Our AI-based virtual health assistant has answers to any question related to your health.</p>
-                    <button className="bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
-                        Chat with AI Doctor
-                    </button>
+                    <Link href="ai-doctor">
+                        <button className="bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
+                            Chat with AI Doctor
+                        </button></Link>
                 </div>
             </section>
 
@@ -131,11 +133,11 @@ export const Opinion = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-10 mb-[84px]">
+                <Link href="ai-doctor" className="flex  justify-center mt-10 mb-[84px]">
                     <button className="bg-theme_color text-white text-lg font-semibold px-6 py-3 rounded hover:bg-theme_color_onHover transition">
                         View All Specialists
                     </button>
-                </div>
+                </Link>
             </section>
 
             <div className='mx-auto max-w-3xl px-5'>
@@ -146,7 +148,7 @@ export const Opinion = () => {
                     <AccordionItem answer={data?.answer} question={data?.question} index={index} />
                 ))}
             </div>
-            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
+            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <Link href="/contact" className='text-theme_color ml-2 underline'> Contact us</Link></p></div>
         </div>
     )
 }

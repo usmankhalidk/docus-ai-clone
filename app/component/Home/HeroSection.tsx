@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import React from 'react'
 import { IoIosStar } from "react-icons/io";
 const HeroSection = () => {
@@ -15,12 +16,13 @@ const HeroSection = () => {
                     Prevent potential health issues and effectively manage your health. Gain insights with our AI Doctor and validate them with top US and European doctors.
                 </p>
                 <div className='flex items-center justify-center md:justify-start'>
-                    <button
+                    <Link href="/signup">                    <button
                         type="submit"
                         className="rounded-sm bg-theme_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-theme_color_onHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                         Try Docus For Free
-                    </button>
+                    </button></Link>
+
                 </div>
                 <div className='flex items-center gap-5 justify-center md:justify-start'>
                     <p className='font-semibold'>Excellent</p>

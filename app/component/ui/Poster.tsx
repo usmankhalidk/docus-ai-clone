@@ -4,6 +4,7 @@ import { PosterInterface } from "../../types/blogInterface";
 import { TbCircleNumber1Filled } from "react-icons/tb";
 import { TbCircleNumber2Filled } from "react-icons/tb";
 import { TbCircleNumber3Filled } from "react-icons/tb";
+import Link from "next/link";
 type LocalInterface = {
     PosterData: PosterInterface
     buttonColor: string
@@ -167,9 +168,10 @@ export const Poster: React.FC<LocalInterface> = ({ PosterData, buttonColor, post
                         </p>
                     </div>
                 </div> : <p className="text-gray-600 text-base sm:text-lg mb-7">{description}</p>}
-                <button className={`${buttonColor === "Green" ? "bg-theme_color" : "bg-button_color"} ${buttonColor === "Green" ? "hover:bg-theme_color_onHover" : "hover:bg-button_color_onHover"} text-white font-semibold py-3 px-6 rounded-[4px] transition-colors w-full md:w-fit text-center ${isAccordion ? "mt-6" : ""}`} >
-                    {button.text}
-                </button>
+                <Link href="/signup" >
+                    <button className={`${buttonColor === "Green" ? "bg-theme_color" : "bg-button_color"} ${buttonColor === "Green" ? "hover:bg-theme_color_onHover" : "hover:bg-button_color_onHover"} text-white font-semibold py-3 px-6 rounded-[4px] transition-colors w-full md:w-fit text-center ${isAccordion ? "mt-6" : ""}`} >
+                        {button.text}
+                    </button></Link>
             </div>
             <div className="md:w-1/2 content-center mt-6 sm:mt-0">
                 <img

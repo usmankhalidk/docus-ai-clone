@@ -1,6 +1,7 @@
 import React from 'react'
 import json from "../../Json/Accordion.json"
 import AccordionItem from './Accordion'
+import Link from 'next/link'
 const HomeAccordion = () => {
     return (
         <>
@@ -13,7 +14,7 @@ const HomeAccordion = () => {
                 ))}
 
             </div>
-            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div></>
+            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <Link href="/contact" className='text-theme_color ml-2 underline'> Contact us</Link></p></div></>
     )
 }
 

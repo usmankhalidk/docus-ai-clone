@@ -27,10 +27,10 @@ const products = [
   { name: 'Second Opinion', href: '/second-opinion', icon: MdGroups2 },
 ]
 const Resources = [
-  { name: 'Blog', href: 'blog' },
-  { name: 'Symptopms Guide', href: 'symptoms-guide' },
-  { name: 'Knowloedge Base', href: 'knowledge-base' },
-  { name: 'Glossary', href: 'glossary' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Symptopms Guide', href: '/symptoms-guide' },
+  { name: 'Knowloedge Base', href: '/knowledge-base' },
+  { name: 'Glossary', href: '/glossary' },
 ]
 
 export default function Example() {

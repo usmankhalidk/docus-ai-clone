@@ -42,18 +42,20 @@ export const LAB = () => {
             <p className="text-base md:text-lg mb-2"><span className='text-theme_color'>✓ </span>Make informed health decisions</p>
           </div>
           <div className='flex flex-col lg:flex-row items-center justify-center md:justify-start gap-4'>
-            <button
-              type="submit"
-              className="rounded-[4px] bg-theme_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-theme_color_onHover w-full lg:w-fit"
-            >
-              Try for Free
-            </button>
-            <button
-              type="submit"
-              className="rounded-[4px] border border-[#1a847c] px-5 py-3 text-lg text-[#1a847c] hover:text-white font-semibold shadow-sm hover:bg-theme_color w-full lg:w-fit"
-            >
-              Join us as a Partner Lab
-            </button>
+            <Link href="/signup">
+              <button
+                type="submit"
+                className="rounded-[4px] bg-theme_color px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-theme_color_onHover w-full lg:w-fit"
+              >
+                Try for Free
+              </button></Link>
+            <Link href="/signup">
+              <button
+                type="submit"
+                className="rounded-[4px] border border-[#1a847c] px-5 py-3 text-lg text-[#1a847c] hover:text-white font-semibold shadow-sm hover:bg-theme_color w-full lg:w-fit"
+              >
+                Join us as a Partner Lab
+              </button></Link>
           </div>
           <div className='flex flex-col sm:flex-row items-center gap-5 justify-center md:justify-start mx-4 mt-2'>
             <p className='font-medium'>Excellent</p>
@@ -167,7 +169,7 @@ export const LAB = () => {
           <AccordionItem answer={data?.answer} question={data?.question} index={index} />
         ))}
       </div>
-      <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
+      <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <Link href="/contact" className='text-theme_color ml-2 underline'> Contact us</Link></p></div>
 
     </div>
   )

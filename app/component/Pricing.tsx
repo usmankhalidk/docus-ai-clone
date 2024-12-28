@@ -6,6 +6,7 @@ import { Forbes } from './Home/Forbes'
 import { FaPercentage } from "react-icons/fa";
 import Cards from '../PricingCard/Cards';
 import plans from "../Json/PricingCard.json"
+import Link from 'next/link'
 const Pricing = () => {
     const [isYearly, setIsYearly] = useState(false);
     const handleToggle = () => {
@@ -49,7 +50,7 @@ const Pricing = () => {
                 ))}
 
             </div>
-            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <a href="" className='text-theme_color ml-2 underline'> Contact us</a></p></div>
+            <div className='mx-auto max-w-5xl mb-14'><p className='text-lg font-bold mt-5'>Have more questions? <Link href="/contact" className='text-theme_color ml-2 underline'> Contact us</Link></p></div>
         </>
     )
 }
