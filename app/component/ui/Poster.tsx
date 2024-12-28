@@ -59,7 +59,7 @@ export const Poster: React.FC<LocalInterface> = ({ PosterData, buttonColor, post
                             aria-expanded={activeIndex === 1 ? "true" : "false"}
                             aria-controls="accordion-flush-body-1"
                         >
-                            <span className={`text-black text-lg font-bold flex items-center gap-2 ${activeIndex == 1 ? "text-theme_color" : ""}`}><TbCircleNumber1Filled className="size-6 text-theme_color" /> {activeTitles[1]}</span>
+                            <span className={`text-black text-lg font-bold flex items-center text-left gap-2 ${activeIndex == 1 ? "text-theme_color" : ""}`}><TbCircleNumber1Filled className="size-6 text-theme_color" /> {activeTitles[1]}</span>
                             <svg
                                 data-accordion-icon
                                 className={`w-3 h-3 rotate-180 shrink-0 ${activeIndex === 1 ? "" : "rotate-180"
@@ -98,7 +98,7 @@ export const Poster: React.FC<LocalInterface> = ({ PosterData, buttonColor, post
                             aria-expanded={activeIndex === 2 ? "true" : "false"}
                             aria-controls="accordion-flush-body-2"
                         >
-                            <span className={`text-black text-lg font-bold flex items-center gap-2 ${activeIndex == 2 ? "text-theme_color" : ""}`}><TbCircleNumber2Filled className="size-6 text-theme_color" /> {activeTitles[2]}</span>
+                            <span className={`text-black text-lg font-bold flex items-center gap-2 text-left ${activeIndex == 2 ? "text-theme_color" : ""}`}><TbCircleNumber2Filled className="size-6 text-theme_color" /> {activeTitles[2]}</span>
                             <svg
                                 data-accordion-icon
                                 className={`w-3 h-3 rotate-180 shrink-0 ${activeIndex === 2 ? "" : "rotate-180"
@@ -137,7 +137,7 @@ export const Poster: React.FC<LocalInterface> = ({ PosterData, buttonColor, post
                             aria-expanded={activeIndex === 3 ? "true" : "false"}
                             aria-controls="accordion-flush-body-3"
                         >
-                            <span className={`text-black text-lg font-bold flex items-center gap-2 ${activeIndex == 3 ? "text-theme_color" : ""}`}><TbCircleNumber3Filled className="size-6 text-theme_color" /> {activeTitles[3]}</span>
+                            <span className={`text-black text-lg font-bold flex text-left items-center gap-2 ${activeIndex == 3 ? "text-theme_color" : ""}`}><TbCircleNumber3Filled className="size-6 text-theme_color" /> {activeTitles[3]}</span>
                             <svg
                                 data-accordion-icon
                                 className={`w-3 h-3 rotate-180 shrink-0 ${activeIndex === 3 ? "" : "rotate-180"
