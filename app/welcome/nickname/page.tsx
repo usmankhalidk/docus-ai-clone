@@ -1,41 +1,59 @@
-'use client';
+'use client'
 
-import { Button, Checkbox, Form, Input, message } from 'antd';
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import { Button, Checkbox, Form, Input, message } from 'antd'
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import type { MessageInstance } from 'antd/es/message/interface'
+
+// Define interfaces for form values
+interface NicknameFormValues {
+  nickname: string
+  isLegalGuardian: boolean
+}
 
 const Nickname: React.FC = () => {
-  const [loading, setLoading] = useState(false);
-  const [goal, setGoal] = useState<string | null>(null);
-  const router = useRouter();
+  const [loading, setLoading] = useState(false)
+  const [goal, setGoal] = useState<string | null>(null)
+  const [messageApi, contextHolder] = message.useMessage()
+  const router = useRouter()
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setGoal(localStorage.getItem('goal'));
-    }
-  }, []);
+    // Get goal from localStorage on component mount
+    const storedGoal = localStorage.getItem('goal')
+    setGoal(storedGoal)
+  }, [])
 
-  const onFinish = (values: { nickname: string; isLegalGuardian: boolean }) => {
+  const showSuccessMessage = (messageApi: MessageInstance) => {
+    messageApi.success('Nickname saved successfully!')
+  }
+
+  const onFinish = (values: NicknameFormValues) => {
     if (values.nickname && values.isLegalGuardian) {
-      setLoading(true);
+      setLoading(true)
       
-      // Save nickname to localStorage
-      localStorage.setItem('nickname', values.nickname);
+      try {
+        // Save nickname to localStorage
+        localStorage.setItem('nickname', values.nickname)
 
-      message.success('Nickname saved successfully!');
+        showSuccessMessage(messageApi)
 
-      // Determine the next route based on the goal
-      const nextRoute = goal === 'personalHealth' 
-        ? '/welcome/health-details/general/age'
-        : '/welcome/country';
+        // Determine the next route based on the goal
+        const nextRoute = goal === 'personalHealth' 
+          ? '/welcome/health-details/general/age'
+          : '/welcome/country'
 
-      router.push(nextRoute);
+        router.push(nextRoute)
+      } catch (error) {
+        messageApi.error('An error occurred. Please try again.')
+        setLoading(false)
+      }
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      {contextHolder}
       <div className="relative w-full max-w-xl sm:max-w-lg p-6 sm:p-8 md:px-20 bg-white rounded-lg shadow-lg">
         <div className="absolute top-4 left-4">
           <Image
@@ -43,10 +61,11 @@ const Nickname: React.FC = () => {
             alt="Docus.ai Logo"
             height={70}
             width={70}
+            priority
           />
         </div>
 
-        <Form
+        <Form<NicknameFormValues>
           name="nicknameForm"
           onFinish={onFinish}
           className="mt-6"
@@ -65,11 +84,16 @@ const Nickname: React.FC = () => {
                   required: true,
                   message: 'Please enter your nickname!',
                 },
+                {
+                  max: 50,
+                  message: 'Nickname cannot be longer than 50 characters',
+                }
               ]}
             >
               <Input
                 placeholder="Preferred nickname or name"
                 className="rounded h-12"
+                maxLength={50}
               />
             </Form.Item>
           </div>
@@ -85,7 +109,7 @@ const Nickname: React.FC = () => {
               },
             ]}
           >
-            <Checkbox className='text-[13px]'>
+            <Checkbox className="text-[13px]">
               I confirm that I am at least 18 years old or I am the legal guardian of the user.
             </Checkbox>
           </Form.Item>
@@ -103,8 +127,7 @@ const Nickname: React.FC = () => {
         </Form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Nickname;
-
+export default Nickname
