@@ -26,16 +26,17 @@ const UpperFooter = () => {
                 </h1>
 
                 {/* Button */}
-                <Link href="/signup" className="px-5 lg:w-1/2 mx-auto">
-                    <button
-                        className="rounded-[4px] bg-button_color px-6 py-3 text-lg font-semibold text-white shadow-sm mt-6 w-full lg:w-fit  hover:bg-[#D2544B]"
-                        style={{
-                            color: buttonTextColor
-                        }}
-                    >
-                        {button.text}
-                    </button>
-                </Link>
+                <div className="px-5 lg:w-1/2 mx-auto">
+                    <Link href="/signup">
+                        <button
+                            className="rounded-[4px] bg-button_color px-6 py-3 text-lg font-semibold text-white shadow-sm mt-6 w-full lg:w-fit  hover:bg-[#D2544B]"
+                            style={{
+                                color: buttonTextColor
+                            }}
+                        >
+                            {button.text}
+                        </button></Link>
+                </div>
 
                 {/* Features */}
                 <ul className="flex flex-col lg:flex-row items-center justify-between w-full mt-7 text-sm sm:text-base xl:px-6 lg:px-2">
