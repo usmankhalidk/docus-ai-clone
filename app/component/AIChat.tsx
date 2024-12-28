@@ -24,10 +24,10 @@ const AIChat = () => {
                         <div>
                             <p className='text-center text-lg font-bold'><Link href="/signup"> <span className='text-theme_color underline'>Sign up</span> </Link>To Continue With AI Doctor</p>
                             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 px-5 py-5'>
-                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-lg font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> I have More Questions  <IoMdSend /></button></Link>
-                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-lg font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> What Should I do Next ?  <IoMdSend /></button></Link>
-                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-lg font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> Can You Analyze my Test Results ? <IoMdSend /></button></Link>
-                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-lg font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> I Need Advice From A top Doctor  <IoMdSend /></button></Link>
+                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-base md:text-lg text-left font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> I have More Questions  <IoMdSend /></button></Link>
+                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-base md:text-lg text-left font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> What Should I do Next ?  <IoMdSend /></button></Link>
+                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-base md:text-lg text-left font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> Can You Analyze my Test Results ? <IoMdSend /></button></Link>
+                                <Link href="/signup">         <button className='rounded-md flex items-center justify-between text-theme_color text-base md:text-lg text-left font-bold p-3 border border-theme_color hover:bg-chathoverbg w-full'> I Need Advice From A top Doctor  <IoMdSend /></button></Link>
                             </div>
                         </div>
                     </div>
